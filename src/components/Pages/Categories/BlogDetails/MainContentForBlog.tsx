@@ -9,7 +9,7 @@ function MainContentForBlog() {
       <div className="col-lg-8">
         <article>
           <div className="news-img">
-            <img src="assets/img/news/single-news-1.webp" alt="Image" />
+            <img src="/img/news/single-news-1.webp" alt="Image" />
             <a href="business.html" className="news-cat">
               Business
             </a>
@@ -17,7 +17,7 @@ function MainContentForBlog() {
           <ul className="news-metainfo list-style">
             <li className="author">
               <span className="author-img">
-                <img src="assets/img/author/author-thumb-1.webp" alt="Image" />
+                <img src="/img/author/author-thumb-1.webp" alt="Image" />
               </span>
               <a href="author.html">James William</a>
             </li>
@@ -54,7 +54,7 @@ function MainContentForBlog() {
             </p>
           </div>
           <div className="news-img">
-            <img src="assets/img/news/single-news-2.webp" alt="Image" />
+            <img src="/img/news/single-news-2.webp" alt="Image" />
           </div>
           <div className="news-para">
             <h5>
@@ -175,7 +175,7 @@ function MainContentForBlog() {
         <div className="comment-item-wrap">
           <div className="comment-item">
             <div className="comment-author-img">
-              <img src="assets/img/author/author-thumb-1.webp" alt="Image" />
+              <img src="/img/author/author-thumb-1.webp" alt="Image" />
             </div>
             <div className="comment-author-wrap">
               <div className="comment-author-info">
@@ -208,7 +208,7 @@ function MainContentForBlog() {
           </div>
           <div className="comment-item reply">
             <div className="comment-author-img">
-              <img src="assets/img/author/author-thumb-2.webp" alt="Image" />
+              <img src="/img/author/author-thumb-2.webp" alt="Image" />
             </div>
             <div className="comment-author-wrap">
               <div className="comment-author-info">
@@ -241,7 +241,7 @@ function MainContentForBlog() {
           </div>
           <div className="comment-item">
             <div className="comment-author-img">
-              <img src="assets/img/author/author-thumb-3.webp" alt="Image" />
+              <img src="/img/author/author-thumb-3.webp" alt="Image" />
             </div>
             <div className="comment-author-wrap">
               <div className="comment-author-info">
@@ -352,43 +352,43 @@ function MainContentForBlog() {
             <ul className="category-widget list-style">
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Celebration <span>(6)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Culture<span>(3)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Fashion<span>(2)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Inspiration<span>(8)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Lifestyle<span>(6)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Politics<span>(2)</span>
                 </a>
               </li>
               <li>
                 <a href="business.html">
-                  <img src="assets/img/icons/arrow-right.svg" alt="Image" />
+                  <img src="/img/icons/arrow-right.svg" alt="Image" />
                   Trending<span>(4)</span>
                 </a>
               </li>
@@ -399,7 +399,7 @@ function MainContentForBlog() {
             <div className="pp-post-wrap">
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-4.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-4.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
@@ -417,7 +417,7 @@ function MainContentForBlog() {
               </div>
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-5.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-5.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
@@ -435,7 +435,7 @@ function MainContentForBlog() {
               </div>
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-6.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-6.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
@@ -453,7 +453,7 @@ function MainContentForBlog() {
               </div>
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-7.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-7.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
@@ -471,7 +471,7 @@ function MainContentForBlog() {
               </div>
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-8.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-8.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
@@ -489,7 +489,7 @@ function MainContentForBlog() {
               </div>
               <div className="news-card-one">
                 <div className="news-card-img">
-                  <img src="assets/img/news/news-thumb-9.webp" alt="Image" />
+                  <img src="/img/news/news-thumb-9.webp" alt="Image" />
                 </div>
                 <div className="news-card-info">
                   <h3>
