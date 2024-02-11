@@ -8,7 +8,7 @@ import "../assets/css/dark-theme.css";
 import "../assets/css/footer.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Footer from "@/components/Pages/Layout/Footer";
-import BootstrapClient from "@/components/bootstrapClient";
+import BootstrapClient from "@/components/BootstrapClient";
 
 const inter = Inter({ subsets: ["latin"] });
 

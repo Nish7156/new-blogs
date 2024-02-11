@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { ImageResponse } from "next/server";
 
 export const size = {
