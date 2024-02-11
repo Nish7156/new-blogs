@@ -6,9 +6,9 @@ import "../assets/css/header.css";
 import "../assets/css/responsive.css";
 import "../assets/css/dark-theme.css";
 import "../assets/css/footer.css";
-import "../assets/css/aos.css";
-import Script from "next/script";
+import "bootstrap/dist/css/bootstrap.css";
 import Footer from "@/components/Pages/Layout/Footer";
+import BootstrapClient from "@/components/bootstrapClient";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,34 +25,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="theme-light">
       <head>
-        <title>Baxo - Responsive Blog HTML Template</title>
-        <link rel="icon" type="image/png" href="assets/img/favicon.webp" />
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossOrigin="anonymous"
-        />
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-          crossOrigin="anonymous"
-        ></script>
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
           rel="stylesheet"
         />
-        <link
-          href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-          rel="stylesheet"
-        ></link>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       </head>
       <body className={inter.className}>
         <Header />
         {children}
-        <Footer/>
-        <script async>AOS.init()</script>
+        <Footer />
+        <BootstrapClient />
       </body>
     </html>
   );
