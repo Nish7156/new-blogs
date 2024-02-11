@@ -21,7 +21,7 @@ export default function Home() {
       <EditorsPick/>
       <NewsLetterBox/>
       <SocialMediaList/>
-      <NewsSliderMiddle/>
+      {/* <NewsSliderMiddle/> */}
       <SelectedNews/>
       <MostPopular/>
       <GeneralNews/>
