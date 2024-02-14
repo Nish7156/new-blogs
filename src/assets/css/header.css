@@ -146,7 +146,7 @@
 .navbar-area .navbar .navbar-brand {
   font-size: inherit;
   line-height: 1;
-  padding: 0;
+  /* padding: 0; */
 }
 .navbar-area .navbar .navbar-toggler {
   color: var(--primaryColor);

@@ -1,4 +1,5 @@
 import React from "react";
+import CustomImageAuto from "../elements/CustomImageAuto";
 
 function TopSponserAd() {
   return (
@@ -9,11 +10,13 @@ function TopSponserAd() {
         </div>
         <div className="promo-wrap">
           <div className="promo-card-two">
-            <img
+            {/* <img
               src="/img/promo-shape-1.webp"
               alt="Image"
               className="promo-shape"
-            />
+            /> */}
+            <CustomImageAuto src="/img/promo-shape-1.webp" className="promo-shape"
+              alt="Image"/>
             <div className="promo-content">
               <a href="index.html" className="logo">
                 <img className="logo-light" src="/img/logo.webp" alt="Image" />

@@ -19,9 +19,9 @@ export default function Home() {
       <NewsLetterBox/>
       <SocialMediaList/>
       <SelectedNews/>
-      <MostPopular/>
+      {/* <MostPopular/>
       <GeneralNews/>
-      <BottomSlider/>
+      <BottomSlider/> */}
     </>
   );
 }

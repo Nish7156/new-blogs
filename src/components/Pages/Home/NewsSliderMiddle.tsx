@@ -1,3 +1,4 @@
+import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import React from "react";
 
 function NewsSliderMiddle() {
@@ -7,7 +8,7 @@ function NewsSliderMiddle() {
         <div className="popular-news-slider swiper">
           <div className="swiper-wrapper">
             <div className="swiper-slide pp-news-card">
-              <img src="/img/news/news-86.webp" alt="Image" />
+              <CustomImageAuto src="/img/news/news-86.webp" alt="Image" />
               <div className="pp-news-info">
                 <a href="business.html" className="news-cat">
                   Politics

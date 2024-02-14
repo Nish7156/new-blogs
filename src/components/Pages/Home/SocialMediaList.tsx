@@ -1,3 +1,4 @@
+import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import React from "react";
 
 function SocialMediaList() {
@@ -8,7 +9,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.fb.com" target="_blank">
-                <img src="/img/icons/facebook.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/facebook.svg" alt="Image" />
               </a>
             </span>
             <a
@@ -23,7 +24,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.twitter.com" target="_blank">
-                <img src="/img/icons/twitter.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/twitter.svg" alt="Image" />
               </a>
             </span>
             <a
@@ -38,7 +39,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.instagram.com" target="_blank">
-                <img src="/img/icons/instagram.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/instagram.svg" alt="Image" />
               </a>
             </span>
             <a
@@ -53,7 +54,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.pinterest.com" target="_blank">
-                <img src="/img/icons/pinterest.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/pinterest.svg" alt="Image" />
               </a>
             </span>
             <a
@@ -68,7 +69,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.pinterest.com" target="_blank">
-                <img src="/img/icons/pinterest.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/pinterest.svg" alt="Image" />
               </a>
             </span>
             <a
@@ -83,7 +84,7 @@ function SocialMediaList() {
           <li>
             <span>
               <a href="https://www.pinterest.com" target="_blank">
-                <img src="/img/icons/pinterest.svg" alt="Image" />
+                <CustomImageAuto src="/img/icons/pinterest.svg" alt="Image" />
               </a>
             </span>
             <a

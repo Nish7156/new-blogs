@@ -7,6 +7,7 @@ import "../assets/css/responsive.css";
 import "../assets/css/dark-theme.css";
 import "../assets/css/footer.css";
 import "bootstrap/dist/css/bootstrap.css";
+import "./style.scss"
 import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 
