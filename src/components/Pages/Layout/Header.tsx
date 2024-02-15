@@ -1,6 +1,7 @@
 import React from "react";
 import PhoneNav from "./PhoneNav";
 import Link from "next/link";
+import Image from "next/image";
 
 function Header() {
   const menuItems = [
@@ -29,14 +30,22 @@ function Header() {
       <div className="navbar-area header-three sticky" id="navbar">
         <div className="container">
           <nav className="navbar navbar-expand-lg">
-            <a className="navbar-brand" href="index.html">
-              <img className="logo-light" src="/img/logo.webp" alt="logo" />
-              <img
+            <Link className="navbar-brand" href="/">
+              <Image
+                width={100}
+                height={100}
+                className="logo-light"
+                src="/img/logo.webp"
+                alt="logo"
+              />
+              <Image
+                width={100}
+                height={100}
                 className="logo-dark"
                 src="/img/logo-white.webp"
                 alt="logo"
               />
-            </a>
+            </Link>
             <button
               type="button"
               className="search-btn d-lg-none"

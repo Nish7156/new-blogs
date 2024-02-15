@@ -1,4 +1,5 @@
-import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function PhoneNav() {
@@ -11,10 +12,22 @@ function PhoneNav() {
         id="navbarOffcanvas"
       >
         <div className="offcanvas-header">
-          <a href="index.html" className="logo d-inline-block">
-            <CustomImageAuto className="logo-light" src="/img/logo.webp" alt="logo"/>
-            <CustomImageAuto className="logo-dark" src="/img/logo-white.webp" alt="logo" />
-          </a>
+          <Link href="/" className="logo d-inline-block">
+            <Image
+              width={100}
+              height={100}
+              className="logo-light"
+              src="/img/logo.webp"
+              alt="logo"
+            />
+            <Image
+              width={100}
+              height={100}
+              className="logo-dark"
+              src="/img/logo-white.webp"
+              alt="logo"
+            />
+          </Link>
           <button
             type="button"
             className="close-btn"

@@ -1,5 +1,5 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function HeroGrid() {
@@ -23,9 +23,9 @@ function HeroGrid() {
                   Business
                 </a>
                 <h3>
-                  <a href="business-details.html">
+                  <Link href="business-details.html">
                     Revolutionizing The Business World: The Power Of Innovation
-                  </a>
+                  </Link>
                 </h3>
                 <p>
                   Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum
@@ -62,15 +62,15 @@ function HeroGrid() {
                           src="/img/news/news-76.webp"
                           alt="Iamge"
                         />
-                        <a href="business.html" className="news-cat">
+                        <Link href="business.html" className="news-cat">
                           Fashion
-                        </a>
+                        </Link>
                       </div>
                       <div className="news-card-info">
                         <h3>
-                          <a href="business-details.html">
+                          <Link href="business-details.html">
                             Dressing Fashion Tips For Any Occasion
-                          </a>
+                          </Link>
                         </h3>
                         <ul className="news-metainfo list-style">
                           <li>
