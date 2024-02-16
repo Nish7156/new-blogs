@@ -1,21 +1,30 @@
-import React from "react";
+import React, { Suspense } from "react";
 import CustomSlider from "@/components/Utilty/CustomSlider";
 import Image from "next/image";
 
-function TopSlider() {
-  const arr = [1, 2, 3];
+async function getData() {
+  const res = await fetch("https://dummyjson.com/products");
 
-  console.log("isClient");
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
 
+  return res.json();
+}
+
+async function TopSlider() {
+  const data = await getData();
   return (
     <>
       <div className="container">
         <div className="trending-box-two">
           <span>Trending</span>
           <div className="trending-slider-two swiper">
-            <CustomSlider data={arr}>
-              <SliderCard />
-            </CustomSlider>
+            <Suspense fallback={<>Loading</>}>
+              <CustomSlider data={data?.products.slice(0, 3)}>
+                <SliderCard />
+              </CustomSlider>
+            </Suspense>
           </div>
         </div>
       </div>
@@ -25,7 +34,9 @@ function TopSlider() {
 
 export default TopSlider;
 
-const SliderCard = () => {
+const SliderCard = ({ item }: any) => {
+  console.log(item);
+
   return (
     <div className="swiper-slide news-card-one">
       <div className="news-card-img">

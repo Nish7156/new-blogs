@@ -7,7 +7,7 @@ import "../assets/css/responsive.css";
 import "../assets/css/dark-theme.css";
 import "../assets/css/footer.css";
 import "bootstrap/dist/css/bootstrap.css";
-import "./style.scss"
+import "./style.scss";
 import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 
@@ -32,12 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="theme-light">
-      <head>
-        <link
-          href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css"
-          rel="stylesheet"
-        />
-      </head>
       <body className={inter.className}>
         <Header />
         {children}

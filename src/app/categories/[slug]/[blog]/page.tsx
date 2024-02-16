@@ -1,12 +1,14 @@
-import BlogDetails from '@/components/Pages/Categories/BlogDetails'
-import React from 'react'
+import BlogDetails from "@/components/Pages/Categories/BlogDetails";
+import React from "react";
 
-function Blog() {
+function Blog({ params }: { params: { slug: string } }) {
+console.log(params);
+
   return (
     <div>
-      <BlogDetails/>
+      <BlogDetails />
     </div>
-  )
+  );
 }
 
-export default Blog
+export default Blog;
