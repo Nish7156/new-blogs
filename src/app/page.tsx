@@ -8,17 +8,20 @@ import MostPopular from "@/components/Pages/Home/MostPopular";
 import GeneralNews from "@/components/Pages/Home/GeneralNews";
 import BottomSlider from "@/components/Pages/Home/BottomSlider";
 import SelectedNews from "@/components/Pages/Home/SelectedNews";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
     <>
       <TopSlider />
-      <HeroGrid />
-      <TopSponserAd/>
-      <EditorsPick/>
-      <NewsLetterBox/>
-      <SocialMediaList/>
-      <SelectedNews/>
+      <Suspense fallback={<>Loading</>}>
+        <HeroGrid />
+      </Suspense>
+      <TopSponserAd />
+      <EditorsPick />
+      <NewsLetterBox />
+      <SocialMediaList />
+      <SelectedNews />
       {/* <MostPopular/>
       <GeneralNews/>
       <BottomSlider/> */}

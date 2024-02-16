@@ -52,10 +52,10 @@ function CustomSlider({
         autoplay={{ delay: 1000, disableOnInteraction: false }}
         className={`${customClass ? customClass : ""}`}
       >
-        {data?.map((data: any, index: number) => {
+        {data?.map((item: any, index: number) => {
           return (
             <SwiperSlide className="" key={index}>
-              {children}
+                  {React.cloneElement(children, { data:item })}
             </SwiperSlide>
           );
         })}

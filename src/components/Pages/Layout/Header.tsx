@@ -2,29 +2,10 @@ import React from "react";
 import PhoneNav from "./PhoneNav";
 import Link from "next/link";
 import Image from "next/image";
+import { menuItems } from "@/lib/constant";
 
 function Header() {
-  const menuItems = [
-    {
-      title: "Home",
-      link: "/",
-    },
-    {
-      title: "Pages",
-      subMenu: [
-        { title: "About Us", link: "about.html" },
-        { title: "Contact Us", link: "contact.html" },
-      ],
-    },
-    {
-      title: "Shop",
-      link: "shop.html",
-    },
-    {
-      title: "Tech",
-      link: "/categories/tech",
-    },
-  ];
+
   return (
     <>
       <div className="navbar-area header-three sticky" id="navbar">
