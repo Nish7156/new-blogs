@@ -4,11 +4,11 @@ import React from "react";
 function CustomImageAuto({ src, alt, className }: any) {
   return (
     <>
-      <div className={"image-container"}>
+      <div className={"image-container zoom-img"}>
         <Image
           src={src}
           layout="fill"
-          className={className ? className : "image"}
+          className={className ? className : "image "}
           loading="lazy"
           alt={alt ? alt : "image"}
         />
