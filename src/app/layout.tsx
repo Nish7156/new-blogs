@@ -14,6 +14,7 @@ import BootstrapClient from "@/components/BootstrapClient";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   metadataBase: new URL("https://www.dummyblog.com"),
   title: {
     default: "Dummy Blog",
