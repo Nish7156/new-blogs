@@ -1,5 +1,4 @@
-// sw.ts
-
+//@ts-nocheck
 import { defaultCache } from "@serwist/next/browser";
 import type { PrecacheEntry } from "@serwist/precaching";
 import { installSerwist } from "@serwist/sw";
