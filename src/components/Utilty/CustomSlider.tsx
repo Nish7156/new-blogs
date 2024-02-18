@@ -49,7 +49,7 @@ function CustomSlider({
           slideShadows: true,
         }}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 1000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
         className={`${customClass ? customClass : ""}`}
       >
         {data?.map((item: any, index: number) => {
