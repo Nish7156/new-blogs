@@ -10,9 +10,6 @@
   },
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.1.0",
-    "@serwist/next": "^8.4.4",
-    "@serwist/precaching": "^8.4.4",
-    "@serwist/sw": "^8.4.4",
     "bootstrap": "^5.3.2",
     "next": "14.0.4",
     "react": "^18",
