@@ -1,5 +1,6 @@
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -52,7 +53,7 @@ async function HeroGrid() {
                   <ul className="news-metainfo list-style">
                     <li className="author">
                       <span className="author-img">
-                        <img
+                        <CustomImageAuto
                           src="/img/author/author-thumb-1.webp"
                           alt="Image"
                         />

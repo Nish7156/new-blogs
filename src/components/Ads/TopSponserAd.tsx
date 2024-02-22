@@ -1,5 +1,6 @@
 import React from "react";
 import CustomImageAuto from "../elements/CustomImageAuto";
+import Image from "next/image";
 
 function TopSponserAd() {
   return (
@@ -19,8 +20,8 @@ function TopSponserAd() {
               alt="Image"/>
             <div className="promo-content">
               <a href="index.html" className="logo">
-                <img className="logo-light" src="/img/logo.webp" alt="Image" />
-                <img
+                <Image width={152} height={31} className="logo-light" src="/img/logo.webp" alt="Image" />
+                <Image width={152} height={31}
                   className="logo-dark"
                   src="/img/logo-white.webp"
                   alt="Image"
@@ -31,7 +32,9 @@ function TopSponserAd() {
                 existence is a Baxo. For science, music, sport, etc.
               </p>
             </div>
-            <img
+            <Image
+            width={500}
+            height={102}
               src="/img/promo-img-2.webp"
               alt="Image"
               className="promo-img"
