@@ -5,7 +5,7 @@ import React from "react";
 
 async function getData() {
   const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-    cache: "no-store"
+    cache: "force-cache"
   });
 
   if (!res.ok) {
