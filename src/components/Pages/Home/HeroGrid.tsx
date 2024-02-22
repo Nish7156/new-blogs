@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/blogs", {
+  const res = await fetch("/api/blogs", {
     cache: "no-store",
   });
 
