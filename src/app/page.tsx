@@ -10,7 +10,9 @@ import BottomSlider from "@/components/Pages/Home/BottomSlider";
 import SelectedNews from "@/components/Pages/Home/SelectedNews";
 import { Suspense } from "react";
 
+
 export default function Home() {
+
   return (
     <>
       <TopSlider />

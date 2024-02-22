@@ -10,6 +10,30 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.scss";
 import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
+import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
+import cron from "node-cron";
+
+async function startScrapingAndSaving() {
+  try {
+    const scrapedData = await scrapeAajTak();
+    await saveToDatabase(scrapedData);
+    console.log("Scraping and saving completed.");
+  } catch (error) {
+    console.error("Error occurred during scraping:", error);
+    process.exit(1);
+  }
+}
+
+cron.schedule(
+  "0 4,16 * * *",
+  async () => {
+    await startScrapingAndSaving();
+    console.log("Starting searching and saving...");
+  },
+  {
+    timezone: "Asia/Kolkata",
+  }
+);
 
 const inter = Inter({ subsets: ["latin"] });
 

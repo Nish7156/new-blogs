@@ -3,10 +3,9 @@ import Link from "next/link";
 import React from "react";
 
 async function getData() {
-  const res = await fetch(
-    "http://blogify-env-1.eba-w8t4imsf.ap-south-1.elasticbeanstalk.com/api/blogs",
-    { cache: "force-cache" }
-  );
+  const res = await fetch("http://localhost:3000/api/blogs", {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -17,19 +16,19 @@ async function getData() {
 
 async function HeroGrid() {
   const data = await getData();
-  console.log(data?.data[0]?.category);
-  
+
+  let dataIndex=1
 
   return (
     <>
       <div className="container">
         <div className="row featured-news-three">
           <div className="col-xl-6">
-            <Link href={`/categories/${data?.data[0]?.category}/${data?.data[0]?.slug}`}>
+            <Link href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}>
               <div className="news-card-eleven">
                 <div className="news-card-img">
                   <CustomImageAuto
-                    src={data.data[0].image}
+                    src={data[dataIndex].image}
                     layout="fill"
                     className={"image"}
                     alt=""
@@ -41,8 +40,7 @@ async function HeroGrid() {
                   </Link>
                   <h3>
                     <Link href="">
-                      Revolutionizing The Business World: The Power Of
-                      Innovation
+                      {data[dataIndex].title}
                     </Link>
                   </h3>
                   <p>
@@ -76,7 +74,7 @@ async function HeroGrid() {
           <div className="col-xl-6">
             <div className="row">
               {data &&
-                data.data?.slice(4, 8).map((data: any) => {
+                data?.slice(8, 12).map((data: any) => {
                   return (
                     <div className="col-md-6" key={data}>
                       <div className="news-card-thirteen">
