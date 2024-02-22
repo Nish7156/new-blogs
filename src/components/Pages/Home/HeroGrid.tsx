@@ -1,10 +1,11 @@
+import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import Link from "next/link";
 import React from "react";
 
 async function getData() {
-  const res = await fetch("new-blogs.vercel.app/api/blogs", {
-    cache: "no-store",
+  const res = await fetch(`${checkEnvironment()}/api/blogs`, {
+    cache: "no-store"
   });
 
   if (!res.ok) {
@@ -17,14 +18,16 @@ async function getData() {
 async function HeroGrid() {
   const data = await getData();
 
-  let dataIndex=1
+  let dataIndex = 1;
 
   return (
     <>
       <div className="container">
         <div className="row featured-news-three">
           <div className="col-xl-6">
-            <Link href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}>
+            <Link
+              href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+            >
               <div className="news-card-eleven">
                 <div className="news-card-img">
                   <CustomImageAuto
@@ -39,9 +42,7 @@ async function HeroGrid() {
                     Business
                   </Link>
                   <h3>
-                    <Link href="">
-                      {data[dataIndex].title}
-                    </Link>
+                    <Link href="">{data[dataIndex].title}</Link>
                   </h3>
                   <p>
                     Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum
