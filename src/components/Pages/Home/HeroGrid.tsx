@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 
 async function getData() {
-  const res = await fetch("/api/blogs", {
+  const res = await fetch("new-blogs.vercel.app/api/blogs", {
     cache: "no-store",
   });
 
