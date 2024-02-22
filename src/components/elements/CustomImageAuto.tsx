@@ -7,7 +7,7 @@ function CustomImageAuto({ src, alt, className }: any) {
       <div className={"image-container zoom-img"}>
         <Image
           src={src}
-          layout="fill"
+          fill
           className={className ? className : "image "}
           loading="lazy"
           alt={alt ? alt : "image"}

@@ -75,9 +75,9 @@ async function HeroGrid() {
           <div className="col-xl-6">
             <div className="row">
               {data &&
-                data?.slice(8, 12).map((data: any) => {
+                data?.slice(8, 12).map((data: any,index:number) => {
                   return (
-                    <div className="col-md-6" key={data}>
+                    <div className="col-md-6" key={index}>
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
                           <CustomImageAuto src={data?.image} alt="Iamge" />
