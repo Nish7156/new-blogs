@@ -20,10 +20,10 @@ export default function Home() {
         <HeroGrid />
       </Suspense>
       <TopSponserAd />
-      <EditorsPick />
+      {/* <EditorsPick />
       <NewsLetterBox />
       <SocialMediaList />
-      <SelectedNews />
+      <SelectedNews /> */}
       {/* <MostPopular/>
       <GeneralNews/>
       <BottomSlider/> */}

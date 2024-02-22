@@ -5,7 +5,7 @@ import React from "react";
 
 async function getData() {
   const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-    cache: "force-cache"
+    cache: "force-cache",
   });
 
   if (!res.ok) {
@@ -75,7 +75,7 @@ async function HeroGrid() {
           <div className="col-xl-6">
             <div className="row">
               {data &&
-                data?.slice(8, 12).map((data: any,index:number) => {
+                data?.slice(8, 12).map((data: any, index: number) => {
                   return (
                     <div className="col-md-6" key={index}>
                       <div className="news-card-thirteen">
