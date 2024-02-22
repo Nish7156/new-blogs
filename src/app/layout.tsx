@@ -24,14 +24,24 @@ async function startScrapingAndSaving() {
   }
 }
 
+// cron.schedule(
+//   "0 4,16 * * *",//  run 4:00 AM & 4:00 PM
+//   async () => {
+//     await startScrapingAndSaving();
+//     console.log("Starting searching and saving...");
+//   },
+//   {
+//     timezone: "Asia/Kolkata"
+//   }
+// );
 cron.schedule(
-  "0 4,16 * * *",
+  "0 * * * *", // Change the cron expression to run every hour
   async () => {
     await startScrapingAndSaving();
     console.log("Starting searching and saving...");
   },
   {
-    timezone: "Asia/Kolkata",
+    timezone: "Asia/Kolkata"
   }
 );
 
@@ -41,16 +51,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.dummyblog.com"),
   title: {
     default: "Dummy Blog",
-    template: `%s | Dummy blog`,
+    template: `%s | Dummy blog`
   },
   description: "This is the description of dummy blog",
   verification: {
-    google: "google-site-verification=878787878",
-  },
+    google: "google-site-verification=878787878"
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
