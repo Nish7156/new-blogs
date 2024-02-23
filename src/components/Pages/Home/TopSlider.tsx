@@ -35,7 +35,6 @@ async function TopSlider() {
 export default TopSlider;
 
 const SliderCard = ({ item }: any) => {
-  console.log(item);
 
   return (
     <div className="swiper-slide news-card-one">

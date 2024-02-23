@@ -1,6 +1,5 @@
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 

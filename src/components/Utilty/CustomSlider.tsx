@@ -14,7 +14,6 @@ function CustomSlider({
   subChildren,
   wrapperClass,
 }: any) {
-  console.log("isClient", '===')
 
   const swiperRef = useRef<any>(null);
 

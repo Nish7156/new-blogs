@@ -47,6 +47,13 @@ cron.schedule(
 
 const inter = Inter({ subsets: ["latin"] });
 
+const meta = {
+  title: "Blog",
+  description: "blogs",
+  image: "",
+  siteName: "",
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dummyblog.com"),
   title: {
@@ -109,7 +116,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  manifest: "/manifest.json",
   twitter: {
     card: "summary_large_image",
     title: "Next.js",
@@ -174,6 +180,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="theme-light">
+      <head>
+        <meta name="theme-color" content="#ffff" />
+        <link rel="manifest" href="/manifest.json" />
+        <script id="schema-org" type="application/ld+json">
+          {`
+          {
+            "@context": "http://schema.org",
+            "@type": "Web-App",
+            "headline": "${meta?.title}",
+            "datePublished": "2023-11-14",
+            "description": "${meta?.description}",
+            "image": "${meta.image}",
+            "publisher": {
+              "@type": "Organization",
+              "name": "${meta?.siteName}",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "${meta?.siteName}"
+              }
+            }
+          }
+        `}
+        </script>
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
