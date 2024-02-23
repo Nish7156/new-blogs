@@ -162,6 +162,7 @@ async function saveToDatabase(scrapedData: any[]) {
         title: data.title,
         description,
         image: imageLink,
+        link:data.link,
         category: data.category.toLowerCase(),
         dateline: data.dateline,
         slug: slug,

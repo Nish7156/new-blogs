@@ -24,26 +24,26 @@ async function startScrapingAndSaving() {
   }
 }
 
-cron.schedule(
-  "0 4,16 * * *", //  run 4:00 AM & 4:00 PM
-  async () => {
-    await startScrapingAndSaving();
-    console.log("Starting searching and saving...");
-  },
-  {
-    timezone: "Asia/Kolkata",
-  }
-);
 // cron.schedule(
-//   "0 * * * *", // Change the cron expression to run every hour
+//   "0 4,16 * * *", //  run 4:00 AM & 4:00 PM
 //   async () => {
 //     await startScrapingAndSaving();
 //     console.log("Starting searching and saving...");
 //   },
 //   {
-//     timezone: "Asia/Kolkata"
+//     timezone: "Asia/Kolkata",
 //   }
 // );
+cron.schedule(
+  "0 * * * *", 
+  async () => {
+    await startScrapingAndSaving();
+    console.log("Starting searching and saving...");
+  },
+  {
+    timezone: "Asia/Kolkata"
+  }
+);
 
 const inter = Inter({ subsets: ["latin"] });
 

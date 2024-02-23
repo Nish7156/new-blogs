@@ -1,5 +1,6 @@
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import { extractDate, truncateText } from "@/lib/helper";
 import Link from "next/link";
 import React from "react";
 
@@ -38,17 +39,16 @@ async function HeroGrid() {
                   />
                 </div>
                 <div className="news-card-info">
-                  <Link href="news-by-category.html" className="news-cat">
-                    Business
+                  <Link
+                    href={`/categories/${data[dataIndex]?.category}`}
+                    className="news-cat capitalize"
+                  >
+                    {data[dataIndex].category}
                   </Link>
                   <h3>
                     <Link href="">{data[dataIndex].title}</Link>
                   </h3>
-                  <p>
-                    Lorem ipsum dosectetur adipisicing elit, sed do.Lorem ipsum
-                    dolor sit amet consectet Null fringilla purus at leo
-                    dignissim congue. Mauris elementum accumsan.
-                  </p>
+                  <p>{truncateText(data[dataIndex].description, 230)}</p>
                   <ul className="news-metainfo list-style">
                     <li className="author">
                       <span className="author-img">
@@ -80,21 +80,32 @@ async function HeroGrid() {
                     <div className="col-md-6" key={index}>
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
-                          <CustomImageAuto src={data?.image} alt="Iamge" />
-                          <Link href="business.html" className="news-cat">
-                            Fashion
+                          <Link
+                            href={`/categories/${data?.category}/${data?.slug}`}
+                          >
+                            <CustomImageAuto src={data?.image} alt="Iamge" />
+                          </Link>
+                          <Link
+                            href={`/categories/${data?.category}}`}
+                            className="news-cat capitalize"
+                          >
+                            {data.category}
                           </Link>
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <Link href="business-details.html">
-                              {data?.title}
+                            <Link
+                              href={`/categories/${data?.category}/${data?.slug}`}
+                            >
+                              {truncateText(data?.title, 80)}
                             </Link>
                           </h3>
                           <ul className="news-metainfo list-style">
                             <li>
                               <i className="fi fi-rr-calendar-minus" />
-                              <a href="news-by-date.html">Mar 30, 2023</a>
+                              <a href="news-by-date.html">
+                                {extractDate(data.dateline)}
+                              </a>
                             </li>
                             <li>
                               <i className="fi fi-rr-clock-three" />

@@ -1,8 +1,16 @@
+"use client";
+import { menuItems } from "@/lib/constant";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 function PhoneNav() {
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
+
+  const toggleSubMenu = (index: any) => {
+    setActiveSubMenu(activeSubMenu === index ? null : index);
+  };
+
   return (
     <>
       <div
@@ -39,319 +47,40 @@ function PhoneNav() {
         </div>
         <div className="offcanvas-body">
           <div className="accordion" id="navbarAccordion">
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed active"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseOne"
-                aria-expanded="false"
-                aria-controls="collapseOne"
-              >
-                Home
-              </button>
-              <div
-                id="collapseOne"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion2">
-                    <div className="accordion-item">
-                      <a className="accordion-link active" href="index.html">
-                        Home Demo One
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a className="accordion-link" href="index-2.html">
-                        Home Demo Two
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a className="accordion-link" href="index-3.html">
-                        Home Demo Three
-                      </a>
+            {menuItems.map((data, index) => (
+              <div className="accordion-item" key={index}>
+                <button
+                  className={`accordion-button ${
+                    activeSubMenu === index ? "" : "collapsed"
+                  }`}
+                  type="button"
+                  onClick={() => toggleSubMenu(index)}
+                >
+                  {data.title}
+                </button>
+                {data?.subMenu && activeSubMenu === index && (
+                  <div
+                    className="accordion-collapse collapse show"
+                    data-bs-parent="#navbarAccordion"
+                  >
+                    <div className="accordion-body">
+                      <div className="accordion" id="navbarAccordion2">
+                        {data.subMenu.map((item, subIndex) => (
+                          <div className="accordion-item" key={subIndex}>
+                            <a
+                              className="accordion-link active"
+                              href="index.html"
+                            >
+                              {item.title}
+                            </a>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
               </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapbaxour"
-                aria-expanded="false"
-                aria-controls="collapbaxour"
-              >
-                Pages
-              </button>
-              <div
-                id="collapbaxour"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion45">
-                    <div className="accordion-item">
-                      <a className="accordion-link" href="about.html">
-                        {" "}
-                        About Us{" "}
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a className="accordion-link" href="contact.html">
-                        Contact Us
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="team.html" className="accordion-link">
-                        {" "}
-                        Team{" "}
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="author.html" className="accordion-link">
-                        {" "}
-                        Author{" "}
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="privacy-policy.html" className="accordion-link">
-                        Privacy Policy
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="terms-conditions.html"
-                        className="accordion-link"
-                      >
-                        Terms &amp; Conditions
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="error-404.html" className="accordion-link">
-                        404 Error Page
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo"
-                aria-expanded="false"
-                aria-controls="collapseTwo"
-              >
-                Business
-              </button>
-              <div
-                id="collapseTwo"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion7">
-                    <div className="accordion-item">
-                      <a href="business.html" className="accordion-link">
-                        Business News
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="business-details.html"
-                        className="accordion-link"
-                      >
-                        Business News Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseThree"
-                aria-expanded="false"
-                aria-controls="collapseThree"
-              >
-                Politics
-              </button>
-              <div
-                id="collapseThree"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion30">
-                    <div className="accordion-item">
-                      <a href="politics.html" className="accordion-link">
-                        Political News
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="politics-details.html"
-                        className="accordion-link"
-                      >
-                        Political News Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFour"
-                aria-expanded="false"
-                aria-controls="collapseFour"
-              >
-                Video
-              </button>
-              <div
-                id="collapseFour"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion11">
-                    <div className="accordion-item">
-                      <a href="featured-video.html" className="accordion-link">
-                        Featured Video
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="featured-video-details.html"
-                        className="accordion-link"
-                      >
-                        Featured Video Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFourth"
-                aria-expanded="false"
-                aria-controls="collapseFourth"
-              >
-                Sports
-              </button>
-              <div
-                id="collapseFourth"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion111">
-                    <div className="accordion-item">
-                      <a href="sports.html" className="accordion-link">
-                        Sports News
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="sports-details.html" className="accordion-link">
-                        Sports News Details
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="accordion-item">
-              <button
-                className="accordion-button collapsed"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#collapseFive"
-                aria-expanded="false"
-                aria-controls="collapseFive"
-              >
-                Shop
-              </button>
-              <div
-                id="collapseFive"
-                className="accordion-collapse collapse"
-                data-bs-parent="#navbarAccordion"
-              >
-                <div className="accordion-body">
-                  <div className="accordion" id="navbarAccordion70">
-                    <div className="accordion-item">
-                      <a href="shop-grid.html" className="accordion-link">
-                        Shop Grid
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="shop-left-sidebar.html"
-                        className="accordion-link"
-                      >
-                        Shop Left Sidebar
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a
-                        href="shop-right-sidebar.html"
-                        className="accordion-link"
-                      >
-                        Shop Right Sidebar
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="shop-details.html" className="accordion-link">
-                        Shop Details
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="cart.html" className="accordion-link">
-                        {" "}
-                        Cart{" "}
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="wishlist.html" className="accordion-link">
-                        Wishlist
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="checkout.html" className="accordion-link">
-                        Checkout
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="login.html" className="accordion-link">
-                        {" "}
-                        Login{" "}
-                      </a>
-                    </div>
-                    <div className="accordion-item">
-                      <a href="signup.html" className="accordion-link">
-                        {" "}
-                        Sign Up{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
           <div className="offcanvas-contact-info">
             <h4>Contact Info</h4>
