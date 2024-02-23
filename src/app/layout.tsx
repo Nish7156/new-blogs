@@ -12,6 +12,7 @@ import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
 import cron from "node-cron";
+import { handleSendMessage } from "./backend/openai";
 
 async function startScrapingAndSaving() {
   try {
@@ -35,13 +36,13 @@ async function startScrapingAndSaving() {
 //   }
 // );
 cron.schedule(
-  "0 * * * *", 
+  "0 * * * *",
   async () => {
     await startScrapingAndSaving();
     console.log("Starting searching and saving...");
   },
   {
-    timezone: "Asia/Kolkata"
+    timezone: "Asia/Kolkata",
   }
 );
 
@@ -203,6 +204,15 @@ export default function RootLayout({
           }
         `}
         </script>
+        <script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
+          crossOrigin="anonymous"
+        ></script>
+        <meta
+          name="google-adsense-account"
+          content={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
+        />
       </head>
       <body className={inter.className}>
         <Header />
