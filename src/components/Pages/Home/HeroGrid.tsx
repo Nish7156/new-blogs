@@ -5,15 +5,17 @@ import Link from "next/link";
 import React from "react";
 
 async function getData() {
-  const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-    cache: "force-cache",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
+  try {
+    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
+      cache: "force-cache",
+    });
+    if (!res.ok) {
+      console.log("error");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
   }
-
-  return res.json();
 }
 
 async function HeroGrid() {
