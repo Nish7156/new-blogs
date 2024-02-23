@@ -1,8 +1,25 @@
+import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import { extractDate, truncateText } from "@/lib/helper";
+import Link from "next/link";
 import React from "react";
 
-function EditorsPick() {
-  const arr = [1, 1, 1, 1, 1, 1];
+async function getData() {
+  try {
+    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      console.log("error");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function EditorsPick() {
+  const data = await getData();
   return (
     <>
       <div className="editor-news-three pt-100 pb-75">
@@ -23,29 +40,35 @@ function EditorsPick() {
             </div>
           </div>
           <div className="row justify-content-center">
-            {arr.map((data: any) => {
+            {data.slice(0, 6).map((data: any, index: number) => {
               return (
-                <div className="col-xl-4 col-lg-6 col-md-6" key={data}>
+                <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
                   <div className="news-card-thirteen">
                     <div className="news-card-img">
-                      <CustomImageAuto
-                        src="/img/news/news-80.webp"
-                        alt="Iamge"
-                      />
-                      <a href="business.html" className="news-cat">
-                        Lifestyle
-                      </a>
+                      <CustomImageAuto src={data?.image} alt={data?.title} />
+                      <Link
+                        href={`/categories/${data?.category}`}
+                        className="news-cat"
+                      >
+                        {data?.category}
+                      </Link>
                     </div>
                     <div className="news-card-info">
                       <h3>
-                        <a href="business-details.html">
-                          Jiraiya Banks Wants To Teach You How To Build A House
-                        </a>
+                        <Link
+                          href={`/categories/${data?.category}/${data?.slug}`}
+                        >
+                          {truncateText(data?.title, 75)}
+                        </Link>
                       </h3>
                       <ul className="news-metainfo list-style">
                         <li>
                           <i className="fi fi-rr-calendar-minus" />
-                          <a href="news-by-date.html">Feb 27, 2023</a>
+                          <Link
+                            href={`/categories/${data?.category}/${data?.slug}`}
+                          >
+                            {extractDate(data?.dateline)}
+                          </Link>
                         </li>
                         <li>
                           <i className="fi fi-rr-clock-three" />

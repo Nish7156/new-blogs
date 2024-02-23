@@ -1,10 +1,10 @@
 import React from "react";
 import MainContentForBlog from "./MainContentForBlog";
 
-function BlogDetails() {
+function BlogDetails({data}:any) {
   return (
     <div>
-      <MainContentForBlog />
+      <MainContentForBlog data={data} />
     </div>
   );
 }

@@ -14,6 +14,17 @@ export const extractDate = (inputString: string) => {
   // Extracting the date from the input string
   const extractedDate = inputString.match(dateRegex);
 
-  // If the date is found, return it, otherwise return a message
-  return extractedDate ? extractedDate[0] : "Date not found";
+  // If the date is found, parse and format it, otherwise return a message
+  if (extractedDate) {
+    const dateObj = new Date(extractedDate[0]);
+    const formattedDate = new Intl.DateTimeFormat('en-US', {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric'
+    }).format(dateObj);
+    return formattedDate;
+  } else {
+    return "Date not found";
+  }
 };
+
