@@ -206,13 +206,13 @@ export default function RootLayout({
         </script>
         <script
           async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1027499434579496"
           crossOrigin="anonymous"
         ></script>
         <meta
           name="google-adsense-account"
-          content={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
-        />
+          content="ca-pub-1027499434579496"
+        ></meta>
       </head>
       <body className={inter.className}>
         <Header />
