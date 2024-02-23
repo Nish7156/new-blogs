@@ -35,35 +35,35 @@ async function startScrapingAndSaving() {
 //     timezone: "Asia/Kolkata",
 //   }
 // );
-cron.schedule(
-  "0 * * * *",
-  async () => {
-    await startScrapingAndSaving();
-    console.log("Starting searching and saving...");
-  },
-  {
-    timezone: "Asia/Kolkata",
-  }
-);
-
+// cron.schedule(
+//   "0 * * * *",
+//   async () => {
+//     await startScrapingAndSaving();
+//     console.log("Starting searching and saving...");
+//   },
+//   {
+//     timezone: "Asia/Kolkata",
+//   }
+// );
+startScrapingAndSaving();
 const inter = Inter({ subsets: ["latin"] });
 
 const meta = {
   title: "Blog",
   description: "blogs",
   image: "",
-  siteName: "",
+  siteName: ""
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.dummyblog.com"),
   title: {
     default: "Dummy Blog",
-    template: `%s | Dummy blog`,
+    template: `%s | Dummy blog`
   },
   description: "This is the description of dummy blog",
   verification: {
-    google: "google-site-verification=878787878",
+    google: "google-site-verification=878787878"
   },
   openGraph: {
     title: "Next.js",
@@ -74,17 +74,17 @@ export const metadata: Metadata = {
       {
         url: "https://nextjs.org/og.png", // Must be an absolute URL
         width: 800,
-        height: 600,
+        height: 600
       },
       {
         url: "https://nextjs.org/og-alt.png", // Must be an absolute URL
         width: 1800,
         height: 1600,
-        alt: "My custom alt",
-      },
+        alt: "My custom alt"
+      }
     ],
     locale: "en_US",
-    type: "website",
+    type: "website"
   },
   robots: {
     index: false,
@@ -96,26 +96,26 @@ export const metadata: Metadata = {
       noimageindex: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+      "max-snippet": -1
+    }
   },
   icons: {
     icon: [
       { url: "/icon.png" },
       new URL("/icon.png", "https://example.com"),
-      { url: "/icon-dark.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon-dark.png", media: "(prefers-color-scheme: dark)" }
     ],
     shortcut: ["/shortcut-icon.png"],
     apple: [
       { url: "/apple-icon.png" },
-      { url: "/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-icon-x3.png", sizes: "180x180", type: "image/png" }
     ],
     other: [
       {
         rel: "apple-touch-icon-precomposed",
-        url: "/apple-touch-icon-precomposed.png",
-      },
-    ],
+        url: "/apple-touch-icon-precomposed.png"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
@@ -124,11 +124,11 @@ export const metadata: Metadata = {
     siteId: "1467726470533754880",
     creator: "@nextjs",
     creatorId: "1467726470533754880",
-    images: ["https://nextjs.org/og.png"], // Must be an absolute URL
+    images: ["https://nextjs.org/og.png"] // Must be an absolute URL
   },
   itunes: {
     appId: "myAppStoreID",
-    appArgument: "myAppArgument",
+    appArgument: "myAppArgument"
   },
   appleWebApp: {
     title: "Apple Web App",
@@ -137,45 +137,45 @@ export const metadata: Metadata = {
       "/assets/startup/apple-touch-startup-image-768x1004.png",
       {
         url: "/assets/startup/apple-touch-startup-image-1536x2008.png",
-        media: "(device-width: 768px) and (device-height: 1024px)",
-      },
-    ],
+        media: "(device-width: 768px) and (device-height: 1024px)"
+      }
+    ]
   },
   alternates: {
     canonical: "https://nextjs.org",
     languages: {
       "en-US": "https://nextjs.org/en-US",
-      "de-DE": "https://nextjs.org/de-DE",
+      "de-DE": "https://nextjs.org/de-DE"
     },
     media: {
-      "only screen and (max-width: 600px)": "https://nextjs.org/mobile",
+      "only screen and (max-width: 600px)": "https://nextjs.org/mobile"
     },
     types: {
-      "application/rss+xml": "https://nextjs.org/rss",
-    },
+      "application/rss+xml": "https://nextjs.org/rss"
+    }
   },
   appLinks: {
     ios: {
       url: "https://nextjs.org/ios",
-      app_store_id: "app_store_id",
+      app_store_id: "app_store_id"
     },
     android: {
       package: "com.example.android/package",
-      app_name: "app_name_android",
+      app_name: "app_name_android"
     },
     web: {
       url: "https://nextjs.org/web",
-      should_fallback: true,
-    },
+      should_fallback: true
+    }
   },
   category: "technology",
   other: {
-    custom: ["meta1", "meta2"],
-  },
+    custom: ["meta1", "meta2"]
+  }
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {

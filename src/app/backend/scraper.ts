@@ -4,6 +4,7 @@ import cheerio from "cheerio";
 import { v2 as cloudinary } from "cloudinary"; // Import Cloudinary
 import slugify from "slugify";
 import clientPromise from "./database";
+import { geminiPrompt } from "./geminiai";
 //@ts-nocheck
 const mongoose = require("mongoose");
 
@@ -13,14 +14,14 @@ const blogSchema = new mongoose.Schema({
   image: String,
   category: String,
   dateline: String,
-  slug: String,
+  slug: String
 });
 
 // Configure Cloudinary with your credentials
 cloudinary.config({
   cloud_name: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
   api_key: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY,
-  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET_KEY,
+  api_secret: process.env.NEXT_PUBLIC_CLOUDINARY_API_SECRET_KEY
 });
 
 //For pagination
@@ -96,26 +97,36 @@ async function saveToDatabase(scrapedData: any[]) {
     const client = await clientPromise;
     const db = client.db(); // Get the database instance
 
+    // Prepare promises to get modified text concurrently
+    const modifiedTextPromises = scrapedData.map(async (data) => {
+      const aiTitlePromise = geminiPrompt(data.title);
+      const aiDescriptionPromise = geminiPrompt(data.description);
+      const [aiTitle, aiDescription] = await Promise.all([
+        aiTitlePromise,
+        aiDescriptionPromise
+      ]);
+      return { ...data, title: aiTitle, description: aiDescription };
+    });
+
+    // Wait for all modified text to be generated
+    const modifiedData = await Promise.all(modifiedTextPromises);
+
     // Check if the link or title already exists in the database
     const existingBlogs = await db
       .collection("blogs")
       .find({
         $or: [
           { link: { $in: scrapedData.map((data) => data.link) } },
-          { title: { $in: scrapedData.map((data) => data.title) } },
-        ],
+          { title: { $in: scrapedData.map((data) => data.title) } }
+        ]
       })
       .toArray();
 
-    const existingLinksSet = new Set(
-      existingBlogs.map((blog: string) => blog.link)
-    );
-    const existingTitlesSet = new Set(
-      existingBlogs.map((blog: { title: any }) => blog.title)
-    );
+    const existingLinksSet = new Set(existingBlogs.map((blog) => blog.link));
+    const existingTitlesSet = new Set(existingBlogs.map((blog) => blog.title));
 
     // Filter out data that already exists in the database
-    const newData = scrapedData.filter(
+    const newData = modifiedData.filter(
       (data) =>
         !existingLinksSet.has(data.link) && !existingTitlesSet.has(data.title)
     );
@@ -153,38 +164,23 @@ async function saveToDatabase(scrapedData: any[]) {
 
       // Upload image to Cloudinary
       const cloudinaryResult = await cloudinary.uploader.upload(image, {
-        public_id: `${slug}_image`,
+        public_id: `${slug}_image`
       });
       imageLink = cloudinaryResult.secure_url;
-
-      
 
       // Create a new blog document
       const blog = {
         title: data.title,
-        description,
+        description: data.description,
         image: imageLink,
-        link:data.link,
+        link: data.link,
         category: data.category.toLowerCase(),
         dateline: data.dateline,
-        slug: slug,
+        slug: slug
       };
 
       // Insert the blog document into the database
       await db.collection("blogs").insertOne(blog);
-
-      //  // Create a new blog document
-      //  const blog = new Blog({
-      //   title: data.title,
-      //   description,
-      //   image: imageLink,
-      //   category: data.category.toLowerCase(),
-      //   dateline: data.dateline,
-      //   slug: slug,
-      // });
-
-      // // Save the Blog instance to the database
-      // await blog.save();
     }
 
     console.log("Data saved successfully!");
