@@ -1,3 +1,5 @@
+import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import { extractDate } from "@/lib/helper";
 import Link from "next/link";
 import React from "react";
 
@@ -17,23 +19,38 @@ function MainContent({ data }: any) {
                     return (
                       <div className="col-md-6" key={index}>
                         <div className="news-card-thirteen">
-                          <div className="news-card-img">
-                            <img src="/img/news/news-80.webp" alt="Iamge" />
-                            <Link href="/" className="news-cat">
-                              {data?.category}
-                            </Link>
-                          </div>
+                          <Link
+                            href={`/categories/${data?.category}/${data?.slug}`}
+                          >
+                            <div className="news-card-img">
+                              <CustomImageAuto
+                                src={data?.image}
+                                alt={data?.title || "image"}
+                              />
+                              <Link
+                                href={`/categories/${data?.category}`}
+                                className="news-cat"
+                              >
+                                {data?.category}
+                              </Link>
+                            </div>
+                          </Link>
                           <div className="news-card-info">
                             <h3>
-                              <a href="business-details.html">
-                                Jiraiya Banks Wants To Teach You How To Build A
-                                House
-                              </a>
+                              <Link
+                                href={`/categories/${data?.category}/${data?.slug}`}
+                              >
+                                {data?.title}
+                              </Link>
                             </h3>
                             <ul className="news-metainfo list-style">
                               <li>
                                 <i className="fi fi-rr-calendar-minus" />
-                                <a href="news-by-date.html">Feb 27, 2023</a>
+                                <Link
+                                  href={`/categories/${data?.category}/${data?.slug}`}
+                                >
+                                  {extractDate(data?.dateline)}
+                                </Link>
                               </li>
                               <li>
                                 <i className="fi fi-rr-clock-three" />
