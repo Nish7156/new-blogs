@@ -1608,7 +1608,7 @@
     top: 5px;
   }
   .news-metainfo li i {
-    top: 6px;
+    top: 4px !important;
   }
   .video-slider-wrap .video-prev {
     left: 0;

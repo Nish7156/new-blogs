@@ -63,7 +63,9 @@ async function HeroGrid() {
                     </li>
                     <li>
                       <i className="fi fi-rr-calendar-minus" />
-                      <a href="news-by-date.html">Feb 03, 2023</a>
+                      <Link href="/">
+                        {extractDate(data[dataIndex].dateline)}
+                      </Link>
                     </li>
                     <li>
                       <i className="fi fi-rr-clock-three" />

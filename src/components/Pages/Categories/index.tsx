@@ -2,10 +2,10 @@ import React from 'react'
 import Breadcrumb from './Breadcrumb'
 import MainContent from './MainContent'
 
-function CategoriesPage() {
+function CategoriesPage({data}:any) {
   return (
     <div>
-        <MainContent/>
+        <MainContent data={data}/>
     </div>
   )
 }

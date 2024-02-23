@@ -1,9 +1,11 @@
 import React, { Suspense } from "react";
 import CustomSlider from "@/components/Utilty/CustomSlider";
 import Image from "next/image";
+import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
+import Link from "next/link";
 
 async function getData() {
-  const res = await fetch("https://dummyjson.com/products");
+  const res = await fetch(`${checkEnvironment()}/api/blogs`);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -21,7 +23,7 @@ async function TopSlider() {
           <span>Trending</span>
           <div className="trending-slider-two swiper">
             <Suspense fallback={<>Loading</>}>
-              <CustomSlider data={data?.products.slice(0, 3)}>
+              <CustomSlider data={data?.slice(0, 3)}>
                 <SliderCard />
               </CustomSlider>
             </Suspense>
@@ -35,9 +37,9 @@ async function TopSlider() {
 export default TopSlider;
 
 const SliderCard = ({ item }: any) => {
-
   return (
     <div className="swiper-slide news-card-one">
+      <Link href={'/'}>
       <div className="news-card-img">
         <Image
           src="/img/news/trending-1.webp"
@@ -47,10 +49,11 @@ const SliderCard = ({ item }: any) => {
           loading="lazy"
         />
       </div>
+      </Link>
       <div className="news-card-info">
-        <a href="news-by-category.html" className="news-cat">
+        <Link href="/" className="news-cat">
           Fashion
-        </a>
+        </Link>
         <h3>
           <a href="business-details.html">
             Fashion Across The Globe: Exploring 15 Trendsetting Destinations
@@ -59,7 +62,7 @@ const SliderCard = ({ item }: any) => {
         <ul className="news-metainfo list-style">
           <li>
             <i className="fi fi-rr-calendar-minus" />
-            <a href="news-by-date.html">Mar 03, 2023</a>
+            <Link href="/">Mar 03, 2023</Link>
           </li>
           <li>
             <i className="fi fi-rr-clock-three" />
