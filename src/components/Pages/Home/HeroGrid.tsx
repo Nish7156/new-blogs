@@ -19,7 +19,7 @@ async function getData() {
 async function HeroGrid() {
   const data = await getData();
 
-  let dataIndex = 1;
+  let dataIndex = Math.floor(Math.random() * 10) + 1;
 
   return (
     <>
