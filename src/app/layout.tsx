@@ -206,13 +206,29 @@ export default function RootLayout({
         </script>
         <script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1027499434579496"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
           crossOrigin="anonymous"
         ></script>
         <meta
           name="google-adsense-account"
-          content="ca-pub-1027499434579496"
+          content={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
         ></meta>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+      </script>
+    `,
+          }}
+        ></script>
       </head>
       <body className={inter.className}>
         <Header />
