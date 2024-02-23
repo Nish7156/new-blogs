@@ -157,6 +157,8 @@ async function saveToDatabase(scrapedData: any[]) {
       });
       imageLink = cloudinaryResult.secure_url;
 
+      
+
       // Create a new blog document
       const blog = {
         title: data.title,

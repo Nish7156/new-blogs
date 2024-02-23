@@ -53,6 +53,11 @@
   optionalDependencies:
     esbuild-linux-64 "^0.14.5"
 
+"@google/generative-ai@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/@google/generative-ai/-/generative-ai-0.2.1.tgz"
+  integrity sha512-gNmMFadfwi7qf/6M9gImgyGJXY1jKQ/de8vGOqgJ0PPYgQ7WwzZDavbKrIuXS2zdqZZaYtxW3EFN6aG9x5wtFw==
+
 "@humanwhocodes/config-array@^0.11.13":
   version "0.11.14"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.11.14.tgz"
