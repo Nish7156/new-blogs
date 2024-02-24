@@ -1,13 +1,7 @@
 import BlogDetails from "@/components/Pages/Categories/BlogDetails";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import React from "react";
-
 import type { Metadata, ResolvingMetadata } from "next";
-
-type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
 
 export async function generateMetadata(
   { params, searchParams }: any,
@@ -15,10 +9,12 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   // fetch data
   const blog = await fetch(
-    `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`
+    `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`,
+    {
+      cache: "no-cache",
+    }
   ).then((res) => res.json());
 
-  // optionally access and extend (rather than replace) parent metadata
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
@@ -38,7 +34,7 @@ async function Blog({ params }: { params: { slug: string } }) {
         //@ts-ignore
         `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`,
         {
-          cache: "no-store",
+          cache: "no-cache",
         }
       );
       if (!res.ok) {
