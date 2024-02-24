@@ -17,10 +17,10 @@ export const extractDate = (inputString: string) => {
   // If the date is found, parse and format it, otherwise return a message
   if (extractedDate) {
     const dateObj = new Date(extractedDate[0]);
-    const formattedDate = new Intl.DateTimeFormat('en-US', {
-      month: 'short',
-      day: '2-digit',
-      year: 'numeric'
+    const formattedDate = new Intl.DateTimeFormat("en-US", {
+      month: "short",
+      day: "2-digit",
+      year: "numeric",
     }).format(dateObj);
     return formattedDate;
   } else {
@@ -28,3 +28,11 @@ export const extractDate = (inputString: string) => {
   }
 };
 
+export function formatCategory(category: string) {
+  // Split the string by "-" and capitalize each word
+  const formattedCategory = category
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  return formattedCategory;
+}
