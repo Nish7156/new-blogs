@@ -12,7 +12,6 @@ import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
 import cron from "node-cron";
-import { handleSendMessage } from "./backend/openai";
 
 async function startScrapingAndSaving() {
   try {
@@ -49,27 +48,27 @@ cron.schedule(
 const inter = Inter({ subsets: ["latin"] });
 
 const meta = {
-  title: "Blog",
-  description: "blogs",
+  title: "Tech Of India",
+  description: "Tech Of India",
   image: "",
-  siteName: "",
+  siteName: "https://techofindia.in",
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dummyblog.com"),
+  metadataBase: new URL("https://techofindia.in"),
   title: {
-    default: "Dummy Blog",
-    template: `%s | Dummy blog`,
+    default: "Tech Of India",
+    template: `%s | Tech Of India`,
   },
   description: "This is the description of dummy blog",
   verification: {
     google: "google-site-verification=878787878",
   },
   openGraph: {
-    title: "Next.js",
+    title: "Tech Of India",
     description: "The React Framework for the Web",
-    url: "https://nextjs.org",
-    siteName: "Next.js",
+    url: "https://techofindia.in",
+    siteName: "Tech Of India",
     images: [
       {
         url: "https://nextjs.org/og.png", // Must be an absolute URL

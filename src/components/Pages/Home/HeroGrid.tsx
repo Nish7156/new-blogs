@@ -34,7 +34,7 @@ async function HeroGrid() {
               <div className="news-card-eleven">
                 <div className="news-card-img">
                   <CustomImageAuto
-                    src={data[dataIndex].image}
+                    src={data[dataIndex]?.image}
                     layout="fill"
                     className={"image"}
                     alt=""
@@ -48,9 +48,9 @@ async function HeroGrid() {
                     {data[dataIndex].category}
                   </Link>
                   <h3>
-                    <Link href="">{data[dataIndex].title}</Link>
+                    <Link href="">{data[dataIndex]?.title}</Link>
                   </h3>
-                  <p>{truncateText(data[dataIndex].description, 230)}</p>
+                  <p>{truncateText(data[dataIndex]?.description, 230)}</p>
                   <ul className="news-metainfo list-style">
                     <li className="author">
                       <span className="author-img">
@@ -64,7 +64,7 @@ async function HeroGrid() {
                     <li>
                       <i className="fi fi-rr-calendar-minus" />
                       <Link href="/">
-                        {extractDate(data[dataIndex].dateline)}
+                        {extractDate(data[dataIndex]?.dateline)}
                       </Link>
                     </li>
                     <li>
