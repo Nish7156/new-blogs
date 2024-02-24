@@ -1,12 +1,9 @@
 import BlogDetails from "@/components/Pages/Categories/BlogDetails";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import React from "react";
-import type { Metadata, ResolvingMetadata } from "next";
+import type { Metadata } from "next";
 
-export async function generateMetadata(
-  { params, searchParams }: any,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   // fetch data
   const blog = await fetch(
     `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`,
@@ -15,14 +12,12 @@ export async function generateMetadata(
     }
   ).then((res) => res.json());
 
-  const previousImages = (await parent).openGraph?.images || [];
-
   return {
     title: blog?.title,
     description: blog?.description,
     category: blog?.category,
     openGraph: {
-      images: [`${blog?.image}`, ...previousImages],
+      images: blog?.image,
     },
   };
 }

@@ -6,8 +6,8 @@ import React from "react";
 
 async function getData() {
   try {
-    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-      cache: "no-store",
+    const res = await fetch(`${checkEnvironment()}/api/hero-blog`, {
+      cache: "force-cache",
     });
     if (!res.ok) {
       console.log("error");
@@ -21,7 +21,8 @@ async function getData() {
 async function HeroGrid() {
   const data = await getData();
 
-  let dataIndex = Math.floor(Math.random() * 10) + 1;
+
+  let dataIndex = 0;
 
   return (
     <>
@@ -50,7 +51,7 @@ async function HeroGrid() {
                   <h3>
                     <Link href="">{data[dataIndex]?.title}</Link>
                   </h3>
-                  <p>{truncateText(data[dataIndex]?.description, 230)}</p>
+                  <p>{truncateText(data[dataIndex]?.description || "", 230)}</p>
                   <ul className="news-metainfo list-style">
                     <li className="author">
                       <span className="author-img">
@@ -79,7 +80,7 @@ async function HeroGrid() {
           <div className="col-xl-6">
             <div className="row">
               {data &&
-                data?.slice(8, 12).map((data: any, index: number) => {
+                data?.slice(1, 5).map((data: any, index: number) => {
                   return (
                     <div className="col-md-6" key={index}>
                       <div className="news-card-thirteen">
