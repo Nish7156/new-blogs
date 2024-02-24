@@ -1,8 +1,23 @@
+import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import React from "react";
 
-function SelectedNews() {
-  const arr = [1, 1, 1, 1, 1, 1, 1, 1];
+async function getBlogs() {
+  try {
+    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
+      cache: "force-cache",
+    });
+    if (!res.ok) {
+      console.log("error");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function SelectedNews() {
+  const data = await getBlogs();
   const tabData = [
     { id: 1, name: "Politics" },
     { id: 2, name: "Sports" },
@@ -44,7 +59,7 @@ function SelectedNews() {
           <div className="tab-content selected-news-content">
             <div className="tab-pane fade" id="tab_1" role="tabpanel">
               <div className="row justify-content-center">
-                {arr.map((data: any) => {
+                {data?.slice(0, 8).map((data: any) => {
                   return (
                     <div
                       key={data}
@@ -53,19 +68,18 @@ function SelectedNews() {
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
                           <CustomImageAuto
-                            src="/img/news/politics/politics-7.webp"
+                             src={data.image}
                             alt="Iamge"
                           />
 
                           <a href="business.html" className="news-cat">
-                            Politics
+                            {data?.category}
                           </a>
                         </div>
                         <div className="news-card-info">
                           <h3>
                             <a href="business-details.html">
-                              The Political Landscape: Navigating Power And
-                              Policy
+                             {data?.title}
                             </a>
                           </h3>
                           <ul className="news-metainfo list-style">
@@ -91,7 +105,7 @@ function SelectedNews() {
               role="tabpanel"
             >
               <div className="row justify-content-center">
-                {arr.map((data: any) => {
+                {data?.slice(9, 17).map((data: any) => {
                   return (
                     <div
                       key={data}
@@ -100,19 +114,18 @@ function SelectedNews() {
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
                           <CustomImageAuto
-                            src="/img/news/news-90.webp"
+                            src={data.image}
                             alt="Iamge"
                           />
 
                           <a href="business.html" className="news-cat">
-                            Politics
+                            {data?.category}
                           </a>
                         </div>
                         <div className="news-card-info">
                           <h3>
                             <a href="business-details.html">
-                              The Political Landscape: Navigating Power And
-                              Policy
+                            {data?.title}
                             </a>
                           </h3>
                           <ul className="news-metainfo list-style">
@@ -134,7 +147,7 @@ function SelectedNews() {
             </div>
             <div className="tab-pane fade" id="tab_3" role="tabpanel">
               <div className="row justify-content-center">
-                {arr.map((data: any) => {
+                {data?.slice(18, 26).map((data: any) => {
                   return (
                     <div
                       key={data}
@@ -143,19 +156,18 @@ function SelectedNews() {
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
                           <CustomImageAuto
-                            src="/img/news/politics/politics-9.webp"
+                            src={data.image}
                             alt="Iamge"
                           />
 
                           <a href="business.html" className="news-cat">
-                            Politics
+                            {data?.category}
                           </a>
                         </div>
                         <div className="news-card-info">
                           <h3>
                             <a href="business-details.html">
-                              The Political Landscape: Navigating Power And
-                              Policy
+                            {data?.title}
                             </a>
                           </h3>
                           <ul className="news-metainfo list-style">

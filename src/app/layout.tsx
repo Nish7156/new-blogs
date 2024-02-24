@@ -45,6 +45,7 @@ cron.schedule(
   }
 );
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 const meta = {
