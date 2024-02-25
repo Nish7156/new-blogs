@@ -12,8 +12,8 @@ import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
 import cron from "node-cron";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 async function startScrapingAndSaving() {
   try {
@@ -52,7 +52,7 @@ const inter = Inter({ subsets: ["latin"] });
 const meta = {
   title: "Tech Of India",
   description:
-    "Welcome to Tech of India, your premier destination for insightful tech blogs tailored to the Indian audience. Explore cutting-edge innovations, expert reviews, and practical guides, all curated to empower and inform tech enthusiasts across India. Stay ahead of the curve with our diverse range of topics, from latest gadgets to emerging trends, as we delve deep into the dynamic world of technology, uniquely crafted for the Indian perspective. Join us as we unravel the limitless possibilities of the digital era, right here at Tech of India.",
+    "Welcome to Tech of India! Explore cutting-edge tech, expert reviews, and practical guides tailored for Indian enthusiasts. Stay ahead with our diverse topics, from gadgets to trends. Unravel the digital era with us!",
   image: "",
   siteName: "https://techofindia.in",
 };
@@ -64,6 +64,18 @@ export const metadata: Metadata = {
     template: `%s | ${meta?.title}`,
   },
   description: meta?.description,
+  keywords: [
+    "Indian tech",
+    "Tech blogs",
+    "Cutting-edge innovations",
+    "Expert reviews",
+    "Practical guides",
+    "Gadgets",
+    "Emerging trends",
+    "Digital era",
+    "Technology insights",
+    "Tech enthusiasts",
+  ],
   verification: {
     google: "google-site-verification=878787878",
   },
@@ -197,7 +209,7 @@ export default function RootLayout({
     <html lang="en" className="theme-light">
       <head>
         <meta name="theme-color" content="#ffff" />
-        {/* <script id="schema-org" type="application/ld+json">
+        <script id="schema-org" type="application/ld+json">
           {`
           {
             "@context": "http://schema.org",
@@ -216,7 +228,7 @@ export default function RootLayout({
             }
           }
         `}
-        </script> */}
+        </script>
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
