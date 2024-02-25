@@ -22,7 +22,7 @@ async function getBlogByCategoryAndSlug(category: any, slug: any) {
 }
 
 export async function generateStaticParams() {
-  const posts = await fetch("http://localhost:3000/api/blogs").then((res) =>
+  const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
     res.json()
   );
 
