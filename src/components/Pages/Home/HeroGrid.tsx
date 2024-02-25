@@ -34,13 +34,13 @@ async function HeroGrid() {
                   >
                     {formatCategory(data[dataIndex].category)}
                   </Link>
-                  <h3>
+                  <h1>
                     <Link
                       href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
                     >
                       {data[dataIndex]?.title}
                     </Link>
-                  </h3>
+                  </h1>
                   <p>{truncateText(data[dataIndex]?.description || "", 230)}</p>
                   <ul className="news-metainfo list-style">
                     <li className="author">

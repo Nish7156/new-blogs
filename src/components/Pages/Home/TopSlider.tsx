@@ -55,9 +55,9 @@ const SliderCard = ({ item }: any) => {
           Fashion
         </Link>
         <h3>
-          <a href="business-details.html">
+          <Link href="">
             Fashion Across The Globe: Exploring 15 Trendsetting Destinations
-          </a>
+          </Link>
         </h3>
         <ul className="news-metainfo list-style">
           <li>

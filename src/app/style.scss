@@ -40,3 +40,18 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.featured-news-three .news-card-eleven .news-card-info h1{
+  font-size: 34px;
+  line-height: 42px;
+  margin: 0 0 9px;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .featured-news-three .news-card-eleven .news-card-info h1 {
+    font-size: 20px;
+    line-height: 32px;
+    margin: 0 0 5px;
+  }
+}
