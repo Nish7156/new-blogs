@@ -12,6 +12,8 @@ import Footer from "@/components/Pages/Layout/Footer";
 import BootstrapClient from "@/components/BootstrapClient";
 import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
 import cron from "node-cron";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from '@vercel/analytics/react';
 
 async function startScrapingAndSaving() {
   try {
@@ -244,6 +246,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Analytics />
+        <SpeedInsights />
         <Footer />
         <BootstrapClient />
       </body>
