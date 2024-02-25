@@ -1,5 +1,5 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import { extractDate, truncateText } from "@/lib/helper";
+import { extractDate, formatCategory, truncateText } from "@/lib/helper";
 import { getHeroBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
@@ -8,6 +8,7 @@ async function HeroGrid() {
   const data = await getHeroBlogs();
 
   let dataIndex = 0;
+  
 
   return (
     <>
@@ -31,10 +32,14 @@ async function HeroGrid() {
                     href={`/categories/${data[dataIndex]?.category}`}
                     className="news-cat capitalize"
                   >
-                    {data[dataIndex].category}
+                    {formatCategory(data[dataIndex].category)}
                   </Link>
                   <h3>
-                    <Link href="">{data[dataIndex]?.title}</Link>
+                    <Link
+                      href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+                    >
+                      {data[dataIndex]?.title}
+                    </Link>
                   </h3>
                   <p>{truncateText(data[dataIndex]?.description || "", 230)}</p>
                   <ul className="news-metainfo list-style">
@@ -49,7 +54,10 @@ async function HeroGrid() {
                     </li>
                     <li>
                       <i className="fi fi-rr-calendar-minus" />
-                      <Link href="/">
+                      <Link
+                        href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+                        prefetch={false}
+                      >
                         {extractDate(data[dataIndex]?.dateline)}
                       </Link>
                     </li>
@@ -76,10 +84,10 @@ async function HeroGrid() {
                             <CustomImageAuto src={data?.image} alt="Iamge" />
                           </Link>
                           <Link
-                            href={`/categories/${data?.category}}`}
+                            href={`/categories/${data?.category}`}
                             className="news-cat capitalize"
                           >
-                            {data.category}
+                            {formatCategory(data.category)}
                           </Link>
                         </div>
                         <div className="news-card-info">

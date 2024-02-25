@@ -45,12 +45,12 @@ cron.schedule(
   }
 );
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 const meta = {
   title: "Tech Of India",
-  description: "Tech Of India",
+  description:
+    "Welcome to Tech of India, your premier destination for insightful tech blogs tailored to the Indian audience. Explore cutting-edge innovations, expert reviews, and practical guides, all curated to empower and inform tech enthusiasts across India. Stay ahead of the curve with our diverse range of topics, from latest gadgets to emerging trends, as we delve deep into the dynamic world of technology, uniquely crafted for the Indian perspective. Join us as we unravel the limitless possibilities of the digital era, right here at Tech of India.",
   image: "",
   siteName: "https://techofindia.in",
 };
@@ -58,18 +58,19 @@ const meta = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://techofindia.in"),
   title: {
-    default: "Tech Of India",
-    template: `%s | Tech Of India`,
+    default: meta?.title,
+    template: `%s | ${meta?.title}`,
   },
-  description: "This is the description of dummy blog",
+  description: meta?.description,
   verification: {
     google: "google-site-verification=878787878",
   },
+  manifest: "/manifest.json",
   openGraph: {
-    title: "Tech Of India",
-    description: "The React Framework for the Web",
-    url: "https://techofindia.in",
-    siteName: "Tech Of India",
+    title: meta?.title,
+    description: meta?.description,
+    url: meta?.siteName,
+    siteName: meta?.title,
     images: [
       {
         url: "https://nextjs.org/og.png", // Must be an absolute URL
@@ -119,8 +120,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Next.js",
-    description: "The React Framework for the Web",
+    title: meta?.title,
+    description: meta.description,
     siteId: "1467726470533754880",
     creator: "@nextjs",
     creatorId: "1467726470533754880",
@@ -131,7 +132,7 @@ export const metadata: Metadata = {
     appArgument: "myAppArgument",
   },
   appleWebApp: {
-    title: "Apple Web App",
+    title: meta.title,
     statusBarStyle: "black-translucent",
     startupImage: [
       "/assets/startup/apple-touch-startup-image-768x1004.png",
@@ -168,9 +169,20 @@ export const metadata: Metadata = {
       should_fallback: true,
     },
   },
-  category: "technology",
+  category: "Technology",
   other: {
-    custom: ["meta1", "meta2"],
+    custom: [
+      "Gadgets",
+      "Software",
+      "Mobile Technology",
+      "Internet of Things (IoT)",
+      "Artificial Intelligence (AI)",
+      "Robotics",
+      "Gaming",
+      "Cybersecurity",
+      "Tech Industry News",
+      "How-Tos and Guides",
+    ],
   },
 };
 
@@ -183,7 +195,6 @@ export default function RootLayout({
     <html lang="en" className="theme-light">
       <head>
         <meta name="theme-color" content="#ffff" />
-        <link rel="manifest" href="/manifest.json" />
         {/* <script id="schema-org" type="application/ld+json">
           {`
           {

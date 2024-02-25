@@ -1,5 +1,5 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import { extractDate } from "@/lib/helper";
+import { extractDate, formatCategory } from "@/lib/helper";
 import Link from "next/link";
 import React from "react";
 import SideBarData from "./SideBarData";
@@ -32,7 +32,7 @@ function MainContent({ data }: any) {
                                 href={`/categories/${data?.category}`}
                                 className="news-cat"
                               >
-                                {data?.category}
+                                {formatCategory(data?.category)}
                               </Link>
                             </div>
                           </Link>
