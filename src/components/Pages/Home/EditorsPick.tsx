@@ -1,25 +1,11 @@
-import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import { extractDate, truncateText } from "@/lib/helper";
+import { getEditoresBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
 
-async function getData() {
-  try {
-    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-      cache: "no-store",
-    });
-    if (!res.ok) {
-      console.log("error");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 async function EditorsPick() {
-  const data = await getData();
+  const data = await getEditoresBlogs();
   return (
     <>
       <div className="editor-news-three pt-100 pb-75">

@@ -54,7 +54,7 @@ function CustomSlider({
         {data?.map((item: any, index: number) => {
           return (
             <SwiperSlide className="" key={index}>
-                  {React.cloneElement(children, { data:item })}
+                 {React.cloneElement(children, { item })}
             </SwiperSlide>
           );
         })}

@@ -1,23 +1,10 @@
-import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import { getEditoresBlogs } from "@/lib/load-blogs";
 import React from "react";
 
-async function getBlogs() {
-  try {
-    const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-      cache: "force-cache",
-    });
-    if (!res.ok) {
-      console.log("error");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
 
 async function SelectedNews() {
-  const data = await getBlogs();
+  const data = await getEditoresBlogs();
   const tabData = [
     { id: 1, name: "Politics" },
     { id: 2, name: "Sports" },
@@ -67,10 +54,7 @@ async function SelectedNews() {
                     >
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
-                          <CustomImageAuto
-                             src={data.image}
-                            alt="Iamge"
-                          />
+                          <CustomImageAuto src={data.image} alt="Iamge" />
 
                           <a href="business.html" className="news-cat">
                             {data?.category}
@@ -78,9 +62,7 @@ async function SelectedNews() {
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <a href="business-details.html">
-                             {data?.title}
-                            </a>
+                            <a href="business-details.html">{data?.title}</a>
                           </h3>
                           <ul className="news-metainfo list-style">
                             <li>
@@ -113,10 +95,7 @@ async function SelectedNews() {
                     >
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
-                          <CustomImageAuto
-                            src={data.image}
-                            alt="Iamge"
-                          />
+                          <CustomImageAuto src={data.image} alt="Iamge" />
 
                           <a href="business.html" className="news-cat">
                             {data?.category}
@@ -124,9 +103,7 @@ async function SelectedNews() {
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <a href="business-details.html">
-                            {data?.title}
-                            </a>
+                            <a href="business-details.html">{data?.title}</a>
                           </h3>
                           <ul className="news-metainfo list-style">
                             <li>
@@ -155,10 +132,7 @@ async function SelectedNews() {
                     >
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
-                          <CustomImageAuto
-                            src={data.image}
-                            alt="Iamge"
-                          />
+                          <CustomImageAuto src={data.image} alt="Iamge" />
 
                           <a href="business.html" className="news-cat">
                             {data?.category}
@@ -166,9 +140,7 @@ async function SelectedNews() {
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <a href="business-details.html">
-                            {data?.title}
-                            </a>
+                            <a href="business-details.html">{data?.title}</a>
                           </h3>
                           <ul className="news-metainfo list-style">
                             <li>
