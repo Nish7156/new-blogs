@@ -58,7 +58,7 @@ async function Blog({
 
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Product",
+    "@type": "Blog",
     name: data?.name,
     image: data?.image,
     description: data?.description,

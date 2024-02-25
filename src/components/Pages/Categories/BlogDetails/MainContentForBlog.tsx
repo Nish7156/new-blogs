@@ -2,6 +2,7 @@ import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import Link from "next/link";
 import React from "react";
 import SideBarData from "../SideBarData";
+import { extractDate, formatCategory } from "@/lib/helper";
 
 function MainContentForBlog({ data }: any) {
   return (
@@ -17,19 +18,21 @@ function MainContentForBlog({ data }: any) {
                     href={`/categories/${data?.category}`}
                     className="news-cat"
                   >
-                    {data?.category}
+                    {formatCategory(data?.category)}
                   </Link>
                 </div>
                 <ul className="news-metainfo list-style">
                   <li className="author">
                     <span className="author-img">
-                      <img src="/img/author/author-thumb-1.webp" alt="Image" />
+                      <CustomImageAuto src="/img/author/author-thumb-1.webp" alt="Image" />
                     </span>
-                    <a href="author.html">James William</a>
+                    {/* <Link href="/">James William</Link> */}
                   </li>
                   <li>
                     <i className="fi fi-rr-calendar-minus" />
-                    <a href="news-by-date.html">Mar 03, 2023</a>
+                    <Link href="" prefetch={false}>
+                      {extractDate(data?.dateline)}
+                    </Link>
                   </li>
                   <li>
                     <i className="fi fi-rr-clock-three" />
@@ -37,20 +40,8 @@ function MainContentForBlog({ data }: any) {
                   </li>
                 </ul>
                 <div className="news-para">
-                  <h1>Jiraiya Banks Wants To Teach You How To Build A House</h1>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    stand dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specim book. It has survived not only five{" "}
-                    <strong>gravida</strong> but also the leap into electronic
-                    typesetting, remaining essentially unchange was popularised
-                    in the 1960s with the release of Letraset sheets containing
-                    Lorem Ipsum <a href="index.html">Ipsum</a> and more recently
-                    with desktop publishing software like Aldus src=" maker
-                    including versions of Lorem Ipsum.
-                  </p>
+                  <h1 className="capitalize">{data?.title}</h1>
+                  <p>{data?.description}</p>
                   <p>
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
@@ -61,7 +52,7 @@ function MainContentForBlog({ data }: any) {
                   </p>
                 </div>
                 <div className="news-img">
-                  <img src="/img/news/single-news-2.webp" alt="Image" />
+                  <CustomImageAuto src="/img/news/single-news-2.webp" alt="Image" />
                 </div>
                 <div className="news-para">
                   <h5>
