@@ -89,7 +89,7 @@ async function SideBarData() {
                       <h3>
                         <Link
                           href={`/categories/${data?.category}/${data?.slug}`}
-                          prefetch={false}
+                          prefetch={true}
                         >
                           {truncateText(data?.title, 50)}
                         </Link>

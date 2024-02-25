@@ -30,7 +30,7 @@ function MainContentForBlog({ data }: any) {
                   </li>
                   <li>
                     <i className="fi fi-rr-calendar-minus" />
-                    <Link href="" prefetch={false}>
+                    <Link href="" prefetch={true}>
                       {extractDate(data?.dateline)}
                     </Link>
                   </li>

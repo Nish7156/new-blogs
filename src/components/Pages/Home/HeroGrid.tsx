@@ -56,7 +56,7 @@ async function HeroGrid() {
                       <i className="fi fi-rr-calendar-minus" />
                       <Link
                         href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
-                        prefetch={false}
+                        prefetch={true}
                       >
                         {extractDate(data[dataIndex]?.dateline)}
                       </Link>
