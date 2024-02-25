@@ -50,9 +50,9 @@ cron.schedule(
 const inter = Inter({ subsets: ["latin"] });
 
 const meta = {
-  title: "Tech Of India",
+  title: "Tech of India - Your Gateway to Cutting-Edge Techa",
   description:
-    "Welcome to Tech of India! Explore cutting-edge tech, expert reviews, and practical guides tailored for Indian enthusiasts. Stay ahead with our diverse topics, from gadgets to trends. Unravel the digital era with us!",
+    "Discover cutting-edge tech, expert reviews & guides for Indian enthusiasts at Tech of India! Stay ahead with gadgets, trends & more. Embrace the digital era with us!",
   image: "",
   siteName: "https://techofindia.in",
 };
@@ -209,6 +209,7 @@ export default function RootLayout({
     <html lang="en" className="theme-light">
       <head>
         <meta name="theme-color" content="#ffff" />
+        <meta name="robots" content="noindex" />
         <script id="schema-org" type="application/ld+json">
           {`
           {
