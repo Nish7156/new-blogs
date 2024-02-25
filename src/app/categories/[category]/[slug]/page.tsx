@@ -3,13 +3,39 @@ import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import React from "react";
 import type { Metadata } from "next";
 
+async function getBlogByCategoryAndSlug(category: any, slug: any) {
+  try {
+    const res = await fetch(
+      //@ts-ignore
+      `${checkEnvironment()}/api/blogs/${category}/${slug}`,
+      {
+        cache: "no-cache",
+      }
+    );
+    if (!res.ok) {
+      console.log("error");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+export async function generateStaticParams() {
+  const posts = await fetch("http://localhost:3000/api/blogs").then((res) =>
+    res.json()
+  );
+
+  return posts.map((post: any) => ({
+    category: post.category,
+    slug: post.slug,
+  }));
+}
+
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   // fetch data
   const blog = await fetch(
-    `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`,
-    {
-      cache: "no-cache",
-    }
+    `${checkEnvironment()}/api/blogs/${params?.category}/${params?.slug}`
   ).then((res) => res.json());
 
   return {
@@ -22,25 +48,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-async function Blog({ params }: { params: { slug: string } }) {
-  async function getBlogByCategoryAndSlug() {
-    try {
-      const res = await fetch(
-        //@ts-ignore
-        `${checkEnvironment()}/api/blogs/${params?.slug}/${params?.blog}`,
-        {
-          cache: "no-cache",
-        }
-      );
-      if (!res.ok) {
-        console.log("error");
-      }
-      return res.json();
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  const data = await getBlogByCategoryAndSlug();
+async function Blog({
+  params,
+}: {
+  params: { category: string; slug: string };
+}) {
+  
+  const data = await getBlogByCategoryAndSlug(params.category, params?.slug);
 
   const jsonLd = {
     "@context": "https://schema.org",
