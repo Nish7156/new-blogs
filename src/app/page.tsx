@@ -9,8 +9,6 @@ import SelectedNews from "@/components/Pages/Home/SelectedNews";
 import MostPopular from "@/components/Pages/Home/MostPopular";
 import GeneralNews from "@/components/Pages/Home/GeneralNews";
 
-
-
 export default function Home() {
   return (
     <>
@@ -22,10 +20,10 @@ export default function Home() {
       <EditorsPick />
       <NewsLetterBox />
       <SocialMediaList />
-      <div style={{marginTop:"20px"}}></div>
+      <div style={{ marginTop: "20px" }}></div>
       <SelectedNews />
-      <MostPopular/>
-      <GeneralNews/>
+      <MostPopular />
+      <GeneralNews />
       {/* <BottomSlider/> */}
     </>
   );

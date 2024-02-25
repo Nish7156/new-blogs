@@ -184,7 +184,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#ffff" />
         <link rel="manifest" href="/manifest.json" />
-        <script id="schema-org" type="application/ld+json">
+        {/* <script id="schema-org" type="application/ld+json">
           {`
           {
             "@context": "http://schema.org",
@@ -203,7 +203,7 @@ export default function RootLayout({
             }
           }
         `}
-        </script>
+        </script> */}
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}

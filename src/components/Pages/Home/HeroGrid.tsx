@@ -1,26 +1,11 @@
-import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import { extractDate, truncateText } from "@/lib/helper";
+import { getHeroBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
 
-async function getData() {
-  try {
-    const res = await fetch(`${checkEnvironment()}/api/hero-blog`, {
-      cache: "force-cache",
-    });
-    if (!res.ok) {
-      console.log("error");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
-
 async function HeroGrid() {
-  const data = await getData();
-
+  const data = await getHeroBlogs();
 
   let dataIndex = 0;
 
