@@ -14,6 +14,7 @@ import { scrapeAajTak, saveToDatabase } from "./backend/scraper";
 import cron from "node-cron";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 async function startScrapingAndSaving() {
   try {
@@ -210,7 +211,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#ffff" />
         <meta name="robots" content="noindex" />
-        <script id="schema-org" type="application/ld+json">
+        <Script async id="schema-org" type="application/ld+json">
           {`
           {
             "@context": "http://schema.org",
@@ -229,21 +230,26 @@ export default function RootLayout({
             }
           }
         `}
-        </script>
-        <script
+        </Script>
+        <Script
+        id="adsbygoogle"
           async
+          strategy="lazyOnload"
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
           crossOrigin="anonymous"
-        ></script>
+        ></Script>
         <meta
           name="google-adsense-account"
           content={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
         ></meta>
-        <script
+        <Script
+        id="gtag"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        ></script>
-        <script
+        ></Script>
+        <Script
+        id="google-analytics"
+          async
           dangerouslySetInnerHTML={{
             __html: `
       <script>
@@ -254,7 +260,19 @@ export default function RootLayout({
       </script>
     `,
           }}
-        ></script>
+        ></Script>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "inline-block", width: 728, height: 90 }}
+          data-ad-client={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
+          data-ad-slot={1234567890}
+        />
+        <script
+        id="adsbygoogle1"
+          dangerouslySetInnerHTML={{
+            __html: "(window.adsbygoogle = window.adsbygoogle || []).push({});",
+          }}
+        />
       </head>
       <body className={inter.className}>
         <Header />
