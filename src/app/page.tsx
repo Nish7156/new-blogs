@@ -8,6 +8,7 @@ import SocialMediaList from "@/components/Pages/Home/SocialMediaList";
 import SelectedNews from "@/components/Pages/Home/SelectedNews";
 import MostPopular from "@/components/Pages/Home/MostPopular";
 import GeneralNews from "@/components/Pages/Home/GeneralNews";
+import AdCode from "./AdCode";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Suspense fallback={<>Loading</>}>
         <HeroGrid />
       </Suspense>
-      <TopSponserAd />
+      {/* <TopSponserAd /> */}
+      <AdCode />
       <EditorsPick />
       <NewsLetterBox />
       <SocialMediaList />
