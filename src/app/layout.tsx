@@ -232,7 +232,7 @@ export default function RootLayout({
         `}
         </Script>
         <Script
-        id="adsbygoogle"
+          id="adsbygoogle"
           async
           strategy="lazyOnload"
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
@@ -243,24 +243,19 @@ export default function RootLayout({
           content={`${process.env.NEXT_PUBLIC_ADSENCE_API_KEY}`}
         ></meta>
         <Script
-        id="gtag"
+          id="gtag"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
         ></Script>
-        <Script
-        id="google-analytics"
-          async
-          dangerouslySetInnerHTML={{
-            __html: `
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-      </script>
-    `,
-          }}
-        ></Script>
+
+        <Script id="google-analytics">
+          {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', ${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});
+          `}
+        </Script>
         <ins
           className="adsbygoogle"
           style={{ display: "inline-block", width: 728, height: 90 }}
@@ -268,7 +263,7 @@ export default function RootLayout({
           data-ad-slot={1234567890}
         />
         <script
-        id="adsbygoogle1"
+          id="adsbygoogle1"
           dangerouslySetInnerHTML={{
             __html: "(window.adsbygoogle = window.adsbygoogle || []).push({});",
           }}
