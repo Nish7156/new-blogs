@@ -8,7 +8,6 @@ async function HeroGrid() {
   const data = await getHeroBlogs();
 
   let dataIndex = 0;
-  
 
   return (
     <>

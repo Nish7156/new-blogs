@@ -52,7 +52,7 @@ function Header() {
               <ul className="navbar-nav mx-auto">
                 {menuItems.map((menuItem, index) => (
                   <li key={index} className="nav-item">
-                    {menuItem.subMenu ? (
+                    {menuItem?.subMenu ? (
                       <Link
                         href={`${menuItem?.link}`}
                         className="dropdown-toggle nav-link"
@@ -64,7 +64,7 @@ function Header() {
                         {menuItem.title}
                       </Link>
                     )}
-                    {menuItem.subMenu && (
+                    {menuItem?.subMenu && (
                       <ul className="dropdown-menu">
                         {menuItem.subMenu.map((subItem, subIndex) => (
                           <li key={subIndex} className="nav-item">
