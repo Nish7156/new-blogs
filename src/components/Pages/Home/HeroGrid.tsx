@@ -4,6 +4,14 @@ import { getHeroBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
 
+// export async function generateStaticParams() {
+//   const categories = await getHeroBlogs().then((res) => res.json());
+//   return categories.map((item: any) => ({
+//     category: item.category,
+//     slug:item.slug
+//   }));
+// }
+
 async function HeroGrid() {
   const data = await getHeroBlogs();
 
@@ -15,7 +23,7 @@ async function HeroGrid() {
         <div className="row featured-news-three">
           <div className="col-xl-6">
             <Link
-              href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+              href={`/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
             >
               <div className="news-card-eleven">
                 <div className="news-card-img">
@@ -28,14 +36,14 @@ async function HeroGrid() {
                 </div>
                 <div className="news-card-info">
                   <Link
-                    href={`/categories/${data[dataIndex]?.category}`}
+                    href={`/${data[dataIndex]?.category}`}
                     className="news-cat capitalize"
                   >
                     {formatCategory(data[dataIndex].category)}
                   </Link>
                   <h1>
                     <Link
-                      href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+                      href={`/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
                     >
                       {data[dataIndex]?.title}
                     </Link>
@@ -54,7 +62,7 @@ async function HeroGrid() {
                     <li>
                       <i className="fi fi-rr-calendar-minus" />
                       <Link
-                        href={`/categories/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
+                        href={`/${data[dataIndex]?.category}/${data[dataIndex]?.slug}`}
                         prefetch={true}
                       >
                         {extractDate(data[dataIndex]?.dateline)}
@@ -77,13 +85,11 @@ async function HeroGrid() {
                     <div className="col-md-6" key={index}>
                       <div className="news-card-thirteen">
                         <div className="news-card-img">
-                          <Link
-                            href={`/categories/${data?.category}/${data?.slug}`}
-                          >
+                          <Link href={`/${data?.category}/${data?.slug}`}>
                             <CustomImageAuto src={data?.image} alt="Iamge" />
                           </Link>
                           <Link
-                            href={`/categories/${data?.category}`}
+                            href={`/${data?.category}`}
                             className="news-cat capitalize"
                           >
                             {formatCategory(data.category)}
@@ -91,9 +97,7 @@ async function HeroGrid() {
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <Link
-                              href={`/categories/${data?.category}/${data?.slug}`}
-                            >
+                            <Link href={`/${data?.category}/${data?.slug}`}>
                               {truncateText(data?.title, 80)}
                             </Link>
                           </h3>

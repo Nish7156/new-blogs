@@ -15,7 +15,7 @@ function MainContentForBlog({ data }: any) {
                 <div className="news-img">
                   <CustomImageAuto src={data?.image} alt={data?.title} />
                   <Link
-                    href={`/categories/${data?.category}`}
+                    href={`/${data?.category}`}
                     className="news-cat"
                   >
                     {formatCategory(data?.category)}

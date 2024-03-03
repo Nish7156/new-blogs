@@ -24,69 +24,69 @@ cloudinary.config({
 });
 
 //For pagination
-async function scrapeAajTak() {
-  const baseUrl = "https://www.gadgets360.com/news/";
-  const maxPages = 3;
-  const scrapedData = [];
-
-  for (let page = 1; page <= maxPages; page++) {
-    const url = `${baseUrl}page-${page}`;
-    const response = await axios.get(url);
-
-    if (response.status !== 200) {
-      console.error(`Failed to fetch data from ${url}`);
-      continue; // Skip to the next page if fetching fails
-    }
-
-    const $ = cheerio.load(response.data);
-
-    $(".story_list.row.margin_b30 li").each((index, element) => {
-      const title = $(element).find(".news_listing").text().trim();
-      const dateline = $(element).find(".dateline").text().trim();
-      const category = $(element).find(".catname").text().trim();
-      const link = $(element).find("a").attr("href");
-
-      // Make sure the link is absolute
-      const absoluteLink = new URL(link, baseUrl).toString();
-      scrapedData.push({ title, dateline, category, link: absoluteLink });
-    });
-
-    console.log(`Scraped data from page ${page}`);
-  }
-
-  console.log("Scraping completed!");
-
-  return scrapedData;
-}
-
 // async function scrapeAajTak() {
-//   const url = "https://www.gadgets360.com/news";
-//   const response = await axios.get(url);
+//   const baseUrl = "https://www.gadgets360.com/news/";
+//   const maxPages = 3;
+//   const scrapedData = [];
 
-//   if (response.status !== 200) {
-//     console.error(`Failed to fetch data from ${url}`);
-//     return;
+//   for (let page = 1; page <= maxPages; page++) {
+//     const url = `${baseUrl}page-${page}`;
+//     const response = await axios.get(url);
+
+//     if (response.status !== 200) {
+//       console.error(`Failed to fetch data from ${url}`);
+//       continue; // Skip to the next page if fetching fails
+//     }
+
+//     const $ = cheerio.load(response.data);
+
+//     $(".story_list.row.margin_b30 li").each((index, element) => {
+//       const title = $(element).find(".news_listing").text().trim();
+//       const dateline = $(element).find(".dateline").text().trim();
+//       const category = $(element).find(".catname").text().trim();
+//       const link = $(element).find("a").attr("href");
+
+//       // Make sure the link is absolute
+//       const absoluteLink = new URL(link, baseUrl).toString();
+//       scrapedData.push({ title, dateline, category, link: absoluteLink });
+//     });
+
+//     console.log(`Scraped data from page ${page}`);
 //   }
-
-//   const $ = cheerio.load(response.data);
-
-//   const scrapedData: any = [];
-
-//   $(".story_list.row.margin_b30 li").each((index: any, element: any) => {
-//     const title = $(element).find(".news_listing").text().trim();
-//     const dateline = $(element).find(".dateline").text().trim();
-//     const category = $(element).find(".catname").text().trim();
-//     const link = $(element).find("a").attr("href");
-
-//     // Make sure the link is absolute
-//     const absoluteLink = new URL(link, url).toString();
-//     scrapedData.push({ title, dateline, category, link: absoluteLink });
-//   });
 
 //   console.log("Scraping completed!");
 
 //   return scrapedData;
 // }
+
+async function scrapeAajTak() {
+  const url = "https://www.gadgets360.com/news";
+  const response = await axios.get(url);
+
+  if (response.status !== 200) {
+    console.error(`Failed to fetch data from ${url}`);
+    return;
+  }
+
+  const $ = cheerio.load(response.data);
+
+  const scrapedData: any = [];
+
+  $(".story_list.row.margin_b30 li").each((index: any, element: any) => {
+    const title = $(element).find(".news_listing").text().trim();
+    const dateline = $(element).find(".dateline").text().trim();
+    const category = $(element).find(".catname").text().trim();
+    const link = $(element).find("a").attr("href");
+
+    // Make sure the link is absolute
+    const absoluteLink = new URL(link, url).toString();
+    scrapedData.push({ title, dateline, category, link: absoluteLink });
+  });
+
+  console.log("Scraping completed!");
+
+  return scrapedData;
+}
 
 async function saveToDatabase(scrapedData: any[]) {
   try {
@@ -158,21 +158,20 @@ async function saveToDatabase(scrapedData: any[]) {
       });
       imageLink = cloudinaryResult.secure_url;
 
-         // Get the current date and time
-         const currentDate = new Date();
-      
+      // Get the current date and time
+      const currentDate = new Date();
 
       // Create a new blog document
       const blog = {
         title: data.title,
         description,
         image: imageLink,
-        link:data.link,
+        link: data.link,
         category: slugCategory,
         dateline: data.dateline,
         slug: slug,
-        views:0,
-        is_public:true,
+        views: 0,
+        is_public: true,
         createdAt: currentDate,
       };
 

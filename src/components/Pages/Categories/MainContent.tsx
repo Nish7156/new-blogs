@@ -20,16 +20,14 @@ function MainContent({ data }: any) {
                     return (
                       <div className="col-md-6" key={index}>
                         <div className="news-card-thirteen">
-                          <Link
-                            href={`/categories/${data?.category}/${data?.slug}`}
-                          >
+                          <Link href={`/${data?.category}/${data?.slug}`}>
                             <div className="news-card-img">
                               <CustomImageAuto
                                 src={data?.image}
                                 alt={data?.title || "image"}
                               />
                               <Link
-                                href={`/categories/${data?.category}`}
+                                href={`/${data?.category}`}
                                 className="news-cat"
                               >
                                 {formatCategory(data?.category)}
@@ -38,18 +36,14 @@ function MainContent({ data }: any) {
                           </Link>
                           <div className="news-card-info">
                             <h3>
-                              <Link
-                                href={`/categories/${data?.category}/${data?.slug}`}
-                              >
+                              <Link href={`/${data?.category}/${data?.slug}`}>
                                 {data?.title}
                               </Link>
                             </h3>
                             <ul className="news-metainfo list-style">
                               <li>
                                 <i className="fi fi-rr-calendar-minus" />
-                                <Link
-                                  href={`/categories/${data?.category}/${data?.slug}`}
-                                >
+                                <Link href={`/${data?.slug}`}>
                                   {extractDate(data?.dateline)}
                                 </Link>
                               </li>

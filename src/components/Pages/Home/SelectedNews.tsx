@@ -1,7 +1,8 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
+import { formatCategory } from "@/lib/helper";
 import { getEditoresBlogs } from "@/lib/load-blogs";
+import Link from "next/link";
 import React from "react";
-
 
 async function SelectedNews() {
   const data = await getEditoresBlogs();
@@ -56,13 +57,18 @@ async function SelectedNews() {
                         <div className="news-card-img">
                           <CustomImageAuto src={data.image} alt="Iamge" />
 
-                          <a href="business.html" className="news-cat">
-                            {data?.category}
-                          </a>
+                          <Link
+                            href={`/${data?.category}`}
+                            className="news-cat"
+                          >
+                            {formatCategory(data?.category)}
+                          </Link>
                         </div>
                         <div className="news-card-info">
                           <h3>
-                            <a href="business-details.html">{data?.title}</a>
+                            <Link href={`/${data?.category}/${data?.slug}`}>
+                              {data?.title}
+                            </Link>
                           </h3>
                           <ul className="news-metainfo list-style">
                             <li>

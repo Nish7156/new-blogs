@@ -33,7 +33,7 @@ async function EditorsPick() {
                     <div className="news-card-img">
                       <CustomImageAuto src={data?.image} alt={data?.title} />
                       <Link
-                        href={`/categories/${data?.category}`}
+                        href={`/${data?.category}`}
                         className="news-cat"
                       >
                         {data?.category}
@@ -42,7 +42,7 @@ async function EditorsPick() {
                     <div className="news-card-info">
                       <h3>
                         <Link
-                          href={`/categories/${data?.category}/${data?.slug}`}
+                          href={`/${data?.category}/${data?.slug}`}
                         >
                           {truncateText(data?.title, 75)}
                         </Link>
@@ -51,7 +51,7 @@ async function EditorsPick() {
                         <li>
                           <i className="fi fi-rr-calendar-minus" />
                           <Link
-                            href={`/categories/${data?.category}/${data?.slug}`}
+                            href={`/${data?.category}/${data?.slug}`}
                           >
                             {extractDate(data?.dateline)}
                           </Link>

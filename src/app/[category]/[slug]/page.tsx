@@ -1,6 +1,6 @@
 import BlogDetails from "@/components/Pages/Categories/BlogDetails";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
-import React from "react";
+import React, { Suspense } from "react";
 import type { Metadata } from "next";
 
 async function getBlogByCategoryAndSlug(category: any, slug: any) {
@@ -9,7 +9,7 @@ async function getBlogByCategoryAndSlug(category: any, slug: any) {
       //@ts-ignore
       `${checkEnvironment()}/api/blogs/${category}/${slug}`,
       {
-        cache: "no-cache",
+        cache: "no-store",
       }
     );
     if (!res.ok) {
@@ -21,16 +21,16 @@ async function getBlogByCategoryAndSlug(category: any, slug: any) {
   }
 }
 
-export async function generateStaticParams() {
-  const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
-    res.json()
-  );
+// export async function generateStaticParams() {
+//   const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
+//     res.json()
+//   );
 
-  return posts.map((post: any) => ({
-    category: post.category,
-    slug: post.slug,
-  }));
-}
+//   return posts.map((post: any) => ({
+//     category: post.category,
+//     slug: post.slug,
+//   }));
+// }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   // fetch data
@@ -53,7 +53,6 @@ async function Blog({
 }: {
   params: { category: string; slug: string };
 }) {
-  
   const data = await getBlogByCategoryAndSlug(params.category, params?.slug);
 
   const jsonLd = {
@@ -69,7 +68,9 @@ async function Blog({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <BlogDetails data={data} />
+      <Suspense fallback={<>Loading...</>}>
+        <BlogDetails data={data} />
+      </Suspense>
     </div>
   );
 }
