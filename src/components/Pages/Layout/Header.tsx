@@ -5,7 +5,6 @@ import Image from "next/image";
 import { menuItems } from "@/lib/constant";
 
 function Header() {
-
   return (
     <>
       <div className="navbar-area header-three sticky" id="navbar">
@@ -16,14 +15,14 @@ function Header() {
                 width={100}
                 height={100}
                 className="logo-light"
-                src="/img/logo.webp"
+                src="/assets/logo_light.jpg"
                 alt="logo"
               />
               <Image
                 width={100}
                 height={100}
                 className="logo-dark"
-                src="/img/logo-white.webp"
+                src="/assets/logo_dark.jpg"
                 alt="logo"
               />
             </Link>

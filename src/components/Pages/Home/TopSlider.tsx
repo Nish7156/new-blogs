@@ -5,7 +5,9 @@ import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import Link from "next/link";
 
 async function getData() {
-  const res = await fetch(`${checkEnvironment()}/api/blogs`);
+  const res = await fetch(`${checkEnvironment()}/api/blogs`, {
+    cache: "no-store",
+  });
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
@@ -16,6 +18,7 @@ async function getData() {
 
 async function TopSlider() {
   const data = await getData();
+
   return (
     <>
       <div className="container">
@@ -39,16 +42,16 @@ export default TopSlider;
 const SliderCard = ({ item }: any) => {
   return (
     <div className="swiper-slide news-card-one">
-      <Link href={'/'}>
-      <div className="news-card-img">
-        <Image
-          src="/img/news/trending-1.webp"
-          alt="Image"
-          width={100}
-          height={100}
-          loading="lazy"
-        />
-      </div>
+      <Link href={"/"}>
+        <div className="news-card-img">
+          <Image
+            src="/img/news/trending-1.webp"
+            alt="Image"
+            width={100}
+            height={100}
+            loading="lazy"
+          />
+        </div>
       </Link>
       <div className="news-card-info">
         <Link href="/" className="news-cat">

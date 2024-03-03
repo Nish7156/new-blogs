@@ -1,14 +1,16 @@
 import CategoriesPage from "@/components/Pages/Categories";
+import Breadcrumb from "@/components/Pages/Categories/Breadcrumb";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import { capitalize, formatCategory } from "@/lib/helper";
 import { Metadata } from "next";
-import React from "react";
+import React, { Suspense } from "react";
 
 async function getBlogByCategory(category: any) {
   try {
     const res = await fetch(
       //@ts-ignore
-      `${checkEnvironment()}/api/blogs/${category}`
+      `${checkEnvironment()}/api/blogs/${category}`,
+      { cache: "no-store" }
     );
     if (!res.ok) {
       console.log("error");
@@ -19,14 +21,14 @@ async function getBlogByCategory(category: any) {
   }
 }
 
-export async function generateStaticParams() {
-  const categories = await fetch(`${checkEnvironment()}/api/blogs`).then(
-    (res) => res.json()
-  );
-  return categories.map((item: any) => ({
-    category: item.category,
-  }));
-}
+// export async function generateStaticParams() {
+//   const categories = await fetch(`${checkEnvironment()}/api/blogs`).then(
+//     (res) => res.json()
+//   );
+//   return categories.map((item: any) => ({
+//     category: item.category,
+//   }));
+// }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   return {
@@ -37,14 +39,16 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-async function SingleCategory({ params }: { params: { category: string } }) {
+async function page({ params }: { params: { category: string } }) {
   const data = await getBlogByCategory(params?.category);
-
   return (
     <div>
-      <CategoriesPage data={data} />
+      <Breadcrumb />
+      <Suspense fallback={<>Loading...</>}>
+        <CategoriesPage data={data} />
+      </Suspense>
     </div>
   );
 }
 
-export default SingleCategory;
+export default page;

@@ -56,7 +56,7 @@ async function SideBarData() {
                   ?.map((data: any, index: number) => {
                     return (
                       <li key={index}>
-                        <Link href={`/categories/${data?.category}`}>
+                        <Link href={`/${data?.category}`}>
                           <Image
                             width={13}
                             height={16}
@@ -88,7 +88,7 @@ async function SideBarData() {
                     <div className="news-card-info">
                       <h3>
                         <Link
-                          href={`/categories/${data?.category}/${data?.slug}`}
+                          href={`/${data?.category}/${data?.slug}`}
                           prefetch={true}
                         >
                           {truncateText(data?.title, 50)}
@@ -98,7 +98,7 @@ async function SideBarData() {
                         <li>
                           <i className="fi fi-rr-calendar-minus" />
                           <Link
-                            href={`/categories/${data?.category}/${data?.slug}`}
+                            href={`/${data?.category}/${data?.slug}`}
                           >
                             {extractDate(data?.dateline)}
                           </Link>
