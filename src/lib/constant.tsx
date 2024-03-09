@@ -15,7 +15,7 @@ export const menuItems = [
   },
   {
     title: "Mobiles",
-    link: "/mobile",
+    link: "/mobiles",
   },
   {
     title: "Entertainment",

@@ -9,17 +9,27 @@ import SelectedNews from "@/components/Pages/Home/SelectedNews";
 import MostPopular from "@/components/Pages/Home/MostPopular";
 import GeneralNews from "@/components/Pages/Home/GeneralNews";
 import AdCode from "./AdCode";
+import { getHeroBlogs,getEditoresBlogs } from "@/lib/load-blogs";
 
-export default function Home() {
+export async function generateStaticParams() {
+  const categories = await getEditoresBlogs().then((res) => res.json());
+  return categories.map((item: any) => ({
+    category: item.category,
+    slug: item.slug,
+  }));
+}
+
+export default async function Home() {
+  const data=await getEditoresBlogs()
   return (
     <>
       <TopSlider />
       <Suspense fallback={<>Loading</>}>
-        <HeroGrid />
+        <HeroGrid  data={data}/>
       </Suspense>
       {/* <TopSponserAd /> */}
       <AdCode />
-      <EditorsPick />
+      <EditorsPick  data={data}/>
       <NewsLetterBox />
       <SocialMediaList />
       <div style={{ marginTop: "20px" }}></div>

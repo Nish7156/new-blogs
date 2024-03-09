@@ -3,7 +3,7 @@ import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 export async function getHeroBlogs() {
   try {
     const res = await fetch(`${checkEnvironment()}/api/hero-blog`, {
-      cache: "no-store",
+      cache: "no-cache",
     });
     if (!res.ok) {
       console.log("error -> getHeroBlogs");
@@ -17,7 +17,7 @@ export async function getHeroBlogs() {
 export async function getEditoresBlogs() {
   try {
     const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-      cache: "no-store",
+      cache: "no-cache",
     });
     if (!res.ok) {
       console.log("error -> getEditoresBlogs");

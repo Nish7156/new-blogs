@@ -12,9 +12,7 @@ import React from "react";
 //   }));
 // }
 
-async function HeroGrid() {
-  const data = await getHeroBlogs();
-
+async function HeroGrid({ data }: any) {
   let dataIndex = 0;
 
   return (
