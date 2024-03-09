@@ -4,8 +4,7 @@ import { getEditoresBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
 
-async function EditorsPick() {
-  const data = await getEditoresBlogs();
+async function EditorsPick({data}:any) {
   return (
     <>
       <div className="editor-news-three pt-100 pb-75">
@@ -26,7 +25,7 @@ async function EditorsPick() {
             </div>
           </div>
           <div className="row justify-content-center">
-            {data.slice(0, 6).map((data: any, index: number) => {
+            {data.slice(5, 11).map((data: any, index: number) => {
               return (
                 <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
                   <div className="news-card-thirteen">
