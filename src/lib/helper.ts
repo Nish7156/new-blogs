@@ -12,7 +12,7 @@ export const extractDate = (inputString: string) => {
     /(\d{1,2}\s(?:January|February|March|April|May|June|July|August|September|October|November|December)\s\d{4})/;
 
   // Extracting the date from the input string
-  const extractedDate = inputString.match(dateRegex);
+  const extractedDate = inputString?.match(dateRegex);
 
   // If the date is found, parse and format it, otherwise return a message
   if (extractedDate) {
@@ -30,8 +30,7 @@ export const extractDate = (inputString: string) => {
 
 export function formatCategory(category: string) {
   // Split the string by "-" and capitalize each word
-  const formattedCategory = category
-    .split("-")
+  const formattedCategory = category?.split("-")
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
   return formattedCategory;

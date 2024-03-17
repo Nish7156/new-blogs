@@ -16,7 +16,7 @@ function MainContent({ data }: any) {
             <div className="col-lg-8">
               <div className="row justify-content-start">
                 {data &&
-                  data?.slice(0, 10).map((data: any, index: number) => {
+                  data.map((data: any, index: number) => {
                     return (
                       <div className="col-md-6" key={index}>
                         <div className="news-card-thirteen">
