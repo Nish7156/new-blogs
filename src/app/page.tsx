@@ -5,37 +5,24 @@ import { Suspense } from "react";
 import EditorsPick from "@/components/Pages/Home/EditorsPick";
 import NewsLetterBox from "@/components/Pages/Home/NewsLetterBox";
 import SocialMediaList from "@/components/Pages/Home/SocialMediaList";
-import SelectedNews from "@/components/Pages/Home/SelectedNews";
-import MostPopular from "@/components/Pages/Home/MostPopular";
-import GeneralNews from "@/components/Pages/Home/GeneralNews";
-import AdCode from "./AdCode";
-import { getHeroBlogs,getEditoresBlogs } from "@/lib/load-blogs";
+import blogData from "../lib/data.json";
 
-export async function generateStaticParams() {
-  const categories = await getEditoresBlogs().then((res) => res.json());
-  return categories.map((item: any) => ({
-    category: item.category,
-    slug: item.slug,
-  }));
-}
 
 export default async function Home() {
-  const data=await getEditoresBlogs()
   return (
     <>
       <TopSlider />
       <Suspense fallback={<>Loading</>}>
-        <HeroGrid  data={data}/>
+        <HeroGrid data={blogData} />
       </Suspense>
-      {/* <TopSponserAd /> */}
-      <AdCode />
-      <EditorsPick  data={data}/>
+      <TopSponserAd />
+      <EditorsPick data={blogData} />
       <NewsLetterBox />
       <SocialMediaList />
-      <div style={{ marginTop: "20px" }}></div>
-      <SelectedNews />
-      <MostPopular />
-      <GeneralNews />
+      {/* <div style={{ marginTop: "20px" }}></div> */}
+      {/* <SelectedNews /> */}
+      {/* <MostPopular /> */}
+      {/* <GeneralNews /> */}
       {/* <BottomSlider/> */}
     </>
   );

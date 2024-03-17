@@ -2,41 +2,23 @@ import BlogDetails from "@/components/Pages/Categories/BlogDetails";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
+import blogData from "../../../lib/data.json";
 
 async function getBlogByCategoryAndSlug(category: any, slug: any) {
-  try {
-    const res = await fetch(
-      //@ts-ignore
-      `${checkEnvironment()}/api/blogs/${category}/${slug}`,
-      {
-        cache: "no-store",
-      }
-    );
-    if (!res.ok) {
-      console.log("error");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
+  return blogData.find(
+    (blog) => blog.category === category && blog.slug === slug
+  );
 }
 
-// export async function generateStaticParams() {
-//   const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
-//     res.json()
-//   );
-
-//   return posts.map((post: any) => ({
-//     category: post.category,
-//     slug: post.slug,
-//   }));
-// }
+export async function generateStaticParams() {
+  return blogData.map((blog) => ({
+    category: blog.category,
+    slug: blog.slug,
+  }));
+}
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
-  // fetch data
-  const blog = await fetch(
-    `${checkEnvironment()}/api/blogs/${params?.category}/${params?.slug}`
-  ).then((res) => res.json());
+  const blog = await getBlogByCategoryAndSlug(params?.category, params?.slug);
 
   return {
     title: blog?.title,
@@ -55,10 +37,12 @@ async function Blog({
 }) {
   const data = await getBlogByCategoryAndSlug(params.category, params?.slug);
 
+  console.log(data);
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
-    name: data?.name,
+    name: data?.title,
     image: data?.image,
     description: data?.description,
   };
@@ -68,9 +52,7 @@ async function Blog({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Suspense fallback={<>Loading...</>}>
-        <BlogDetails data={data} />
-      </Suspense>
+      <BlogDetails data={data} />
     </div>
   );
 }
