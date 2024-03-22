@@ -33,7 +33,10 @@ async function page({ params }: { params: { category: string } }) {
   return (
     <div>
       <Breadcrumb />
-      <CategoriesPage data={data} />
+      <Suspense fallback={<>Loading...</>}>
+        {/* <CategoriesPage data={data} /> */}
+        <div className="">dddd</div>
+      </Suspense>
     </div>
   );
 }

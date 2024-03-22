@@ -1,16 +1,7 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
 import { extractDate, formatCategory, truncateText } from "@/lib/helper";
-import { getHeroBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
-
-// export async function generateStaticParams() {
-//   const categories = await getHeroBlogs().then((res) => res.json());
-//   return categories.map((item: any) => ({
-//     category: item.category,
-//     slug:item.slug
-//   }));
-// }
 
 async function HeroGrid({ data }: any) {
   let dataIndex = 0;
@@ -46,17 +37,23 @@ async function HeroGrid({ data }: any) {
                       {data[dataIndex]?.title}
                     </Link>
                   </h1>
-                  <p>{truncateText(data[dataIndex]?.description || "", 230)}</p>
+                  <div className="news-para">
+                    <p>
+                      {truncateText(data[dataIndex]?.description || "", 230)}
+                    </p>
+                  </div>
                   <ul className="news-metainfo list-style">
-                    <li className="author">
-                      <span className="author-img">
-                        <CustomImageAuto
-                          src="/img/author/author-thumb-1.webp"
-                          alt="Image"
-                        />
-                      </span>
-                      <a href="author.html">James William</a>
-                    </li>
+                    {data[dataIndex]?.author && (
+                      <li className="author">
+                        <span className="author-img">
+                          <CustomImageAuto
+                            src="/img/author/author-thumb-1.webp"
+                            alt="Image"
+                          />
+                        </span>
+                        <a href="author.html">James William</a>
+                      </li>
+                    )}
                     <li>
                       <i className="fi fi-rr-calendar-minus" />
                       <Link

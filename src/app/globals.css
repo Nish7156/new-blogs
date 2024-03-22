@@ -1664,7 +1664,13 @@ select {
 .hero-news-card .hero-news-info h3 a {
   color: var(--primaryColor);
 }
+.hero-news-card .hero-news-info h1 a {
+  color: var(--primaryColor);
+}
 .hero-news-card .hero-news-info h3 a:hover {
+  color: var(--secondaryColor);
+}
+.hero-news-card .hero-news-info h1 a:hover {
   color: var(--secondaryColor);
 }
 .hero-news-card .hero-news-info p {
@@ -2124,6 +2130,26 @@ select {
   background-size: 0% 1px;
   transition: background-size 0.7s;
 }
+.news-card-one h1 a,
+.news-card-two h1 a,
+.news-card-three h1 a,
+.news-card-four h1 a,
+.news-card-five h1 a,
+.news-card-six h1 a,
+.news-card-seven h1 a,
+.news-card-eight h1 a,
+.news-card-nine h1 a,
+.news-card-ten h1 a,
+.news-card-eleven h1 a,
+.news-card-twelve h1 a,
+.news-card-thirteen h1 a {
+  color: var(--primaryColor);
+  position: relative;
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.7s;
+}
 .news-card-one h3 a:hover,
 .news-card-two h3 a:hover,
 .news-card-three h3 a:hover,
@@ -2137,6 +2163,22 @@ select {
 .news-card-eleven h3 a:hover,
 .news-card-twelve h3 a:hover,
 .news-card-thirteen h3 a:hover {
+  background-image: linear-gradient(#111, #111);
+  background-size: 100% 1px;
+}
+.news-card-one h1 a:hover,
+.news-card-two h1 a:hover,
+.news-card-three h1 a:hover,
+.news-card-four h1 a:hover,
+.news-card-five h1 a:hover,
+.news-card-six h1 a:hover,
+.news-card-seven h1 a:hover,
+.news-card-eight h1 a:hover,
+.news-card-nine h1 a:hover,
+.news-card-ten h1 a:hover,
+.news-card-eleven h1 a:hover,
+.news-card-twelve h1 a:hover,
+.news-card-thirteen h1 a:hover {
   background-image: linear-gradient(#111, #111);
   background-size: 100% 1px;
 }
@@ -2163,6 +2205,9 @@ select {
   line-height: 30px;
 }
 .news-card-one .news-card-info h3 a {
+  color: var(--primaryColor);
+}
+.news-card-one .news-card-info h1 a {
   color: var(--primaryColor);
 }
 .news-card-one .news-card-info .news-metainfo li {
@@ -2464,6 +2509,9 @@ select {
 .news-card-eight .news-card-info h3 a {
   color: var(--whiteColor);
 }
+.news-card-eight .news-card-info h1 a {
+  color: var(--whiteColor);
+}
 .news-card-eight .news-card-info .news-metainfo li {
   color: var(--offwhiteColor);
 }
@@ -2527,6 +2575,9 @@ select {
   margin-bottom: 15px;
 }
 .news-card-nine .news-card-info h3 a {
+  color: var(--whiteColor);
+}
+.news-card-nine .news-card-info h1 a {
   color: var(--whiteColor);
 }
 .news-card-nine .news-card-info .news-metainfo li {

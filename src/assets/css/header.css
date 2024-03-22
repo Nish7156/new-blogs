@@ -662,6 +662,9 @@
   padding: 22px;
   border-bottom: 1px solid #eee;
 }
+.responsive-navbar .offcanvas-header {
+  justify-content: space-between !important;
+}
 .responsive-navbar .offcanvas-header .close-btn {
   background-color: transparent;
   color: var(--primaryColor);
