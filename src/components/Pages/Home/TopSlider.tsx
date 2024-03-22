@@ -6,7 +6,7 @@ import Link from "next/link";
 
 async function getData() {
   const res = await fetch(`${checkEnvironment()}/api/blogs`, {
-    cache: "no-store",
+    cache: "no-cache",
   });
 
   if (!res.ok) {

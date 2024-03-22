@@ -4,6 +4,8 @@ import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import blogData from "../../../lib/data.json";
 
+
+
 async function getBlogByCategoryAndSlug(category: any, slug: any) {
   return blogData.find(
     (blog) => blog.category === category && blog.slug === slug
@@ -37,7 +39,6 @@ async function Blog({
 }) {
   const data = await getBlogByCategoryAndSlug(params.category, params?.slug);
 
-  console.log(data);
 
   const jsonLd = {
     "@context": "https://schema.org",

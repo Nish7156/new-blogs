@@ -26,14 +26,14 @@ function Header() {
                 alt="logo"
               />
             </Link>
-            <button
+            {/* <button
               type="button"
               className="search-btn d-lg-none"
               data-bs-toggle="modal"
               data-bs-target="#searchModal"
             >
               <i className="flaticon-loupe" />
-            </button>
+            </button> */}
             <a
               className="navbar-toggler"
               data-bs-toggle="offcanvas"
@@ -49,35 +49,43 @@ function Header() {
             </a>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav mx-auto">
-                {menuItems.map((menuItem, index) => (
-                  <li key={index} className="nav-item">
-                    {menuItem?.subMenu ? (
-                      <Link
-                        href={`${menuItem?.link}`}
-                        className="dropdown-toggle nav-link"
-                      >
-                        {menuItem.title}
-                      </Link>
-                    ) : (
-                      <Link href={menuItem.link} className="nav-link">
-                        {menuItem.title}
-                      </Link>
-                    )}
-                    {menuItem?.subMenu && (
-                      <ul className="dropdown-menu">
-                        {menuItem.subMenu.map((subItem, subIndex) => (
-                          <li key={subIndex} className="nav-item">
-                            <Link href={subItem.link} className="nav-link">
-                              {subItem.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                ))}
+                {menuItems &&
+                  menuItems?.map((menuItem, index) => (
+                    <li key={index} className="nav-item">
+                      {menuItem?.subMenu ? (
+                        <Link
+                          href={`${menuItem?.link}`}
+                          className="dropdown-toggle nav-link"
+                        >
+                          {menuItem.title}
+                        </Link>
+                      ) : (
+                        <Link href={menuItem.link} className="nav-link">
+                          {menuItem.title}
+                        </Link>
+                      )}
+                      {menuItem?.subMenu && (
+                        <ul className="dropdown-menu">
+                          {menuItem &&
+                            //@ts-ignore
+                            menuItem?.subMenu?.map(
+                              (subItem: any, subIndex: any) => (
+                                <li key={subIndex} className="nav-item">
+                                  <Link
+                                    href={subItem.link}
+                                    className="nav-link"
+                                  >
+                                    {subItem.title}
+                                  </Link>
+                                </li>
+                              )
+                            )}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
               </ul>
-              <div className="others-option d-flex align-items-center">
+              {/* <div className="others-option d-flex align-items-center">
                 <div className="option-item">
                   <button
                     type="button"
@@ -93,7 +101,7 @@ function Header() {
                     Sign In
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </nav>
         </div>

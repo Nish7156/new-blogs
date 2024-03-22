@@ -47,7 +47,7 @@ function PhoneNav() {
         </div>
         <div className="offcanvas-body">
           <div className="accordion" id="navbarAccordion">
-            {menuItems.map((data, index) => (
+            {menuItems&&menuItems?.map((data, index) => (
               <div className="accordion-item" key={index}>
                 <button
                   className={`accordion-button ${
@@ -56,7 +56,7 @@ function PhoneNav() {
                   type="button"
                   onClick={() => toggleSubMenu(index)}
                 >
-                  {data.title}
+                  {data?.title}
                 </button>
                 {data?.subMenu && activeSubMenu === index && (
                   <div
@@ -65,13 +65,13 @@ function PhoneNav() {
                   >
                     <div className="accordion-body">
                       <div className="accordion" id="navbarAccordion2">
-                        {data.subMenu.map((item, subIndex) => (
+                        {data?.subMenu?.map((item, subIndex) => (
                           <div className="accordion-item" key={subIndex}>
                             <a
                               className="accordion-link active"
-                              href="index.html"
+                              href="/"
                             >
-                              {item.title}
+                              {item?.title}
                             </a>
                           </div>
                         ))}

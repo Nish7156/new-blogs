@@ -84,7 +84,7 @@ function MainContent({ data }: any) {
                 </ul>
               )}
             </div>
-            <SideBarData />
+            {/* <SideBarData /> */}
           </div>
         </div>
       </div>

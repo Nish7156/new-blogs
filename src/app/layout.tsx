@@ -15,6 +15,7 @@ import cron from "node-cron";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import Head from "next/head";
 
 async function startScrapingAndSaving() {
   try {
@@ -37,16 +38,16 @@ async function startScrapingAndSaving() {
 //     timezone: "Asia/Kolkata",
 //   }
 // );
-cron.schedule(
-  "0 * * * *",
-  async () => {
-    await startScrapingAndSaving();
-    console.log("Starting searching and saving...");
-  },
-  {
-    timezone: "Asia/Kolkata",
-  }
-);
+// cron.schedule(
+//   "0 * * * *",
+//   async () => {
+//     await startScrapingAndSaving();
+//     console.log("Starting searching and saving...");
+//   },
+//   {
+//     timezone: "Asia/Kolkata",
+//   }
+// );
 
 const inter = Inter({ subsets: ["latin"] });
 
