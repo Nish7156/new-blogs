@@ -3,8 +3,7 @@ import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 import React, { Suspense } from "react";
 import type { Metadata } from "next";
 import blogData from "../../../lib/data.json";
-
-
+import Breadcrumb from "@/components/Pages/Categories/Breadcrumb";
 
 async function getBlogByCategoryAndSlug(category: any, slug: any) {
   return blogData.find(
@@ -39,7 +38,6 @@ async function Blog({
 }) {
   const data = await getBlogByCategoryAndSlug(params.category, params?.slug);
 
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -53,6 +51,7 @@ async function Blog({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <Breadcrumb />
       <BlogDetails data={data} />
     </div>
   );

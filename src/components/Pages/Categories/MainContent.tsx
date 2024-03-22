@@ -12,7 +12,7 @@ function MainContent({ data }: any) {
     <div>
       <div className="sports-wrap ptb-100">
         <div className="container">
-          <div className="row gx-55 gx-5">
+          <div className="d-flex  justify-content-center align-items-center">
             <div className="col-lg-8">
               <div className="row justify-content-start">
                 {data &&

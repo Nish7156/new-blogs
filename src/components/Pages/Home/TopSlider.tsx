@@ -21,18 +21,20 @@ async function TopSlider() {
 
   return (
     <>
-      <div className="container">
-        <div className="trending-box-two">
-          <span>Trending</span>
-          <div className="trending-slider-two swiper">
-            <Suspense fallback={<>Loading</>}>
-              <CustomSlider data={data?.slice(0, 3)}>
-                <SliderCard />
-              </CustomSlider>
-            </Suspense>
+      {data.length != 0 ? (
+        <div className="container">
+          <div className="trending-box-two">
+            <span>Trending</span>
+            <div className="trending-slider-two swiper">
+              <Suspense fallback={<>Loading</>}>
+                <CustomSlider data={data?.slice(0, 3)}>
+                  <SliderCard />
+                </CustomSlider>
+              </Suspense>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </>
   );
 }
