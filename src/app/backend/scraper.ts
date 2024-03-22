@@ -4,6 +4,7 @@ import cheerio from "cheerio";
 import { v2 as cloudinary } from "cloudinary"; // Import Cloudinary
 import slugify from "slugify";
 import clientPromise from "./database";
+import { geminiPrompt } from "./geminiai";
 //@ts-nocheck
 const mongoose = require("mongoose");
 
@@ -100,10 +101,7 @@ async function saveToDatabase(scrapedData: any[]) {
     const existingBlogs = await db
       .collection("blogs")
       .find({
-        $or: [
-          { link: { $in: scrapedData.map((data) => data.link) } },
-          { title: { $in: scrapedData.map((data) => data.title) } },
-        ],
+        $or: [{ link: { $in: scrapedData.map((data) => data.link) } }],
       })
       .toArray();
 
@@ -116,8 +114,7 @@ async function saveToDatabase(scrapedData: any[]) {
 
     // Filter out data that already exists in the database
     const newData = scrapedData.filter(
-      (data) =>
-        !existingLinksSet.has(data.link) && !existingTitlesSet.has(data.title)
+      (data) => !existingLinksSet.has(data.link)
     );
 
     if (newData.length === 0) {
@@ -162,14 +159,29 @@ async function saveToDatabase(scrapedData: any[]) {
       const currentDate = new Date();
 
       // Create a new blog document
+      let newTitle = await geminiPrompt(
+        `title=${data.title} without changing meaning change 90 percent of  words dont add exra new word want in short`
+      );
+      let newDesc = await geminiPrompt(
+        `description=${description} without changing meaning change 70 percent of  words  `
+      );
+      let newPoints = await geminiPrompt(
+        `using ${description} i want 5 points related to description inside an array of objects  `
+      );
+
+      const newSlug = slugify(newTitle, { lower: true });
+      console.log(';');
+      
+
       const blog = {
-        title: data.title,
-        description,
+        title: newTitle || data.title,
+        description: newDesc,
         image: imageLink,
         link: data.link,
         category: slugCategory,
+        bulletPoints: newPoints,
         dateline: data.dateline,
-        slug: slug,
+        slug: newSlug,
         views: 0,
         is_public: true,
         createdAt: currentDate,

@@ -11,8 +11,7 @@ export async function geminiPrompt(userInput:string) {
 
     const result = await model.generateContent(userInput);
     const response = await result.response;
-    const text = response.text();
-    console.log(text);
+   return response.text();
   } catch (error) {
     console.error("Error:", error);
   }

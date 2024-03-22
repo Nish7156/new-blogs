@@ -5,8 +5,6 @@ import SideBarData from "../SideBarData";
 import { extractDate, formatCategory } from "@/lib/helper";
 
 function MainContentForBlog({ data }: any) {
-  console.log(data,"??");
-  
   return (
     <div>
       <div className="news-details-wrap ptb-100">

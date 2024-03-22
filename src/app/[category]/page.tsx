@@ -4,17 +4,30 @@ import { capitalize, formatCategory } from "@/lib/helper";
 import { Metadata } from "next";
 import React, { Suspense } from "react";
 import blogData from "../../lib/data.json";
-
-async function getBlogByCategory(category: string) {
-  return blogData.filter((blog) => blog.category === category) || [];
-}
+import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 
 export async function generateStaticParams() {
-  return blogData.map((post) => ({
-    params: {
-      category: post.category,
-    },
+  const categories = await fetch(`${checkEnvironment()}/api/blogs`).then(
+    (res) => res.json()
+  );  
+  return categories.map((item: any) => ({
+    category: item.category,
   }));
+}
+
+async function getBlogByCategory(category: any) {
+  try {
+    const res = await fetch(
+      //@ts-ignore
+      `${checkEnvironment()}/api/blogs/${category}`
+    );
+    if (!res.ok) {
+      console.log("error getBlogByCategory");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {

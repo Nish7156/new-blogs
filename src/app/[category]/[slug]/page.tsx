@@ -5,17 +5,36 @@ import type { Metadata } from "next";
 import blogData from "../../../lib/data.json";
 import Breadcrumb from "@/components/Pages/Categories/Breadcrumb";
 
-async function getBlogByCategoryAndSlug(category: any, slug: any) {
-  return blogData.find(
-    (blog) => blog.category === category && blog.slug === slug
+export async function generateStaticParams() {
+  const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
+    res.json()
   );
+
+  return posts.map((post: any) => ({
+    category: post.category,
+    slug: post.slug,
+  }));
 }
 
-export async function generateStaticParams() {
-  return blogData.map((blog) => ({
-    category: blog.category,
-    slug: blog.slug,
-  }));
+async function getBlogByCategoryAndSlug(category: any, slug: any) {
+
+  let url = `${checkEnvironment()}/api/blogs/${category}/${slug}`
+  console.log(url);
+  
+  
+  try {
+    const res = await fetch(
+      //@ts-ignore
+     `${url}`
+    );
+
+    if (!res.ok) {
+      console.log("error getBlogByCategoryAndSlug");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error, "message");
+  }
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
@@ -52,7 +71,7 @@ async function Blog({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Breadcrumb />
-      <BlogDetails data={data} />
+      {data && <BlogDetails data={data} />}
     </div>
   );
 }
