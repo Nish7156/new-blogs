@@ -12,10 +12,10 @@ function Header() {
           <nav className="navbar navbar-expand-lg">
             <Link className="navbar-brand" href="/">
               <Image
-                width={100}
-                height={100}
+                width={150}
+                height={150}
                 className="logo-light"
-                src="/assets/logo_light.jpg"
+                src="/assets/TOI_logo_light.png"
                 alt="logo"
               />
               <Image
