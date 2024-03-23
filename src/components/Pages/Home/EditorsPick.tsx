@@ -25,7 +25,7 @@ async function EditorsPick({data}:any) {
             </div>
           </div>
           <div className="row justify-content-center">
-            {data.slice(6, 11).map((data: any, index: number) => {
+            {data.slice(6, 12).map((data: any, index: number) => {
               return (
                 <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
                   <div className="news-card-thirteen">

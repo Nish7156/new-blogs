@@ -166,11 +166,34 @@ async function saveToDatabase(scrapedData: any[]) {
         `description=${description} without changing meaning change 70 percent of  words  `
       );
       let newPoints = await geminiPrompt(
-        `using ${description} i want 5 points related to description inside an array of objects  `
+        `using ${description} i want 5 points related to description inside an array of objects key value pair key is point  `
       );
 
-      const newSlug = slugify(newTitle, { lower: true });
-      console.log(';');
+      
+
+      let newSlug = slugify(newTitle, { lower: true }).replace(/\s+/g, '-');
+      if (newSlug.endsWith('.')) {
+          newSlug = newSlug.slice(0, -1);
+      }
+
+    const existingBlogWithTitle = await db.collection("blogs").findOne({ title: newTitle });
+
+if (existingBlogWithTitle) {
+    console.log("Skipping data with existing title:-", newTitle);
+    continue;
+}
+const existingBlogWithImage = await db.collection("blogs").findOne({ image: imageLink });
+
+if (existingBlogWithImage) {
+    console.log("Skipping data with existing image link:", imageLink);
+    continue;
+}
+const existingBlogWithSlug = await db.collection("blogs").findOne({ slug: newSlug });
+
+if (existingBlogWithSlug) {
+    console.log("Skipping data with existing slug:", newSlug);
+    continue;
+}
       
 
       const blog = {
