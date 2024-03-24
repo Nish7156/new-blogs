@@ -39,6 +39,7 @@ async function getBlogByCategoryAndSlug(category: any, slug: any) {
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const blog = await getBlogByCategoryAndSlug(params?.category, params?.slug);
+console.log(blog?.image,"???");
 
   return {
     title: blog?.title,
