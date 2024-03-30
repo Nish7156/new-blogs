@@ -5,7 +5,8 @@ import SideBarData from "../SideBarData";
 import { extractDate, formatCategory } from "@/lib/helper";
 
 function MainContentForBlog({ data }: any) {
-  
+  console.log(data);
+
   return (
     <div>
       <div className="news-details-wrap ptb-100">
@@ -15,17 +16,17 @@ function MainContentForBlog({ data }: any) {
               <article>
                 <div className="news-img">
                   <CustomImageAuto src={data?.image} alt={data?.title} />
-                  <Link
-                    href={`/${data?.category}`}
-                    className="news-cat"
-                  >
+                  <Link href={`/${data?.category}`} className="news-cat">
                     {formatCategory(data?.category)}
                   </Link>
                 </div>
                 <ul className="news-metainfo list-style">
                   <li className="author">
                     <span className="author-img">
-                      <CustomImageAuto src="/img/author/author-thumb-1.webp" alt="Image" />
+                      <CustomImageAuto
+                        src="/img/author/author-thumb-1.webp"
+                        alt="Image"
+                      />
                     </span>
                     {/* <Link href="/">James William</Link> */}
                   </li>
@@ -53,10 +54,13 @@ function MainContentForBlog({ data }: any) {
                   </p>
                 </div>
                 <div className="news-img">
-                  <CustomImageAuto src="/img/news/single-news-2.webp" alt="Image" />
+                  <CustomImageAuto
+                    src="/img/news/single-news-2.webp"
+                    alt="Image"
+                  />
                 </div>
                 <div className="news-para">
-                  <h5>
+                  {/* <h5>
                     Mastering Digital Transformation: How to Stay Ahead in a
                     Rapidly Changing Business Landscape
                   </h5>
@@ -67,50 +71,25 @@ function MainContentForBlog({ data }: any) {
                     look even slightly believable. If you are going to use a
                     passage of Lorem Ipsum, you need to be sure there isn't
                     anything embarrassing hidden in the middle of text.
-                  </p>
-                  <h5>Unordered &amp; Ordered Lists</h5>
-                  <p>
+                  </p> */}
+                  <h5>Important points</h5>
+                  {/* <p>
                     There are many variations of passages of Lorem Ipsum
                     available, but the majority have suffered alteration in some
                     form by injected humour, or randomised words which don't
                     look even slightly believable.
-                  </p>
+                  </p> */}
                   <ul className="content-feature-list list-style mt-15">
-                    <li>
-                      <span>
-                        <i className="flaticon-arrow-right" />
-                      </span>
-                      It is a long established fact that a reader will be
-                      distracted by the readable content.
-                    </li>
-                    <li>
-                      <span>
-                        <i className="flaticon-arrow-right" />
-                      </span>
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting
-                    </li>
-                    <li>
-                      <span>
-                        <i className="flaticon-arrow-right" />
-                      </span>
-                      It was popularised in the 1960s with the release of
-                      Letraset sheets
-                    </li>
-                    <li>
-                      <span>
-                        <i className="flaticon-arrow-right" />
-                      </span>
-                      Publishing software like Aldus PageMaker including
-                      versions of Lorem Ipsum.
-                    </li>
-                    <li>
-                      <span>
-                        <i className="flaticon-arrow-right" />
-                      </span>
-                      All the Lorem Ipsum generators on the Internet tend to
-                      repeat predefined.
-                    </li>
+                    {data?.bulletpoints.map((data: any, index: number) => {
+                      return (
+                        <li>
+                          <span>
+                            <i className="flaticon-arrow-right" />
+                          </span>
+                          {data?.point}
+                        </li>
+                      );
+                    })}
                   </ul>
                   <p>
                     There are many variations of passages of Lorem Ipsum
@@ -124,13 +103,10 @@ function MainContentForBlog({ data }: any) {
                 </div>
                 <blockquote className="wp-block-quote">
                   <i className="fi fi-rr-quote-right" />
-                  <p>
-                    “ People find waiting more tolerable when they can see the
-                    work being done on their behalf ”
-                  </p>
-                  <h6>William Benjamin</h6>
+                  <p>“{`${data?.quote}`} ”</p>
+                  {/* <h6>William Benjamin</h6> */}
                 </blockquote>
-                <div className="news-para">
+                {/* <div className="news-para">
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
                     typesetting industry. Lorem Ipsum has been the industry's
@@ -163,7 +139,7 @@ function MainContentForBlog({ data }: any) {
                     Quisquam culpa reprehenderit ad ipsa porro obcaecati
                     accusantium tempore officiis tenetur est!
                   </p>
-                </div>
+                </div> */}
               </article>
             </div>
             {/* <SideBarData /> */}

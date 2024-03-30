@@ -1,18 +1,16 @@
 import TopSlider from "@/components/Pages/Home/TopSlider";
 import HeroGrid from "@/components/Pages/Home/HeroGrid";
-import { getEditoresBlogs, getHeroBlogs } from "@/lib/load-blogs";
 import EditorsPick from "@/components/Pages/Home/EditorsPick";
 import TopSponserAd from "@/components/Ads/TopSponserAd";
+import blogData from "../lib/data.json"
 
 export default async function Home() {
-  const blogData=await getHeroBlogs()
-  const editosNewwBlogs=await getEditoresBlogs()
   return (
     <>
       <TopSlider />
-      <HeroGrid data={blogData} />
+      <HeroGrid data={blogData.slice(0,5)} />
       <TopSponserAd />
-      <EditorsPick data={editosNewwBlogs} />
+      <EditorsPick data={blogData} />
       {/* <NewsLetterBox />
       <SocialMediaList /> */}
       {/* <div style={{ marginTop: "20px" }}></div> */}

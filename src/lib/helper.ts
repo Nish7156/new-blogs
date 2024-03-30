@@ -39,3 +39,9 @@ export function formatCategory(category: string) {
 export function capitalize(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
+
+
+export   function getRandomTime() {
+  const randomMinutes = Math.floor(Math.random() * (10 - 2 + 1)) + 2;
+  return randomMinutes;
+}

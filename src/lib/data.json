@@ -1,192 +1,482 @@
 [
   {
-    "_id": "65e3fe2aeb986a6c209d18b4",
-    "title": "IT Minister Ashwini Vaishnaw Criticizes Google's App Removal in India",
-    "description": "Google's decision to remove certain apps from its Indian app store has drawn criticism from IT Minister Ashwini Vaishnaw. The dispute arises from Google's in-app payment guidelines. Startups like Matrimony.com and Naukri are affected, facing potential revenue loss. The removals highlight ongoing tensions between Indian startups and Google over fee policies.",
-    "orderList": [
-      "Google's app removal criticized by IT Minister",
-      "Dispute over in-app payment guidelines",
-      "Startups like Matrimony.com and Naukri affected",
-      "Tensions between Indian startups and Google"
-    ],
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709440205/google%27s-removal-of-apps-from-play-store-in-india-%27cannot-be-permitted%27:-it-minister-ashwini-vaishnaw_image.jpg",
-    "link": "https://www.gadgets360.com/apps/news/google-play-store-app-removal-india-cannot-be-permitted-it-minister-ashwini-vaishnaw-5163181",
-    "category": "apps",
-    "dateline": "by Reuters, 2 March 2024",
-    "slug": "it-minister-ashwini-vaishnaw-criticizes-googles-app-removal-in-india",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-03T04:35:54.146Z"
-  },
-  {
-    "_id": "65e3fe2beb986a6c209d18b5",
-    "title": "Google Pixel Watch 3 to Introduce Larger Size Variant, Pixel Buds Pro 2 in Development",
-    "description": "The upcoming Google Pixel Watch 3 will include a larger 45mm size variant alongside the traditional 41mm model. This update addresses user requests for a larger watch size. Additionally, Google is reportedly working on the Pixel Buds Pro 2, the successor to its Pixel Buds Pro earphones.",
-    "orderList": [
-      "Pixel Watch 3 to offer larger 45mm size variant",
-      "Addressing user requests for larger watch size",
-      "Pixel Buds Pro 2 in development as successor to Pixel Buds Pro"
-    ],
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709440207/google-pixel-watch-3-to-come-in-45mm-size-pixel-buds-pro-2-in-development:-report_image.png",
-    "link": "https://www.gadgets360.com/wearables/news/google-pixel-watch-3-45mm-size-variant-buds-pro-2-report-5163019",
-    "category": "wearables",
-    "dateline": "Written by Manas Mitul, 2 March 2024",
-    "slug": "google-pixel-watch-3-to-introduce-larger-size-variant-pixel-buds-pro-2-in-development",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-03T04:35:55.887Z"
-  },
-  {
-    "_id": "65e3fe2deb986a6c209d18b6",
-    "title": "Embracer Group to Sell Saber Interactive in $500 Million Deal",
-    "description": "Embracer Group AB plans to sell Saber Interactive, one of its major subsidiaries, to private investors for up to $500 million. Saber, known for games like Snowrunner and World War Z, will continue developing a remake of Star Wars: The Knights of the Old Republic. The deal is part of Embracer's cost-cutting initiative.",
-    "orderList": [
-      "Embracer Group to sell Saber Interactive for up to $500 million",
-      "Saber to continue Star Wars: The Knights of the Old Republic remake",
-      "Part of Embracer's cost-cutting initiative"
-    ],
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709440557/embracer-group-to-sell-saber-interactive-developer-of-a-new-%27star-wars%27-game-remake-in-dollar500-million-deal_image.png",
-    "link": "https://www.gadgets360.com/games/news/embracer-group-sell-saber-interactive-usd-500-million-star-wars-knights-of-the-old-republic-remake-5162182",
-    "category": "gaming",
-    "dateline": "by Jason Schreier, Bloomberg, 2 March 2024",
-    "slug": "embracer-group-to-sell-saber-interactive-in-500-million-deal",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-03T04:35:57.933Z"
-  },
-  {
-    "_id": "65e3fe31eb986a6c209d18b7",
-    "title": "Apple Scraps MicroLED Display for Apple Watch Ultra, Employees Laid Off",
-    "description": "Apple has reportedly cancelled its microLED display project for the Apple Watch Ultra due to economic viability concerns. Analyst Ming-Chi Kuo revealed that Apple struggled to justify the high production costs. Several employees from the development team have been laid off. The cancellation marks a significant setback for Apple's display technology ambitions.",
-    "orderList": [
-      "Apple cancels microLED display project for Apple Watch Ultra",
-      "Economic viability concerns cited as reason for cancellation",
-      "Layoffs reported among development team",
-      "Setback for Apple's display technology ambitions"
-    ],
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709440560/apple-watch-ultra-with-microled-display-cancelled-employees-laid-off:-ming-chi-kuo_image.jpg",
-    "link": "https://www.gadgets360.com/wearables/news/apple-watch-ultra-microled-display-cancelled-layoffs-ming-chi-kuo-report-5161845",
-    "category": "wearables",
-    "dateline": "Written by Manas Mitul, 2 March 2024",
-    "slug": "apple-scraps-microled-display-for-apple-watch-ultra-employees-laid-off",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-03T04:36:01.213Z"
-  },
-  {
-    "_id": "65ec4846b1e9f820b545d54b",
-    "title": "X Unveils 'Long-Form Express' for Premium Users to Create and Share Extended Content",
-    "description": "X, the social networking platform previously known as Twitter, now offers a new feature called Long-Form Express. Exclusive to Premium users, it enables sharing of comprehensive written content. Users can access this feature through the Long-Form Express section, offering diverse formatting options and multimedia embedding capabilities. Articles can span up to 15,000 words and include images, videos, and X posts. They appear on users' profiles and followers' timelines, marked by a distinct icon and layout. Additionally, users have editing and deletion privileges for published articles.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983813/x-introduces-%27articles%27-for-premium%2B-users-to-write-and-share-long-form-content_image.jpg",
-    "link": "https://www.gadgets360.com/apps/news/x-articles-long-form-blog-premium-plus-users-verified-organisations-5200870",
-    "category": "apps",
-    "dateline": "Written by Sucharita Ganguly, 8 March 2024",
-    "slug": "x-unveils-'long-form-express'-for-premium-users-to-create-and-share-extended-content",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-09T11:30:14.104Z",
-    "orderList": [
-      "Exclusive feature for X Premium users",
-      "Compose articles with up to 15,000 words",
-      "Include multimedia and X posts",
-      "Articles appear on profiles and followers' timelines",
-      "Users have editing and deletion options"
-    ]
-  },
-  {
-    "_id": "65ec4846b1e9f820b545d54c",
-    "title": "iPhone 16 Pro Design Leak Reveals Innovative Capture Button",
-    "description": "Leaked CAD renders unveil the anticipated iPhone 16 Pro's design, featuring a novel Capture Button alongside significant improvements. The Capture Button, placed below the power button, facilitates seamless photo and video capturing, with additional functionalities like focus adjustment and zoom control. The handset boasts a larger form factor compared to its predecessor, accommodating a 6.3-inch display with thinner bezels. The rear camera setup houses three sensors, a LiDAR module, and enhanced photography capabilities. Expect a sleek design and vibrant colour options upon release.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983811/iphone-16-pro-leaked-renders-suggest-new-design-with-capture-button_image.jpg",
-    "link": "https://www.gadgets360.com/mobiles/news/iphone-16-pro-design-renders-leak-display-size-capture-button-dimensions-apple-report-5204763",
+    "_id": "6607ec1dd6f1e3400d7832e3",
+    "title": "Leaked Specs of Redmi Note 13 Pro Turbo Hint at Global Debut as Poco F6",
+    "description": "Recent leaks suggest that the Redmi Note 13 Pro Turbo is gearing up to be the latest powerhouse in the Note 13 series. Speculations hint at its potential global debut as the Poco F6, following the trend set by its predecessor. The device is anticipated to boast Qualcomm's latest Snapdragon 8s Gen 3 chipset and may feature an OLED display with an impressive 120Hz refresh rate. While official confirmation is pending from the company, leaked details from a source on Weibo shed light on the device's potential specifications and design elements. According to the leak, the Redmi Note 13 Pro Turbo could sport a flat 1.5K OLED screen sourced from TCL Huaxing and Shenzhen Tianma, promising a visually immersive experience. Powering the device could be a robust 5,000mAh battery, reportedly supporting blazing-fast 90W wired charging. Camera enthusiasts might find solace in the rumored 50-megapixel primary camera equipped with a Sony IMX882 sensor, promising stellar photography performance. Additional camera details remain undisclosed for now. On the front, the device is speculated to house a 20-megapixel selfie shooter, ensuring crisp and clear self-portraits. Design-wise, the Redmi Note 13 Pro Turbo is said to draw inspiration from various predecessors, with hints of the Redmi K70E and design elements borrowed from the Redmi Note 12T and Redmi Note 13 Pro. Notably, last year's Redmi Note 12 Turbo debuted in China and later launched globally as the Poco F5. As anticipation builds around the Redmi Note 13 Pro Turbo, enthusiasts eagerly await further updates from Xiaomi, which could shed more light on its global availability and potential launch as the Poco F6.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794958/redmi-note-13-pro-turbo-specifications-leak-could-debut-globally-as-poco-f6_image.jpg",
+    "link": "https://www.gadgets360.com/mobiles/news/redmi-note-13-pro-specifications-xiaomi-poco-f6-leak-5338182",
     "category": "mobiles",
-    "dateline": "Written by Sucharita Ganguly, 9 March 2024",
-    "slug": "iphone-16-pro-design-leak-reveals-innovative-capture-button",
+    "dateline": "Written by David Delima, 30 March 2024",
+    "slug": "leaked-specs-of-redmi-note-13-pro-turbo-hint-at-global-debut-as-poco-f6",
     "views": 0,
     "is_public": true,
-    "createdAt": "2024-03-09T11:30:14.220Z",
-    "orderList": [
-      "Novel Capture Button enhances photo and video capabilities",
-      "Larger display with thinner bezels",
-      "Advanced rear camera setup for improved photography",
-      "Expect sleek design and vibrant colour options"
-    ]
+    "createdAt": "2024-03-30T10:40:29.372Z",
+    "bulletpoints": [
+      {
+        "point": "Leaked details suggest the Redmi Note 13 Pro Turbo could feature a flat 1.5K OLED screen with a 120Hz refresh rate."
+      },
+      {
+        "point": "The device might house a powerful 5,000mAh battery supporting 90W wired charging for quick power-ups."
+      },
+      {
+        "point": "Camera enthusiasts may rejoice with a speculated 50-megapixel primary camera equipped with a Sony IMX882 sensor."
+      },
+      {
+        "point": "Design elements from various predecessors, including the Redmi K70E and Redmi Note 12T, could influence the Redmi Note 13 Pro Turbo's aesthetics."
+      },
+      {
+        "point": "Following the trend set by its predecessor, the Redmi Note 13 Pro Turbo is rumored to debut globally as the Poco F6, catering to a wider audience."
+      }
+    ],
+    "quote": "Success is often achieved by those who don't know that failure is inevitable."
   },
   {
-    "_id": "65ec4846b1e9f820b545d54d",
-    "title": "iPhone 16 Pro Design Leak Reveals Innovative Capture Button",
-    "description": "Leaked CAD renders unveil the anticipated iPhone 16 Pro's design, featuring a novel Capture Button alongside significant improvements. The Capture Button, placed below the power button, facilitates seamless photo and video capturing, with additional functionalities like focus adjustment and zoom control. The handset boasts a larger form factor compared to its predecessor, accommodating a 6.3-inch display with thinner bezels. The rear camera setup houses three sensors, a LiDAR module, and enhanced photography capabilities. Expect a sleek design and vibrant colour options upon release.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983811/iphone-16-pro-leaked-renders-suggest-new-design-with-capture-button_image.jpg",
-    "link": "https://www.gadgets360.com/mobiles/news/iphone-16-pro-design-renders-leak-display-size-capture-button-dimensions-apple-report-5204763",
+    "_id": "6607ec20d6f1e3400d7832e5",
+    "title": "Leaked Cases Reveal iPhone 16's Redesigned Camera Layout",
+    "description": "Anticipation builds as leaks hint at the forthcoming iPhone 16 and iPhone 16 Plus, slated for release in the latter half of 2024. Recent images of cases purportedly for these models suggest a departure from the design of their predecessors, notably featuring a pill-shaped rear camera island with rounded edges. This evolution from the iPhone 15 series marks a significant aesthetic shift, promising a sleeker look for Apple's flagship devices. Alongside the revised camera layout, speculations abound regarding a potential dual rear camera setup, vertically aligned to facilitate spatial recording—a feature notably absent from the iPhone 15 due to its diagonal camera configuration.\n\nMoreover, rumors suggest the inclusion of Apple's Action button across all variants of the iPhone 16 series, a feature previously exclusive to the Pro models. The leaked cases offer a glimpse of this anticipated button placement, alongside a cutout for a rumored 'Capture' button slated for introduction later in the year. Excitement further mounts with leaks hinting at the color options for the iPhone 16 Pro and Pro Max, purportedly expanding to four choices.\n\nAs enthusiasts await official announcements, these leaks fuel speculation and anticipation, offering tantalizing glimpses into the future of Apple's iconic smartphone lineup.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794960/iphone-16-cases-surface-online-hinting-at-pill-shaped-rear-camera-island_image.jpg",
+    "link": "https://www.gadgets360.com/mobiles/news/iphone-16-design-leak-case-vertical-camera-layout-5338386",
     "category": "mobiles",
-    "dateline": "Written by Sucharita Ganguly, 9 March 2024",
-    "slug": "iphone-16-pro-design-leak-reveals-innovative-capture-button",
+    "dateline": "Written by David Delima, 30 March 2024",
+    "slug": "leaked-cases-reveal-iphone-16s-redesigned-camera-layout",
     "views": 0,
     "is_public": true,
-    "createdAt": "2024-03-09T11:30:14.655Z",
-    "orderList": [
-      "Novel Capture Button enhances photo and video capabilities",
-      "Larger display with thinner bezels",
-      "Advanced rear camera setup for improved photography",
-      "Expect sleek design and vibrant colour options"
-    ]
+    "createdAt": "2024-03-30T10:40:32.955Z",
+    "bulletpoints": [
+      {
+        "point": "Introduction of a pill-shaped rear camera island marks a departure from previous iPhone designs."
+      },
+      {
+        "point": "Speculations suggest a dual rear camera setup aligned vertically, enabling spatial recording."
+      },
+      {
+        "point": "Inclusion of Apple's Action button across all iPhone 16 models, extending beyond the Pro variants."
+      },
+      {
+        "point": "Rumored 'Capture' button adds to the intrigue, potentially enhancing user experience."
+      },
+      {
+        "point": "Leaked color options for iPhone 16 Pro and Pro Max hint at expanded choices, heightening anticipation."
+      }
+    ],
+    "quote": "The only way to do great work is to love what you do."
+  },
+
+  {
+    "_id": "6607ec22d6f1e3400d7832e7",
+    "title": "Microsoft and OpenAI Announce Ambitious Project for Revolutionary Data Center with 'Stargate' AI Supercomputer: Insider Report",
+    "description": "In a groundbreaking collaboration, Microsoft and OpenAI are embarking on an unprecedented venture, aiming to construct a state-of-the-art data center project estimated at a staggering $100 billion. This endeavor includes the development of an artificial intelligence supercomputer dubbed 'Stargate,' slated to debut in 2028. The revelation, reported by The Information, underscores the intensifying demand for AI-driven data infrastructure, propelled by the rapid evolution of generative artificial intelligence technology. According to sources cited in The Information, Microsoft is likely to spearhead the financing of this ambitious initiative. The projected cost, expected to surpass existing data center investments by a factor of 100, reflects the scale and ambition of the endeavor. The proposed supercomputer, to be situated in the United States, represents the flagship installment in a series of supercomputing facilities planned for construction over the next six years. The estimated cost of $100 billion, disclosed by individuals familiar with the project, underscores the magnitude of Microsoft and OpenAI's vision. Notably, the project is delineated into five phases, with 'Stargate' positioned as the pinnacle of this progression. Preceding this, Microsoft and OpenAI are collaborating on a fourth-phase supercomputer slated for release around 2026. Critical to the project's execution is the acquisition of advanced AI chips, a substantial investment accounting for a significant portion of the expenditure in the upcoming phases. These chips, essential for powering the computational prowess of the supercomputers, come at a premium. Nvidia CEO Jensen Huang revealed that the latest artificial intelligence chip, the 'Blackwell' B200, carries a price tag ranging from $30,000 to $40,000.Microsoft's commitment to innovation in this domain is further underscored by its development of custom-designed computing chips, announced in November the previous year. Notably, the project aims to foster interoperability with chips sourced from diverse suppliers, ensuring flexibility and scalability in its architecture.A Microsoft spokesperson, in response to inquiries by Reuters, emphasized the company's ongoing investment in infrastructure innovations to propel the frontier of AI capability. However, the spokesperson refrained from commenting directly on the reported launch of the Stargate supercomputer.Financial projections indicate that expenses associated with the project could exceed $115 billion, more than triple the capital spending allocated by Microsoft for similar endeavors in the preceding year.[Quote: 'We are always planning for the next generation of infrastructure innovations needed to continue pushing the frontier of AI capability.' - Microsoft spokesperson]For further insights into this transformative collaboration between Microsoft and OpenAI, refer to the original report by The Information.© Thomson Reuters 2024",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794963/microsoft-openai-plan-100-billion-data-centre-with-stargate-ai-supercomputer-report_image.jpg",
+    "link": "https://www.gadgets360.com/ai/news/microsoft-openai-data-center-project-report-5338183",
+    "category": "ai",
+    "dateline": "by Reuters, 30 March 2024",
+    "slug": "microsoft-openai-revolutionary-data-center-stargate-ai-supercomputer-insider-report",
+    "views": 0,
+    "is_public": true,
+    "createdAt": "2024-03-30T10:40:34.876Z",
+    "bulletpoints": [
+      {
+        "point": "Groundbreaking collaboration between Microsoft and OpenAI for a revolutionary data center project."
+      },
+      {
+        "point": "Development of an AI supercomputer named 'Stargate' slated for launch in 2028."
+      },
+      {
+        "point": "Intensifying demand for AI-driven data infrastructure fueled by advancements in generative AI technology."
+      },
+      {
+        "point": "Projected cost of $100 billion underscores the scale and ambition of the initiative."
+      },
+      {
+        "point": "Significant investment in AI chips, with costs exceeding $115 billion, demonstrates commitment to innovation."
+      }
+    ],
+    "quote": "We are always planning for the next generation of infrastructure innovations needed to continue pushing the frontier of AI capability."
   },
   {
-    "_id": "65ec4847b1e9f820b545d54e",
-    "title": "iPhone 16 Pro Design Leak Reveals Innovative Capture Button",
-    "description": "Leaked CAD renders unveil the anticipated iPhone 16 Pro's design, featuring a novel Capture Button alongside significant improvements. The Capture Button, placed below the power button, facilitates seamless photo and video capturing, with additional functionalities like focus adjustment and zoom control. The handset boasts a larger form factor compared to its predecessor, accommodating a 6.3-inch display with thinner bezels. The rear camera setup houses three sensors, a LiDAR module, and enhanced photography capabilities. Expect a sleek design and vibrant colour options upon release.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983811/iphone-16-pro-leaked-renders-suggest-new-design-with-capture-button_image.jpg",
-    "link": "https://www.gadgets360.com/mobiles/news/iphone-16-pro-design-renders-leak-display-size-capture-button-dimensions-apple-report-5204763",
+    "_id": "6607ec24d6f1e3400d7832e9",
+    "title": "Anticipated Launch of New iPad Pro and iPad Air Models in May: Insights by Mark Gurman",
+    "description": "Apple is anticipated to introduce updated versions of its iPad Pro and iPad Air models, featuring larger displays and upgraded chipsets. Recent leaks and reports have hinted at these forthcoming tablets, generating significant anticipation among Apple enthusiasts. Despite earlier speculations suggesting an April launch, a recent report by Bloomberg's Mark Gurman indicates a delay, with the unveiling now expected in early May, about a month before the commencement of Apple's Worldwide Developers Conference (WWDC) scheduled for June 10. Gurman attributes the delay to ongoing software refinement and the intricacies of implementing new manufacturing techniques for the anticipated displays. According to Gurman, Apple suppliers are ramping up production in preparation for the launch. The new iPad Pro variants, codenamed J717, J718, J720, and J721, are rumored to be powered by Apple's latest M3 chipset and will purportedly support redesigned versions of the Magic Keyboard and Apple Pencil. Additionally, Apple has reportedly been exploring the integration of OLED screens into these upcoming iPad models. Notably, the iPad Air, currently available in a 10.9-inch size, is expected to receive a larger 12.9-inch display. The next-generation iPad Air models are speculated to feature M2 chipsets and may include landscape-oriented front cameras. Recent leaks have hinted at thinner bezels for the upcoming iPad Pro models, with options for glossy and matte screen versions. One leak suggests that the 11-inch variant will feature a 7.12mm bezel, while the 12.9-inch option will have a 7.08mm bezel, marking reductions of 10 and 15 percent, respectively, compared to their 2022 counterparts.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794965/apple-s-new-ipad-pro-ipad-air-models-likely-to-launch-in-may-mark-gurman_image.jpg",
+    "link": "https://www.gadgets360.com/tablets/news/apple-ipad-pro-air-launch-timeline-expected-mark-gurman-report-5334289",
+    "category": "tablets",
+    "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+    "slug": "anticipated-launch-of-new-ipad-pro-and-ipad-air-models-in-may-insights-by-mark-gurman",
+    "views": 0,
+    "is_public": true,
+    "createdAt": "2024-03-30T10:40:36.757Z",
+    "bulletpoints": [
+      {
+        "point": "Introduction of updated iPad Pro and iPad Air models"
+      },
+      {
+        "point": "Rumors suggest larger displays and upgraded chipsets"
+      },
+      {
+        "point": "Anticipated launch in early May, ahead of WWDC"
+      },
+      {
+        "point": "Delayed due to software refinement and manufacturing complexities"
+      },
+      {
+        "point": "Speculations about thinner bezels and integration of OLED screens"
+      }
+    ],
+    "quote": "The excitement surrounding the launch of these new iPad models reflects Apple's ongoing commitment to innovation and user experience enhancement."
+  },
+  {
+    "_id": "6607ec26d6f1e3400d7832eb",
+    "title": "Google Introduces Feature to Display Wallet Balances for Various Cryptocurrencies",
+    "description": "In a progressive move towards cryptocurrency adoption, Google has unveiled a new feature allowing users to easily check the balances of their crypto wallets directly through a Google search. This initiative is poised to simplify engagement with digital assets and could potentially attract more individuals to the world of cryptocurrencies. The feature enables users to view wallet balances for popular blockchains including Bitcoin, Arbitrum, Avalanche, Optimism, Polygon, and Fantom. While the displayed balances may not be real-time and are limited to native tokens of supported blockchains, this development signifies a significant step towards mainstream acceptance of digital currencies. Screenshots of the feature have already surfaced on various social media platforms, generating excitement among crypto enthusiasts. It's important to note that wallet addresses do not disclose the identity of the wallet holder, as control over each wallet is maintained through private keys. This integration comes amid a bullish trend in the crypto market, with Bitcoin recently reaching a new all-time high. Predictions from financial institutions like Standard Chartered suggest further bullish momentum, projecting Bitcoin's price to reach $200,000 by 2025. The introduction of ETFs in the US and ETNs in the UK is expected to attract more investors to the crypto space, leading to increased interest in checking wallet balances on platforms like Google. Google has previously demonstrated its support for cryptocurrencies by integrating similar features, such as displaying wallet balances for Ethereum Name Service (ENS) holders. The ENS simplifies complex wallet addresses into human-readable formats, enhancing user accessibility and convenience.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794968/google-to-show-token-balances-in-wallets-running-on-bitcoin-polygon-fantom-blockchains_image.jpg",
+    "link": "https://www.gadgets360.com/cryptocurrency/news/google-token-balance-wallet-bitcoin-polygon-arbitrum-avalanche-optimism-polygon-fantom-5334589",
+    "category": "cryptocurrency",
+    "dateline": "Written by Radhika Parashar, 29 March 2024",
+    "slug": "google-introduces-feature-to-display-wallet-balances-for-various-cryptocurrencies",
+    "views": 0,
+    "is_public": true,
+    "createdAt": "2024-03-30T10:40:38.545Z",
+    "bulletpoints": [
+      {
+        "point": "Google's new feature allows users to easily check the balances of their crypto wallets directly through a Google search."
+      },
+      {
+        "point": "The initiative aims to simplify engagement with digital assets and could attract more individuals to the world of cryptocurrencies."
+      },
+      {
+        "point": "Users can now view wallet balances for popular blockchains including Bitcoin, Arbitrum, Avalanche, Optimism, Polygon, and Fantom."
+      },
+      {
+        "point": "Predictions from financial institutions suggest further bullish momentum in the crypto market, with Bitcoin's price projected to reach $200,000 by 2025."
+      },
+      {
+        "point": "Google's support for cryptocurrencies is evident through previous integrations, such as displaying wallet balances for Ethereum Name Service (ENS) holders."
+      }
+    ],
+    "quote": "The best way to predict the future is to create it. - Peter Drucker"
+  },
+  {
+    "_id": "6607ec28d6f1e3400d7832ed",
+    "title": "Launching Soon: Vivo's Thinnest Foldable Phone Set to Hit Indian Markets",
+    "description": "Vivo's latest offering, the X Fold 3, is set to make its debut in India, promising to be the slimmest foldable device in the market. Boasting a Snapdragon 8 Gen 2 chipset under its hood, this innovative smartphone features a 5,500mAh battery with rapid wired charging capabilities. Its book-style design unfolds to reveal an expansive 8.03-inch 2K primary display and a sophisticated 50-megapixel triple rear camera setup. Although an official confirmation is pending, reports suggest that the Indian variant will mirror the specifications of its Chinese counterpart. The Vivo X Fold 3 unfolds to a thickness of 10.2mm, making it notably sleeker than its predecessor, the Vivo X Fold 2. In addition to its impressive display, this device packs an octa-core Snapdragon processor, up to 16GB of RAM, and up to 1TB of storage. Running on Android 14-based OriginOS 4, it promises a seamless user experience. Its camera setup includes a versatile 50-megapixel VCS bionic primary sensor, an ultra-wide-angle lens, and a dedicated portrait shooter, ensuring stunning photography in any scenario. With both cover and main displays equipped with 32-megapixel selfie cameras, capturing high-quality self-portraits is effortless. Powering all these features is a robust 5,500mAh battery with support for 80W fast charging. Whether unfolded or folded, the Vivo X Fold 3 offers a compact and stylish form factor, weighing 219g and measuring 159.96mm x 142.69mm x 4.65mm when unfolded and 159.96mm x 72.7mm x 10.2mm when folded. Expected to launch at competitive prices, this cutting-edge device will come in Feather White and Thin Wing Black variants, catering to diverse consumer preferences.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794970/vivo-x-fold-3-tipped-to-launch-in-india-soon-said-to-be-country-s-thinnest-foldable_image.jpg",
+    "link": "https://www.gadgets360.com/mobiles/news/vivo-x-fold-3-india-launch-expected-specifications-thinnest-foldable-report-5333895",
     "category": "mobiles",
-    "dateline": "Written by Sucharita Ganguly, 9 March 2024",
-    "slug": "iphone-16-pro-design-leak-reveals-innovative-capture-button",
+    "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+    "slug": "launching-soon-vivos-thinnest-foldable-phone-set-to-hit-indian-markets",
     "views": 0,
     "is_public": true,
-    "createdAt": "2024-03-09T11:30:15.343Z",
-    "orderList": [
-      "Novel Capture Button enhances photo and video capabilities",
-      "Larger display with thinner bezels",
-      "Advanced rear camera setup for improved photography",
-      "Expect sleek design and vibrant colour options"
-    ]
+    "createdAt": "2024-03-30T10:40:40.340Z",
+    "bulletpoints": [
+      {
+        "point": "Vivo X Fold 3 promises to be the slimmest foldable device in the market."
+      },
+      {
+        "point": "It features a Snapdragon 8 Gen 2 chipset and a 5,500mAh battery with rapid wired charging."
+      },
+      {
+        "point": "The device boasts an expansive 8.03-inch 2K primary display and a sophisticated 50-megapixel triple rear camera setup."
+      },
+      {
+        "point": "With up to 16GB of RAM and 1TB of storage, it ensures smooth performance and ample space for multimedia content."
+      },
+      {
+        "point": "Expected to launch at competitive prices, it will come in Feather White and Thin Wing Black variants."
+      }
+    ],
+    "quote": "Innovation is not about saying yes to everything. It's about saying NO to all but the most crucial features."
   },
   {
-    "_id": "65ec4847b1e9f820b545d54f",
-    "title": "X Unveils 'Long-Form Express' for Premium Users to Create and Share Extended Content",
-    "description": "X, the social networking platform previously known as Twitter, now offers a new feature called Long-Form Express. Exclusive to Premium users, it enables sharing of comprehensive written content. Users can access this feature through the Long-Form Express section, offering diverse formatting options and multimedia embedding capabilities. Articles can span up to 15,000 words and include images, videos, and X posts. They appear on users' profiles and followers' timelines, marked by a distinct icon and layout. Additionally, users have editing and deletion privileges for published articles.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983813/x-introduces-%27articles%27-for-premium%2B-users-to-write-and-share-long-form-content_image.jpg",
-    "link": "https://www.gadgets360.com/apps/news/x-articles-long-form-blog-premium-plus-users-verified-organisations-5200870",
-    "category": "apps",
-    "dateline": "Written by Sucharita Ganguly, 8 March 2024",
-    "slug": "x-unveils-'long-form-express'-for-premium-users-to-create-and-share-extended-content",
+    "_id": "6607ec2ad6f1e3400d7832ef",
+    "title": "Concerns Rise: FATF Urges Prompt Action from Nations Regarding Crypto Regulations",
+    "description": "The Financial Action Task Force (FATF) has highlighted a growing concern over the slow implementation of regulations pertaining to the virtual digital assets sector across numerous nations. In its latest report, the FATF expressed apprehension regarding the delay in adopting and enforcing these regulations, citing the potential for criminal activities to flourish in the absence of stringent oversight. Over a period of 12 months, the organization meticulously scrutinized the regulatory landscape of various countries to compile a comprehensive assessment of the extent to which FATF guidelines have been integrated. The FATF's Plenary session in February 2023 established a roadmap aimed at fortifying the implementation of its standards concerning virtual assets and virtual asset service providers (VASPs). Despite this initiative, a considerable number of countries have yet to fully embrace the FATF's requirements, thereby leaving vulnerabilities in the global financial system. The FATF has long been at the forefront of efforts to combat the illicit use of crypto assets for money laundering and terrorist financing. In November 2022, the FATF unofficially mandated member countries to adhere to its anti-money laundering (AML) regulations to avoid being classified as 'grey listed'. Among the directives issued by the FATF is the requirement for countries to exclusively permit licensed entities to engage in transactions involving crypto assets. Additionally, nations are instructed to gather comprehensive information about both the senders and recipients of crypto assets, particularly in cases involving suspicious transactions. The FATF's evaluation encompasses various criteria, including the implementation of risk assessments, the establishment of licensing frameworks, and the enforcement of supervisory measures for VASPs. The organization emphasizes the urgency of regulatory action, stressing that the inherently international and borderless nature of virtual assets demands a coordinated global response. Failure to regulate VASPs effectively in any jurisdiction could have far-reaching consequences, underscoring the critical importance of timely and robust regulatory frameworks. Notably, India has emerged as a proactive participant in regulatory efforts, having successfully implemented the FATF's guidelines. However, several countries, including Australia, Finland, Greece, Malaysia, and Portugal, are still in the process of aligning their regulatory frameworks with FATF standards. Ashish Singhal, Co-founder of India's CoinSwitch crypto exchange, lauded India's proactive stance in conducting risk assessments of VASPs and implementing the Travel Rule. Singhal's remarks underscore the significance of regulatory compliance and international cooperation in addressing the challenges posed by virtual assets.",
+    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794974/fatf-upset-worried-about-nations-being-slow-in-regulating-crypto-details_image.jpg",
+    "link": "https://www.gadgets360.com/cryptocurrency/news/fatf-crypto-regulations-nations-slow-in-adopting-rules-5333805",
+    "category": "cryptocurrency",
+    "dateline": "Written by Radhika Parashar, 29 March 2024",
+    "slug": "concerns-rise-fatf-urges-prompt-action-from-nations-regarding-crypto-regulations",
     "views": 0,
     "is_public": true,
-    "createdAt": "2024-03-09T11:30:15.793Z",
-    "orderList": [
-      "Exclusive feature for X Premium users",
-      "Compose articles with up to 15,000 words",
-      "Include multimedia and X posts",
-      "Articles appear on profiles and followers' timelines",
-      "Users have editing and deletion options"
-    ]
-  },
-  {
-    "_id": "65ec4847b1e9f820b545d550",
-    "title": "Apple Plans Foldable iPhone Launch in 2026, Promising Thin and Light Design",
-    "description": "Apple is gearing up to release its first foldable iPhone in 2026, aiming for a sleeker and lighter design compared to competitors. The folding device will prioritize durability, minimizing crease marks on the screen. Apple aims to surpass rivals Samsung and Google, known for their existing foldable offerings. The company's focus on cutting-edge technology suggests a game-changing product in the foldables market. Previous rumours hinted at a foldable MacBook, but recent reports indicate Apple's commitment to a foldable iPhone.",
-    "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1709983815/apple-could-release-a-foldable-iphone-in-2026-will-reportedly-be-thinner-lighter-than-competitors_image.jpg",
-    "link": "https://www.gadgets360.com/mobiles/news/iphone-foldable-release-2026-tipped-thinner-lighter-than-competition-apple-report-5201140",
-    "category": "mobiles",
-    "dateline": "Written by Manas Mitul, 8 March 2024",
-    "slug": "apple-plans-foldable-iphone-launch-in-2026-promising-thin-and-light-design",
-    "views": 0,
-    "is_public": true,
-    "createdAt": "2024-03-09T11:30:15.885Z",
-    "orderList": [
-      "Foldable iPhone launch planned for 2026",
-      "Focus on sleek, lightweight design",
-      "Priority on durability and screen quality",
-      "Aims to surpass competitors like Samsung and Google"
-    ]
-  }
+    "createdAt": "2024-03-30T10:40:42.443Z",
+    "bulletpoints": [
+    {
+    "point": "FATF highlights concerns over slow implementation of crypto regulations."
+    },
+    {
+    "point": "Numerous nations are urged to promptly adopt and enforce regulatory measures."
+    },
+    {
+    "point": "India praised for proactive approach in implementing FATF guidelines."
+    },
+    {
+    "point": "Global coordination emphasized to address challenges posed by virtual assets."
+    },
+    {
+    "point": "Significant progress noted, but several countries still in the process of aligning regulations."
+    }
+    ],
+    "quote": "Regulatory compliance and international cooperation are crucial in addressing the challenges posed by virtual assets."
+    },
+    {
+      "_id": "6607ec2cd6f1e3400d7832f1",
+      "title": "Unveiling of Itel S24: Featuring a 108-Megapixel Primary Camera, Dynamic Bar, and 5,000mAh Battery",
+      "description": "Recently unveiled, the Itel S24 boasts impressive features tailored to enhance user experience. Equipped with a MediaTek Helio G91 chipset, this smartphone ensures smooth performance for daily tasks and gaming. Its robust 5,000mAh battery, complemented by wired fast charging support, guarantees extended usage without frequent recharges. The device offers flexibility with three RAM and storage configurations, catering to various user preferences. Sporting a unique color-changing photochromatic technology, the back panel transforms hues under natural light, adding a touch of dynamism to its aesthetics. Moreover, the Starry Dial design, featuring 3D magnetic particles, creates captivating patterns that catch the eye. Although the India launch awaits confirmation, the Itel S24 is already generating buzz on the global stage. Available in Coastline Blue, Dawn White, and Starry Black variants, users can choose a style that resonates with their personality. The device boasts a 6.6-inch HD+ screen with a 90Hz refresh rate, ensuring vibrant visuals and smooth interactions. With up to 8GB of LPDDR4x RAM and 256GB of storage, multitasking and storing media become seamless. Running on Android 13-based Itel OS 13, the phone offers a user-friendly interface and enhanced security features. The camera setup is a highlight, featuring a 108-megapixel Samsung ISOCELL HM6 sensor for stunning photography. Supported by an f/1.6 aperture and electronic image stabilization (EIS), users can capture sharp, blur-free images even in challenging conditions. The Dynamic Bar feature adds convenience, displaying essential notifications around the front camera cutout. From battery status updates to incoming call alerts, users stay informed without unlocking their device. Security is paramount, with a side-mounted fingerprint sensor ensuring swift and secure access. Weighing 192g and measuring 8.3mm in thickness, the Itel S24 strikes a balance between performance and portability. Whether for work or play, this smartphone promises a seamless experience, empowering users to stay connected and productive on the go.",
+      "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794977/itel-s24-with-108-megapixel-main-camera-dynamic-bar-5-000mah-battery-unveiled_image.jpg",
+      "link": "https://www.gadgets360.com/mobiles/news/itel-s24-launch-colours-ram-storage-options-specifications-features-5333250",
+      "category": "mobiles",
+      "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+      "slug": "unveiling-of-itel-s24-featuring-a-108-megapixel-primary-camera-dynamic-bar-and-5000mah-battery",
+      "views": 0,
+      "is_public": true,
+      "createdAt": "2024-03-30T10:40:44.205Z",
+      "bulletpoints": [
+      {
+      "point": "MediaTek Helio G91 chipset for smooth performance"
+      },
+      {
+      "point": "5,000mAh battery with wired fast charging support"
+      },
+      {
+      "point": "Color-changing photochromatic technology for dynamic aesthetics"
+      },
+      {
+      "point": "Starry Dial design with 3D magnetic particles for captivating patterns"
+      },
+      {
+      "point": "Dynamic Bar feature for convenient notifications around the front camera cutout"
+      }
+      ],
+      "quote": "The Itel S24 strikes a perfect balance between style and substance, offering users a seamless experience in both form and function."
+      },
+      {
+        "_id": "6607ec2ed6f1e3400d7832f3",
+        "title": "PlayStation Plus April Free Games Feature Immortals of Aveum, Minecraft Legends, and Skul: The Hero Slayer",
+        "description": "Sony has unveiled the lineup of complimentary games arriving on PlayStation Plus in April. This month's offerings encompass a diverse array of gaming experiences, including the first-person spell shooter Immortals of Aveum, the strategic spinoff Minecraft Legends, and the roguelike-action platformer Skul: The Hero Slayer. These titles will be available to PS Plus subscribers across all tiers starting April 2nd.\n\nIn Immortals of Aveum, players wield magical gauntlets to cast vibrant spells at adversaries, reminiscent of the combat dynamics seen in Call of Duty. Set in the war-torn realm of Aveum, the game follows Jak, a fledgling soldier who discovers his latent magical abilities and joins an elite order of battlemages to combat dark forces.\n\nMinecraft Legends, a real-time strategy game developed by Mojang, transports players into a world where they must fend off a Piglin invasion through resource management, base construction, and troop deployment. With both single-player and multiplayer modes, including co-op and competitive PvP, players can engage in a variety of gameplay experiences.\n\nSkul: The Hero Slayer, developed by SouthPAW Games, offers a challenging adventure in which players assume the role of Skul, a skeleton soldier fighting to save demonkind. With procedurally generated levels, diverse boss encounters, and the ability to swap skulls for unique powers, Skul provides a fresh take on the roguelike-action genre.\n\nAdditionally, PlayStation Plus members can enjoy the Overwatch 2 Mega Bundle, featuring exclusive cosmetics and Battle Pass perks. The Game Catalog also expands this month, offering titles like NBA 2K24, Marvel's Midnight Suns, Resident Evil 3, Lego DC Supervillains, and Dragon Ball Z: Kakarot to subscribers in the Extra and Deluxe/Premium tiers.\n\nAs always, these free games are accessible as long as the subscription remains active, providing PlayStation Plus members with a diverse selection of gaming experiences to enjoy.",
+        "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794978/ps-plus-monthly-free-games-for-april-include-immortals-of-aveum-minecraft-legends-and-skul-the-hero-slayer_image.png",
+        "link": "https://www.gadgets360.com/games/news/ps-plus-monthly-free-games-april-immortals-of-aveum-minecraft-legends-skul-the-hero-slayer-sony-playstation-ps4-ps5-5333622",
+        "category": "gaming",
+        "dateline": "Written by Manas Mitul, 29 March 2024",
+        "slug": "playstation-plus-april-free-games-feature-immortals-of-aveum-minecraft-legends-and-skul-the-hero-slayer",
+        "views": 0,
+        "is_public": true,
+        "createdAt": "2024-03-30T10:40:46.721Z",
+        "bulletpoints": [
+        {
+        "point": "Enjoy a diverse lineup of complimentary games, including Immortals of Aveum, Minecraft Legends, and Skul: The Hero Slayer."
+        },
+        {
+        "point": "Experience intense spellcasting action in Immortals of Aveum, where players harness magical powers to combat dark forces."
+        },
+        {
+        "point": "Defend against a Piglin invasion in Minecraft Legends by strategizing base construction, resource management, and troop deployment."
+        },
+        {
+        "point": "Embark on a challenging adventure in Skul: The Hero Slayer, where players fight through procedurally generated levels and confront powerful bosses."
+        },
+        {
+        "point": "Access additional perks and titles through PlayStation Plus, including the Overwatch 2 Mega Bundle and an expanded Game Catalog."
+        }
+        ],
+        "quote": "In the world of gaming, every adventure is a story waiting to be told."
+        },
+        {
+          "_id": "6607ec30d6f1e3400d7832f5",
+          "title": "Latest Tecno Smartphone Pova 6 Pro 5G Unveiled in India: Price, Features, and Specifications",
+          "description": "Tecno has introduced its latest offering, the Pova 6 Pro 5G, to the Indian market, marking its debut on March 29. Initially showcased at the Mobile World Congress (MWC) 2024 in February, this smartphone boasts impressive features. Fueled by a 6nm MediaTek Dimensity 6080 SoC, it promises powerful performance. The highlight lies in its camera setup, featuring a 108-megapixel triple rear camera system, a rarity in smartphones today. What sets it apart is the inclusion of a massive 6,000mAh battery, complemented by 70W wired fast charging support, making it the first of its kind in India. Two variants are available, one with 8GB of RAM and 256GB of storage, and the other with 12GB of RAM and the same storage capacity. The pricing starts at Rs. 19,999, with an additional instant bank discount of Rs. 2,000 applicable across all banks, bringing the effective cost down to Rs. 17,999 and Rs. 19,999 for the respective variants. As a bonus, customers will receive a free Tecno S2 Speaker worth Rs. 4,999 with their purchase. The device will be up for grabs from April 4, 12pm IST onwards, accessible through Amazon and offline retail outlets. Available in two striking color options, Comet Green and Meteorite Grey, the Pova 6 Pro 5G boasts a 6.78-inch full-HD+ AMOLED display with a 120Hz refresh rate and 1,300 nits peak brightness. Its processing power is further bolstered by the MediaTek Dimensity 6080 SoC, paired with up to 12GB of RAM, expandable virtually to an additional 12GB. Running on Android 14-based HiOS 14, it promises a smooth user experience. The rear camera setup comprises a 108-megapixel primary sensor, offering up to 3x in-sensor zoom, alongside a 2-megapixel portrait shooter and an AI-backed lens, accompanied by a dual LED flash unit. On the front, there's a 32-megapixel sensor with a dual-tone LED flash unit for selfies and video calls. Noteworthy features include Dynamic Port 2.0, which displays notifications and other alerts around the hole punch cutout, and an updated Arc Interface with over 200 LEDs, offering more than 100 customizations. Dolby Atmos-supported dual speakers enhance the audio experience. Connectivity options include 5G, Wi-Fi, Bluetooth, NFC, GPS, and USB Type-C. Moreover, it boasts an IP53 rating for dust and splash resistance, with a slim profile measuring 7.8mm in thickness and weighing 195g.",
+          "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794981/tecno-pova-6-pro-5g-with-updated-arc-lighting-6-000mah-battery-launched-in-india-price-specifications_image.jpg",
+          "link": "https://www.gadgets360.com/mobiles/news/tecno-pova-6-pro-5g-india-price-launch-sale-date-specifications-features-5332759",
+          "category": "mobiles",
+          "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+          "slug": "latest-tecno-smartphone-pova-6-pro-5g-unveiled-in-india-price-features-and-specifications",
+          "views": 0,
+          "is_public": true,
+          "createdAt": "2024-03-30T10:40:48.892Z",
+          "bulletpoints": [
+          {
+          "feature": "Powerful 6nm MediaTek Dimensity 6080 SoC"
+          },
+          {
+          "feature": "108-megapixel triple rear camera system"
+          },
+          {
+          "feature": "Massive 6,000mAh battery with 70W wired fast charging support"
+          },
+          {
+          "feature": "Dynamic Port 2.0 for intuitive notifications"
+          },
+          {
+          "feature": "Enhanced audio experience with Dolby Atmos-supported dual speakers"
+          }
+          ],
+          "quote": "Innovation is not just about changing, it's about improving."
+          }
+          ,{
+            "_id": "6607ec32d6f1e3400d7832f7",
+            "title": "Upcoming Launch of Samsung Galaxy M55 5G and Galaxy M15 5G in India: Expected Prices, Specifications, and Leaks",
+            "description": "Samsung is gearing up for the launch of its latest smartphones, the Galaxy M55 5G and Galaxy M15 5G, in the Indian market. The Galaxy M55 5G boasts Qualcomm's Snapdragon 7 Gen 1 chipset, while the Galaxy M15 5G is equipped with an octa-core MediaTek Dimensity 6100+ SoC. These models, which were recently unveiled in Brazil, are now set to make their debut in India. Ahead of the launch, various details have emerged about their features and pricing. Amazon India banners have confirmed the imminent arrival of these handsets in the Indian market, although an official launch date is yet to be announced. According to leaked information, the Galaxy M55 5G is expected to feature a Snapdragon 7 Gen 1 SoC, while the Galaxy M15 5G may sport a sAMOLED display with a centred waterdrop notch and a massive 6,000mAh battery. Tipster Sudhanshu Ambhore has provided insights into the pricing and probable configurations of these devices in India. The Galaxy M55 5G is anticipated to be priced starting at Rs. 26,999 for the 8GB + 128GB variant, with higher storage options costing up to Rs. 32,999. On the other hand, the Galaxy M15 5G could start at Rs. 13,499 for the 4GB + 128GB variant and go up to Rs. 14,999 for the 6GB + 128GB variant. These smartphones are expected to offer competitive features similar to their global counterparts. For instance, the Galaxy M15 5G may come with a MediaTek Dimensity 6100+ SoC, a 6.5-inch 90Hz full-HD+ Super AMOLED display, a 50-megapixel triple rear camera setup, a 13-megapixel selfie camera, and support for 45W wired fast charging. In Brazil, the Galaxy M55 5G is listed at BRL 3,199 (approximately Rs. 53,000) for the 8GB + 256GB variant, while the Galaxy M15 5G is priced at BRL 1,499 (about Rs. 25,000) for the 4GB + 128GB variant. These smartphones come in various color options to cater to different preferences.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794984/samsung-galaxy-m55-5g-galaxy-m15-5g-india-launch-confirmed-prices-ram-and-storage-variants-leaked_image.jpg",
+            "link": "https://www.gadgets360.com/mobiles/news/samsung-m55-m15-5g-india-launch-confirm-design-amazon-price-expected-5332266",
+            "category": "mobiles",
+            "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+            "slug": "upcoming-launch-of-samsung-galaxy-m55-5g-and-galaxy-m15-5g-in-india-expected-prices-specifications-and-leaks",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:50.817Z",
+            "bulletpoints": [
+              {
+                "point": "Galaxy M55 5G and Galaxy M15 5G are anticipated to offer competitive features in the Indian market."
+              },
+              {
+                "point": "Tipster Sudhanshu Ambhore has provided insights into the pricing and probable configurations of these devices in India."
+              },
+              {
+                "point": "The Galaxy M55 5G is expected to feature a Snapdragon 7 Gen 1 SoC, while the Galaxy M15 5G may sport a sAMOLED display with a centred waterdrop notch."
+              },
+              {
+                "point": "Amazon India banners have confirmed the imminent arrival of these handsets in the Indian market."
+              },
+              {
+                "point": "In Brazil, the Galaxy M55 5G is listed at BRL 3,199 (approximately Rs. 53,000) for the 8GB + 256GB variant."
+              }
+            ],
+            "quote": "The future belongs to those who believe in the beauty of their dreams."
+          },
+          {
+            "_id": "6607ec34d6f1e3400d7832f9",
+            "title": "Xiaomi Unveils SU7 Electric Vehicle in China to Challenge Tesla in the EV Market",
+            "description": "Xiaomi, the renowned Chinese smartphone manufacturer, has entered the electric vehicle market with the launch of its SU7, a stylish electric car boasting features reminiscent of Porsche models. Priced competitively below Tesla's Model 3, the SU7 aims to carve out a significant share in China's increasingly crowded EV landscape. During the unveiling event, Xiaomi's CEO Lei Jun highlighted the SU7's superior capabilities compared to both Tesla and Porsche offerings. With a starting price of CNY 215,900, the SU7 offers a minimum range of 700 km, surpassing Tesla's Model 3 range of 567km. Lei Jun emphasized Xiaomi's commitment to the auto industry, having previously announced a $10 billion investment in the EV sector. The SU7, developed in partnership with BAIC Group, garnered immense interest with 50,000 orders received within the first 27 minutes of availability. Leveraging its expertise in smartphones, Xiaomi integrates its proprietary Hyper OS into the SU7's operating system, creating a seamless connection between the vehicle and other Xiaomi devices. Despite skepticism from analysts about Xiaomi's transition into the premium EV segment, the company's diversified revenue streams and technological prowess position it as a formidable competitor. However, challenges persist in China's auto market, particularly for newcomers amidst fierce competition among established players. Nevertheless, Xiaomi's strategic approach and focus on innovation could pave the way for success in the EV industry.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794986/xiaomi-launches-su7-electric-car-in-china-as-smartphone-maker-takes-aim-at-ev-giant-tesla_image.jpg",
+            "link": "https://www.gadgets360.com/auto/news/xiaomi-su7-electric-car-launched-china-tesla-competition-5332677",
+            "category": "auto",
+            "dateline": "by Reuters, 29 March 2024",
+            "slug": "xiaomi-unveils-su7-electric-vehicle-in-china-to-challenge-tesla",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:52.588Z",
+            "bulletpoints": [
+              {"point": "Xiaomi introduces the SU7 electric car, targeting the competitive EV market in China."},
+              {"point": "The SU7 offers advanced features and competitive pricing, aiming to rival Tesla's Model 3."},
+              {"point": "Xiaomi's expertise in smartphones is leveraged to enhance the SU7's connectivity and user experience."},
+              {"point": "Despite skepticism, Xiaomi's diversified revenue streams and technological capabilities position it as a strong contender in the EV industry."},
+              {"point": "Challenges persist in China's auto market, but Xiaomi's strategic approach and commitment to innovation could lead to success."}
+            ],
+            "quote": "In the midst of challenges, innovation becomes our greatest ally."
+          },
+          {
+            "_id": "6607ec36d6f1e3400d7832fb",
+            "title": "Bitcoin Holds Firm Above $67,000, Ethereum and Solana Maintain Positive Momentum Amid Market Slowdown",
+            "description": "Amidst a backdrop of market slowdown, Bitcoin managed to maintain its position above $67,000 on Friday, March 29, experiencing a marginal loss of 0.18 percent. Currently valued at $67,034 (approximately Rs. 55.8 lakh), Bitcoin witnessed a minor dip of $111 (roughly Rs. 9,250) within the past 24 hours. Analysts anticipate a consolidation phase around the $70,400 mark (approximately Rs. 58.6 lakh) for Bitcoin in the near future. Several other cryptocurrencies followed Bitcoin's trajectory with losses, including Tether, Binance Coin, USD Coin, Cardano, Bitcoin Cash, and Polygon. However, amidst this, Ethereum managed to secure a slight gain of 0.86 percent, reaching a price of $3,390 (approximately Rs. 2.82 lakh) on Friday. Solana, Ripple, Dogecoin, Avalanche, Shiba Inu, and Polkadot also showed marginal gains. Furthermore, Tron, Near Protocol, Litecoin, Cronos, and Stellar joined the list of cryptocurrencies registering minor upticks. Market analysts suggest that the crypto market remains volatile, especially with $15 billion (approximately Rs. 1,25,022 crore) worth of options set to expire. The overall sentiment in the market appears to be extremely greedy, as noted by Edul Patel, CEO of Mudrex. Despite the positive movements in certain cryptocurrencies, the broader crypto market is grappling with legal issues across various jurisdictions. Notable players such as Binance, Coinbase, and KuCoin are under investigation in Nigeria, the Philippines, and the US, respectively. Additionally, Sam Bankman-Fried, the former CEO of now-defunct FTX exchange, has been sentenced to 25 years in prison for his involvement in a multi-billion-dollar fraud case, marking a significant event in the regulatory landscape of the crypto industry. Despite these challenges, the overall crypto market cap saw a slight increase of 0.58 percent in the last 24 hours, reaching a valuation of $2.65 trillion (approximately Rs. 2,20,87,246 crore). It's imperative to note that cryptocurrency investments carry inherent market risks and are not regulated as legal tender.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794988/bitcoin-holds-firm-above-67-000-ethereum-and-solana-maintain-positive-momentum-amid-market-slowdown_image.jpg",
+            "link": "https://www.gadgets360.com/cryptocurrency/news/bitcoin-ether-solana-price-today-cryptocurrency-market-rate-india-5332676",
+            "category": "cryptocurrency",
+            "dateline": "Written by Radhika Parashar, 29 March 2024",
+            "slug": "bitcoin-holds-firm-above-67-000-ethereum-and-solana-maintain-positive-momentum-amid-market-slowdown",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:54.408Z",
+            "bulletpoints": [
+              {"point": "Bitcoin maintains position above $67,000 amidst market slowdown."},
+              {"point": "Ethereum registers slight gain, reaching $3,390 on Friday."},
+              {"point": "Solana, Ripple, Dogecoin, and others show marginal gains."},
+              {"point": "Crypto market faces regulatory challenges with investigations into major exchanges."},
+              {"point": "Sam Bankman-Fried, former FTX CEO, sentenced to 25 years in prison for fraud."}
+            ],
+            "quote": "The crypto market is a dynamic landscape where volatility and regulatory challenges coexist, presenting both opportunities and risks for investors."
+          },
+          {
+            "_id": "6607ec38d6f1e3400d7832fd",
+            "title": "Former FTX CEO Receives 25-Year Sentence for Multi-Billion Dollar Fraud",
+            "description": "A judge sentenced Sam Bankman-Fried to 25 years in prison for orchestrating a multi-billion-dollar fraud scheme involving the now-bankrupt FTX cryptocurrency exchange. The sentencing, handed down on Thursday, marked the conclusion of a dramatic downfall for the former billionaire entrepreneur. US District Judge Lewis Kaplan rejected Bankman-Fried's claims of innocence, stating that he had deceived customers and lied during his trial testimony. Bankman-Fried, aged 32, was found guilty of seven counts of fraud and conspiracy related to FTX's collapse in 2022. Prosecutors labeled it as one of the largest financial frauds in US history. Despite expressing remorse for the losses suffered by FTX customers, Bankman-Fried did not admit to criminal wrongdoing. He intends to appeal both his conviction and sentence. The sentencing signals a crackdown by US authorities on malfeasance in cryptocurrency markets, emphasizing the severity of consequences for financial crimes. Bankman-Fried's actions resulted in significant losses for FTX customers, equity investors, and lenders to the Alameda Research hedge fund. The judge imposed an $11 billion forfeiture order, allowing the government to compensate victims using seized assets. While defense counsel portrayed Bankman-Fried as a mathematically driven individual who attempted to rectify the situation post-collapse, the judge emphasized the pursuit of power and influence as underlying motives. Bankman-Fried's philanthropic endeavors and political contributions before his downfall contrast starkly with the criminal activities he was found guilty of, highlighting the complexities of his character.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794990/former-ftx-ceo-receives-25-year-sentence-for-multi-billion-dollar-fraud_image.jpg",
+            "link": "https://www.gadgets360.com/cryptocurrency/news/sam-bankman-fried-sentenced-25-years-multi-billion-dollar-ftx-fraud-5332262",
+            "category": "cryptocurrency",
+            "dateline": "by Reuters, 29 March 2024",
+            "slug": "former-ftx-ceo-receives-25-year-sentence-for-multi-billion-dollar-fraud",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:56.160Z",
+            "bulletpoints": [
+              {"point": "Former FTX CEO sentenced to 25 years in prison for orchestrating a multi-billion-dollar fraud."},
+              {"point": "US District Judge rejects Bankman-Fried's claims of innocence, emphasizing his deceptive actions."},
+              {"point": "The sentencing highlights the severity of consequences for financial crimes in cryptocurrency markets."},
+              {"point": "Bankman-Fried's fraudulent activities resulted in significant losses for FTX customers, equity investors, and lenders."},
+              {"point": "Defense counsel portrays Bankman-Fried as a philanthropic figure, contrasting with his criminal conviction."}
+            ],
+            "quote": "The case of Sam Bankman-Fried underscores the intricate interplay between ambition, philanthropy, and criminality in the world of cryptocurrency."
+          },
+          {
+            "_id": "6607ec39d6f1e3400d7832ff",
+            "title": "Unveiling the Motorola Edge 50 Ultra: Design, Color Variants, and Key Features Revealed",
+            "description": "Motorola enthusiasts await the imminent arrival of the Motorola Edge 50 Ultra, expected to debut alongside other models in the Edge 50 series. While the Motorola Edge 50 Pro is set to launch in India on April 3, recent leaks also hint at the emergence of the Motorola Edge 50 Fusion. Speculations suggest a global unveiling of all three models simultaneously. According to reports, the Motorola Edge 50 Ultra will be available in three distinct colors: Beige, Black, and Peach Fuzz. Interestingly, in certain markets, it may adopt the moniker 'Moto X50 Ultra'. Design renders showcase the device in these colorways, hinting at a sleek and modern aesthetic. Notably, the Moto X50 Ultra has been teased in China and is poised for a near-future launch. The leaked renders feature the date 'April 3' on the lock screen, aligning with previous leaks regarding the Edge 50 Pro's launch date. This suggests a potential joint launch for both models. The design similarities between the Edge 50 Ultra and Edge 50 Pro are evident, with both models sporting a distinctive rear camera module. The black and peach variants boast a faux leather back panel, while the beige option features a textured rear panel, offering consumers varied aesthetic preferences. The rear camera island houses a triple-camera setup, including a 75mm periscope lens capable of 5x optical zoom, alongside laser autofocus support. On the front, a curved OLED display with a centered hole-punch cutout accommodates the front camera sensor. The device is expected to run on Android 14-based Hello UI out-of-the-box, promising users a seamless and intuitive experience with the potential for three years of OS upgrades. Pricing is anticipated to hover around $999 (approximately Rs. 83,300), positioning it as a premium offering in the smartphone market.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794992/motorola-edge-50-ultra-design-renders-colour-options-key-specifications-surface-online_image.jpg",
+            "link": "https://www.gadgets360.com/mobiles/news/motorola-edge-50-ultra-design-colour-options-specifications-leak-5331835",
+            "category": "mobiles",
+            "dateline": "Written by Sucharita Ganguly, 29 March 2024",
+            "slug": "unveiling-the-motorola-edge-50-ultra-design-color-variants-and-key-features-revealed",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:57.854Z",
+            "bulletpoints": [
+              {
+                "point": "Distinct color variants: Beige, Black, and Peach Fuzz."
+              },
+              {
+                "point": "Faux leather and textured back panels for varied aesthetics."
+              },
+              {
+                "point": "Triple-camera setup with 5x optical zoom and laser autofocus."
+              },
+              {
+                "point": "Curved OLED display with a centered hole-punch cutout."
+              },
+              {
+                "point": "Android 14-based Hello UI with three years of OS upgrades."
+              }
+            ],
+            "quote": "The Motorola Edge 50 Ultra promises to redefine the smartphone experience with its premium design and cutting-edge features."
+          },
+          {
+            "_id": "6607ec3bd6f1e3400d783301",
+            "title": "Insights into Upcoming iQoo Devices: Z9 Turbo, Pad 2, and Neo 10",
+            "description": "iQoo enthusiasts are eagerly anticipating the launch of several new devices, including the iQoo Z9 Turbo and the iQoo Pad 2. Rumors also suggest the imminent arrival of the iQoo Neo 10. Digital Chat Station, a reputable tipster, has shed light on the key features of these upcoming products. The iQoo Z9 Turbo is expected to boast a high-resolution 1.5K OLED display, powered by the formidable Snapdragon 8s Gen 3 SoC, and fueled by a substantial 6,000mAh battery. Reports indicate a potential April launch alongside the base iQoo Z9 and the iQoo Z9x. iQoo has officially confirmed the introduction of a new Z9 variant in April, featuring Qualcomm's latest chipset, likely referring to the Z9 Turbo. However, detailed specifications remain under wraps. Moving on to the iQoo Pad 2, leaks suggest significant upgrades over its predecessor, including a spacious 13-inch 3.1K LCD screen, MediaTek Dimensity 9300 chipset, and a hefty 11,500mAh battery. Speculations hint at its resemblance to the Vivo Pad 3 Pro, recently unveiled in China. Additionally, the tipster unveils details about an unnamed iQoo model, speculated to be the iQoo Neo 9s, Neo 9 Racing Edition, or Neo 10. This mystery device is rumored to feature a Snapdragon 8 Gen 3 chipset, a 1.5K OLED display, and a 50-megapixel primary rear camera equipped with optical image stabilization (OIS). While the moniker remains unconfirmed, enthusiasts eagerly await further updates on this intriguing addition to the iQoo lineup.",
+            "image": "https://res.cloudinary.com/dpvae9k6n/image/upload/v1711794994/iqoo-z9-turbo-iqoo-pad-2-key-features-leaked-iqoo-neo-10-tipped-to-launch-soon_image.jpg",
+            "link": "https://www.gadgets360.com/mobiles/news/iqoo-z9-turbo-pad-2-neo-10-9s-9-racing-edition-expected-features-weibo-leak-5327984",
+            "category": "mobiles",
+            "dateline": "Written by Sucharita Ganguly, 28 March 2024",
+            "slug": "insights-into-upcoming-iqoo-devices-z9-turbo-pad-2-and-neo-10",
+            "views": 0,
+            "is_public": true,
+            "createdAt": "2024-03-30T10:40:59.604Z",
+            "bulletpoints": [
+              {
+                "point": "iQoo Z9 Turbo: 1.5K OLED display, Snapdragon 8s Gen 3 SoC, 6,000mAh battery."
+              },
+              {
+                "point": "iQoo Pad 2: 13-inch 3.1K LCD screen, MediaTek Dimensity 9300 chipset, 11,500mAh battery."
+              },
+              {
+                "point": "Upcoming iQoo model: Snapdragon 8 Gen 3 chipset, 1.5K OLED display, 50-megapixel primary rear camera with OIS."
+              },
+              {
+                "point": "Awaiting official confirmation on the mystery iQoo device's moniker and specifications."
+              },
+              {
+                "point": "Stay tuned for more updates on iQoo's latest offerings!"
+              }
+            ],
+            "quote": "The iQoo lineup continues to push boundaries with innovative features and powerful performance."
+          }
+          
+          
+          
+          
+          
+          
+          
+        
+        
+        
+        
+        
+        
 ]

@@ -6,40 +6,27 @@ import blogData from "../../../lib/data.json";
 import Breadcrumb from "@/components/Pages/Categories/Breadcrumb";
 
 export async function generateStaticParams() {
-  const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
-    res.json()
-  );
+  // const posts = await fetch(`${checkEnvironment()}/api/blogs`).then((res) =>
+  //   res.json()
+  // );
 
-  return posts.map((post: any) => ({
+  return blogData.map((post: any) => ({
     category: post.category,
     slug: post.slug,
   }));
 }
 
 async function getBlogByCategoryAndSlug(category: any, slug: any) {
+  const filteredBlogs = blogData.find((blog) => {
+    return blog.category === category && blog.slug === slug;
+  });
 
-  let url = `${checkEnvironment()}/api/blogs/${category}/${slug}`
-  console.log(url);
-  
-  
-  try {
-    const res = await fetch(
-      //@ts-ignore
-     `${url}`
-    );
-
-    if (!res.ok) {
-      console.log("error getBlogByCategoryAndSlug");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error, "message");
-  }
+  return filteredBlogs || null;
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const blog = await getBlogByCategoryAndSlug(params?.category, params?.slug);
-console.log(blog?.image,"???");
+  console.log(blog?.image, "???");
 
   return {
     title: blog?.title,

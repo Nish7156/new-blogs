@@ -7,27 +7,15 @@ import blogData from "../../lib/data.json";
 import { checkEnvironment } from "@/components/Utilty/checkEnvironment ";
 
 export async function generateStaticParams() {
-  const categories = await fetch(`${checkEnvironment()}/api/blogs`).then(
-    (res) => res.json()
-  );  
-  return categories.map((item: any) => ({
+  
+  return blogData.map((item: any) => ({
     category: item.category,
   }));
 }
 
 async function getBlogByCategory(category: any) {
-  try {
-    const res = await fetch(
-      //@ts-ignore
-      `${checkEnvironment()}/api/blogs/${category}`
-    );
-    if (!res.ok) {
-      console.log("error getBlogByCategory");
-    }
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
+  const filteredPosts = blogData.filter(post => post.category === category);
+  return filteredPosts;
 }
 
 export async function generateMetadata({ params }: any): Promise<Metadata> {

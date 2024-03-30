@@ -1,10 +1,10 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import { extractDate, truncateText } from "@/lib/helper";
+import { extractDate, getRandomTime, truncateText } from "@/lib/helper";
 import { getEditoresBlogs } from "@/lib/load-blogs";
 import Link from "next/link";
 import React from "react";
 
-async function EditorsPick({data}:any) {
+async function EditorsPick({ data }: any) {
   return (
     <>
       <div className="editor-news-three pt-100 pb-75">
@@ -30,34 +30,29 @@ async function EditorsPick({data}:any) {
                 <div className="col-xl-4 col-lg-6 col-md-6" key={index}>
                   <div className="news-card-thirteen">
                     <div className="news-card-img">
-                      <CustomImageAuto src={data?.image} alt={data?.title} />
-                      <Link
-                        href={`/${data?.category}`}
-                        className="news-cat"
-                      >
+                      <Link href={`/${data?.category}/${data?.slug}`}>
+                        <CustomImageAuto src={data?.image} alt={data?.title} />
+                      </Link>
+                      <Link href={`/${data?.category}`} className="news-cat capitalize">
                         {data?.category}
                       </Link>
                     </div>
                     <div className="news-card-info">
                       <h3>
-                        <Link
-                          href={`/${data?.category}/${data?.slug}`}
-                        >
+                        <Link href={`/${data?.category}/${data?.slug}`}>
                           {truncateText(data?.title, 75)}
                         </Link>
                       </h3>
                       <ul className="news-metainfo list-style">
                         <li>
                           <i className="fi fi-rr-calendar-minus" />
-                          <Link
-                            href={`/${data?.category}/${data?.slug}`}
-                          >
+                          <Link href={`/${data?.category}/${data?.slug}`}>
                             {extractDate(data?.dateline)}
                           </Link>
                         </li>
                         <li>
                           <i className="fi fi-rr-clock-three" />
-                          15 Min Read
+                          {getRandomTime() + " Min Read"}
                         </li>
                       </ul>
                     </div>

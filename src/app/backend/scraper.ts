@@ -389,21 +389,30 @@ async function saveToDatabase(scrapedData: any[]) {
           .replace(/^\.+|\.+$/g, "") // Remove leading and trailing periods
           .replace(/^-+|-+$/g, ""); // Trim any remaining leading or trailing dashes
       }
-      
+
       let slug = customSlugify(data.title);
-      
+
       const slugCategory = slugify(data.category, { lower: true });
 
       // Check if the slug already exists in the database
-      let slugExists = await db.collection("blogs").findOne({ slug });
+      const slugExists = await db.collection("blogs").findOne({ slug });
 
-      // If slug already exists, modify it to make it unique
-      let counter = 1;
-      while (slugExists) {
-        slug = `${slug}-${counter}`;
-        slugExists = await db.collection("blogs").findOne({ slug });
-        counter++;
+      if (slugExists) {
+        console.log(
+          `Slug "${slug}" already exists. Skipping insertion for data:`,
+          data
+        );
+        continue; // Skip inserting this blog
       }
+
+       // Check if the link already exists in the database
+       const linkExists = await db.collection("blogs").findOne({ link: data.link });
+
+       if (linkExists !== null) {
+         console.log(`Link "${data.link}" already exists. Skipping insertion for data:`, data);
+         // No need to continue; proceed to the next iteration of the loop
+       }
+  
       // Extract content from the link
       const response = await axios.get(data.link);
       const $ = cheerio.load(response.data);

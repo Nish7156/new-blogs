@@ -6,27 +6,43 @@ export async function GET(request: any) {
     const client: any = await clientPromise;
     const db = client.db();
 
-    // Retrieve the last 20 objects from the database
+    // Retrieve all blogs from the database
     const blogs = await db.collection("blogs").find({}).toArray();
 
-    // Store the last 20 objects in an array
-    const last10Blogs = blogs.slice(-10);
+    // Create a map to store unique blogs based on slug
+    const uniqueBlogsMap = new Map();
 
-    // Generate 5 random indices
-    const randomIndices: number[] = [];
-    while (randomIndices.length < 5) {
-      const randomIndex = Math.floor(Math.random() * last10Blogs.length);
-      if (!randomIndices.includes(randomIndex)) {
-        randomIndices.push(randomIndex);
-      }
+    // Iterate through blogs and add them to the map using slug as key
+    for (const blog of blogs) {
+      uniqueBlogsMap.set(blog.slug, blog);
     }
 
-    // Retrieve the 5 random objects from the array
-    const randomBlogs = randomIndices.map((index) => last10Blogs[index]);
+    // Extract values from the map to get unique blogs
+    const uniqueBlogs = Array.from(uniqueBlogsMap.values());
+
+    // Check if there are more than 5 unique blogs, if yes, select 5 random ones
+    const randomBlogs = uniqueBlogs.length > 5 ? getRandomBlogs(uniqueBlogs, 5) : uniqueBlogs;
 
     return NextResponse.json(randomBlogs);
   } catch (error) {
     console.error("Error fetching blogs from MongoDB:", error);
     return NextResponse.json({ message: "Internal server error" });
   }
+}
+
+// Function to get a random subset of blogs
+function getRandomBlogs(blogs: any[], count: number): any[] {
+  const randomBlogs: any[] = [];
+  const indices: number[] = [];
+
+  // Generate 'count' random indices
+  while (indices.length < count) {
+    const randomIndex = Math.floor(Math.random() * blogs.length);
+    if (!indices.includes(randomIndex)) {
+      indices.push(randomIndex);
+      randomBlogs.push(blogs[randomIndex]);
+    }
+  }
+
+  return randomBlogs;
 }

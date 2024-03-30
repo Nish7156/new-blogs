@@ -27,7 +27,7 @@ async function startScrapingAndSaving() {
     process.exit(1);
   }
 }
-
+// startScrapingAndSaving()
 
 // cron.schedule(
 //   "0 4,16 * * *", //  run 4:00 AM & 4:00 PM

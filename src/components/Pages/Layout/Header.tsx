@@ -1,10 +1,40 @@
+//@ts-nocheck
 import React from "react";
 import PhoneNav from "./PhoneNav";
 import Link from "next/link";
 import Image from "next/image";
-import { menuItems } from "@/lib/constant";
+import blogData from "../../../lib/data.json";
 
-function Header() {
+async function generateMenuItemsFromCategories() {
+  // Assuming blogData is an array of objects where each object represents a blog post
+  // and has category property
+  const categories = blogData.reduce((uniqueCategories, blog) => {
+    //@ts-ignore
+    if (!uniqueCategories.find((category) => category.name === blog.category)) {
+      //@ts-ignore
+      uniqueCategories.push({
+        name: blog.category,
+        link: `/${blog.category.toLowerCase()}`,
+      });
+    }
+    return uniqueCategories;
+  }, []);
+
+  // Adding the "Pages" section with sub-menu
+  // categories.push({
+  //   name: "Pages",
+  //   subMenu: [
+  //     { name: "About Us", link: "about.html" },
+  //     { name: "Contact Us", link: "contact.html" },
+  //   ],
+  // });
+
+  return categories;
+}
+
+async function Header() {
+  const data = await generateMenuItemsFromCategories();
+
   return (
     <>
       <div className="navbar-area header-three sticky" id="navbar">
@@ -49,19 +79,22 @@ function Header() {
             </a>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav mx-auto">
-                {menuItems &&
-                  menuItems?.map((menuItem, index) => (
+                {data &&
+                  data?.map((menuItem, index) => (
                     <li key={index} className="nav-item">
                       {menuItem?.subMenu ? (
                         <Link
                           href={`${menuItem?.link}`}
                           className="dropdown-toggle nav-link"
                         >
-                          {menuItem.title}
+                          {menuItem.name}
                         </Link>
                       ) : (
-                        <Link href={menuItem.link} className="nav-link">
-                          {menuItem.title}
+                        <Link
+                          href={menuItem.link}
+                          className="nav-link capitalize"
+                        >
+                          {menuItem.name}
                         </Link>
                       )}
                       {menuItem?.subMenu && (
@@ -75,7 +108,7 @@ function Header() {
                                     href={subItem.link}
                                     className="nav-link"
                                   >
-                                    {subItem.title}
+                                    {subItem.name}
                                   </Link>
                                 </li>
                               )

@@ -13,39 +13,28 @@ export async function GET(request: any) {
       .sort({ createdAt: -1 })
       .toArray();
 
-    // Initialize a map to store categories and their counts
-    const categoriesMap = new Map();
+    // Initialize a set to store unique categories
+    const uniqueCategories = new Set();
 
-    // Iterate through the sorted blog posts
-    blogs.forEach((blog: any) => {
-      // Increment the count for each category
-      if (categoriesMap.has(blog.category)) {
-        categoriesMap.set(blog.category, categoriesMap.get(blog.category) + 1);
+    // Iterate through the sorted blog posts to get unique categories
+    const categories = blogs.reduce((acc: { category: any; count: number; }[], blog: { category: unknown; }) => {
+      // Check if the category is already in the set
+      if (!uniqueCategories.has(blog.category)) {
+        // If not, add it to the set and push it to the result array
+        uniqueCategories.add(blog.category);
+        acc.push({ category: blog.category, count: 1 });
       } else {
-        categoriesMap.set(blog.category, 1);
+        // If the category is already in the set, increment its count
+        const existingCategory = acc.find((item) => item.category === blog.category);
+        if (existingCategory) {
+          existingCategory.count++;
+        }
       }
-    });
+      return acc;
+    }, []);
 
-    // Convert the map to an array of objects
-    let categories = Array.from(categoriesMap, ([category, count]) => ({
-      category,
-      count,
-    }));
-
-    // Sort the categories based on the creation date of their most recent blog post
-    categories.sort((a, b) => {
-      // Get the most recent blog post for each category
-      const latestPostA = blogs.find(
-        (blog: { category: any }) => blog.category === a.category
-      );
-      const latestPostB = blogs.find(
-        (blog: { category: any }) => blog.category === b.category
-      );
-
-      // Compare the creation dates
-      //@ts-ignore
-      return new Date(latestPostB.createdAt) - new Date(latestPostA.createdAt);
-    });
+    // Sort the categories based on the count of blog posts
+    categories.sort((a: { count: number; }, b: { count: number; }) => b.count - a.count);
 
     return NextResponse.json(categories);
   } catch (error) {

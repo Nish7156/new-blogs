@@ -1,10 +1,11 @@
 import CustomImageAuto from "@/components/elements/CustomImageAuto";
-import { extractDate, formatCategory, truncateText } from "@/lib/helper";
+import { extractDate, formatCategory, getRandomTime, truncateText } from "@/lib/helper";
 import Link from "next/link";
 import React from "react";
 
 async function HeroGrid({ data }: any) {
   let dataIndex = 0;
+
 
   return (
     <>
@@ -65,7 +66,7 @@ async function HeroGrid({ data }: any) {
                     </li>
                     <li>
                       <i className="fi fi-rr-clock-three" />
-                      15 Min Read
+                      {getRandomTime() + " Min Read"}
                     </li>
                   </ul>
                 </div>
@@ -105,7 +106,7 @@ async function HeroGrid({ data }: any) {
                             </li>
                             <li>
                               <i className="fi fi-rr-clock-three" />
-                              11 Min Read
+                              {getRandomTime() + " Min Read"}
                             </li>
                           </ul>
                         </div>
