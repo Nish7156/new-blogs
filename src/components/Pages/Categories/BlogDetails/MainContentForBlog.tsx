@@ -82,7 +82,7 @@ function MainContentForBlog({ data }: any) {
                   <ul className="content-feature-list list-style mt-15">
                     {data?.bulletpoints.map((data: any, index: number) => {
                       return (
-                        <li>
+                        <li key={index}>
                           <span>
                             <i className="flaticon-arrow-right" />
                           </span>
